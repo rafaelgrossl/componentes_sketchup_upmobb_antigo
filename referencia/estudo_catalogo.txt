@@ -1,0 +1,4918 @@
+
+==================== caixa_balcao (9176cf6dd7a7dcb995f1cdfa10fe7465__caixa_balcao.skp)
+C caixa_balcao#6 [caixa_upm] 900.0x552.0x713.5
+  D _inst__x_formula=px
+  D _inst__y_formula=py
+  D _inst__z_formula=pz
+  D _keyalert_formula=parent!keyalert
+  D _lenx_formula=if(parent!lenx>parent!max_width,parent!max_width,parent!lenx)
+  D _leny_formula=if(parent!leny>parent!max_depth,parent!max_depth,parent!leny)
+  D _lenz_formula=if(parent!lenz>parent!max_height,parent!max_height,parent!lenz)
+  D _name=caixa_upm
+  D keyalert=1
+  D modeloptions=caixas
+  D parentrefresh=1
+  D type=conteiner_external|conteiner_bottom
+  F inst__rotx:  () 
+  F inst__roty:  () 
+  F inst__rotz:  () 
+  F inst__x:  () 
+  F inst__y:  () 
+  F inst__z:  () 
+  C lateral_direita#6 [lateral_direita] 20.5x550.0x703.0
+    D _inst__x_formula=parent!lenx-a3_thickness+mx
+    D _inst__y_formula=+my
+    D _inst__z_formula=0+mz+if(parent!typeassembly=0,a3_thickness)
+    D _lenx_formula=a3_thickness
+    D _leny_formula=if(a2_depth>max_depth,max_depth,if(a2_depth<min_depth,min_depth,a2_depth))
+    D _lenz_formula=if(a1_height>max_height,max_height,if(a1_height<min_height,min_height,a1_height))
+    D _name=lateral_direita
+    D description=Lateral Direita
+    D itemcode=CM_LAT_DIR
+    D materialoptions=peças
+    D name=Lateral Direita
+    D type=peace
+    F addy: Adicionar a profundidade (+ -): (TEXTBOX) &
+    F addz: Adicionar a altura (+ -): (TEXTBOX) &
+    F inst___iscollapsed:  () 
+    F inst__rotx:  () 
+    F inst__roty:  () 
+    F inst__rotz:  () 
+    F inst__x:  () 
+    F inst__y:  () 
+    F inst__z:  () 
+    F mx: Mover em X(+ -): (TEXTBOX) &
+    F my: Mover em Y(+ -): (TEXTBOX) &
+    F mz: Mover em Z(+ -): (TEXTBOX) &
+    F zobservation: Observação: (TEXTBOX) &
+    I _x_formula=parent!lenx-a3_thickness+mx
+    I _y_formula=+my
+    I _z_formula=0+mz+if(parent!typeassembly=0,a3_thickness)
+    I materialoptions=peças
+    I type=peace
+    C kit_minifix15_twister#58 [kit_minifix] 20.5x44.0x531.5
+      D _inst__x_formula=px
+      D _inst__y_formula=py
+      D _inst__z_formula=pz
+      D _itemcode_formula="CM_KIT_MIN15TW_"&if(thicknesspeace=1.55,"16_","19_")&upmfinish
+      D _lenx_formula=thicknesspeace+0.2
+      D _leny_formula=3.25
+      D _lenz_formula=choose(quadrant,parent!lenz,parent!lenz,parent!leny,parent!leny)+addz
+      D _name=kit_minifix
+      D atttransfer=addz|quadrant|mx|my|mz|inverte|margin|quantity|atttransfer|upmdisable|hidden|_mz_formula|_upmdisable_formula|_hidden_formula|_margin_formula
+      D componentedit=1
+      D description=Kit de ferragens Minifix Pino Twister
+      D itemcode=CM_KIT_MIN15TW_19_PLAST_BRANCO
+      D materialoptions=tampa minifix
+      D modeloptions=fixação lateral
+      D name=kit ferragem
+      F addz: Adicionar Comprimento (+ -): (TEXTBOX) &
+      F counterpeace: Espessura peça contra: (LIST) &6mm=0.6&8mm=0.8&10mm=1.0&16mm=1.6&17mm=1.7&19mm=1.9&19,5mm=1.95&20mm=2.0&21mm=2.1&30mm=3.0&
+      F disablecover: Desativar Tampa: (LIST) &não=0&sim=1&
+      F inst___iscollapsed:  () 
+      F inst__copies:  () 
+      F inst__copy:  () 
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      F inverte: Inverter lado: (LIST) &n%E3o=0&sim=1&
+      F margin: Margem: (TEXTBOX) &
+      F mpeg: Margem Cavilha: (TEXTBOX) &
+      F my: Mover em Y(+ -): (TEXTBOX) &
+      F mz: Mover em Z(+ -): (TEXTBOX) &
+      F pegoff: Somente 1 cavilha (LIST) &N%E3o=0&Sim=1&
+      F quadrant: Quadrante: (LIST) &Frontal=1&Traseiro=2&Inferior=3&Superior=4&
+      F quantity: Quantidade: (TEXTBOX) &
+      I _x_formula=px
+      I _y_formula=py
+      I _z_formula=pz
+      I atttransfer=addz|quadrant|mx|my|mz|inverte|margin|quantity|atttransfer|upmdisable|hidden|_mz_formula|_upmdisable_formula|_hidden_formula|_margin_formula
+      I description=Kit de ferragens Minifix Pino Twister
+      I itemcode=CM_KIT_MIN15TW_19_PLAST_BRANCO
+      G Agrupar#108 [guia] 500.0x0.0x18.5
+        I _lenx_formula=parent!thicknesspeace
+        I _leny_formula=0
+        I _lenz_formula=parent!lenz
+        I _name=guia
+        I _x_formula=if(parent!inverte=1,0.2,0)
+        I _y_formula=-parent!leny
+        I _z_formula=0
+      C mini_fix#92 [mini_fix] 17.0x44.0x15.5
+        D _inst__x_formula=if(parent!inverte=0,thicknesspeace-lenz,lenz+0.2)
+        D _inst__y_formula=-parent!leny+2.4
+        D _inst__z_formula=parent!margin+if(parent!quantity>1,copy*(parent!spaceutil/Copies),0)
+        D _lenx_formula=1.5
+        D _leny_formula=1.5
+        D _lenz_formula=1.2
+        D _name=mini_fix
+        D materialoptions=tampa minifix
+        F inst___iscollapsed:  () 
+        F inst__copies:  () 
+        F inst__copy:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        I _name=mini_fix
+        I _x_formula=if(parent!inverte=0,thicknesspeace-lenz,lenz+0.2)
+        I _y_formula=-parent!leny+2.4
+        I _z_formula=parent!margin+if(parent!quantity>1,copy*(parent!spaceutil/Copies),0)
+        I materialoptions=tampa minifix
+      C mini_fix#93 [mini_fix] 17.0x44.0x15.5
+        D _inst__x_formula=if(parent!inverte=0,thicknesspeace-lenz,lenz+0.2)
+        D _inst__y_formula=-parent!leny+2.4
+        D _inst__z_formula=parent!margin+if(parent!quantity>1,copy*(parent!spaceutil/Copies),0)
+        D _lenx_formula=1.5
+        D _leny_formula=1.5
+        D _lenz_formula=1.2
+        D _name=mini_fix
+        D _x_formula=if(parent!inverte=0,thicknesspeace-lenz,lenz+0.2)
+        D _y_formula=-parent!leny+2.4
+        D _z_formula=parent!margin+if(parent!quantity>1,copy*(parent!spaceutil/Copies),0)
+        D materialoptions=tampa minifix
+        F inst___iscollapsed:  () 
+        F inst__copies:  () 
+        F inst__copy:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        I _name=mini_fix
+        I _x_formula=if(parent!inverte=0,thicknesspeace-lenz,lenz+0.2)
+        I _y_formula=-parent!leny+2.4
+        I _z_formula=parent!margin+if(parent!quantity>1,copy*(parent!spaceutil/Copies),0)
+        I materialoptions=tampa minifix
+      C cavilha#117 [cavilha] 8.0x28.0x8.0
+        D _inst__x_formula=thicknesspeace/2-parent!px
+        D _inst__y_formula=-parent!leny
+        D _inst__z_formula=if(upmdisable=1,lenx/2,parent!mpeg+copy*(parent!spaceutilpeg))
+        D _lenx_formula=0.8
+        D _leny_formula=2.8
+        D _lenz_formula=0.8
+        D _name=cavilha
+        D description=Cavilhas de fixação 8 x 28
+        D name=Cavilhas
+        F inst___iscollapsed:  () 
+        F inst__copies:  () 
+        F inst__copy:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F thicknesspeace: Espessura da peça (LIST) &15mm=1.55&18mm=1.85&25mm=2.55&
+        I _name=cavilha
+        I _x_formula=thicknesspeace/2-parent!px
+        I _y_formula=-parent!leny
+        I _z_formula=if(upmdisable=1,lenx/2,parent!mpeg+copy*(parent!spaceutilpeg))
+        I description=Cavilhas de fixação 8 x 28
+        I name=Cavilhas
+      C cavilha#115 [cavilha] 8.0x28.0x8.0
+        D _inst__x_formula=thicknesspeace/2-parent!px
+        D _inst__y_formula=-parent!leny
+        D _inst__z_formula=if(upmdisable=1,lenx/2,parent!mpeg+copy*(parent!spaceutilpeg))
+        D _lenx_formula=0.8
+        D _leny_formula=2.8
+        D _lenz_formula=0.8
+        D _name=cavilha
+        D _x_formula=thicknesspeace/2-parent!px
+        D _y_formula=-parent!leny
+        D _z_formula=if(upmdisable=1,lenx/2,parent!mpeg+copy*(parent!spaceutilpeg))
+        D description=Cavilhas de fixação 8 x 28
+        D name=Cavilhas
+        F inst___iscollapsed:  () 
+        F inst__copies:  () 
+        F inst__copy:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F thicknesspeace: Espessura da peça (LIST) &15mm=1.55&18mm=1.85&25mm=2.55&
+        I _name=cavilha
+        I _x_formula=thicknesspeace/2-parent!px
+        I _y_formula=-parent!leny
+        I _z_formula=if(upmdisable=1,lenx/2,parent!mpeg+copy*(parent!spaceutilpeg))
+        I description=Cavilhas de fixação 8 x 28
+        I name=Cavilhas
+    C usinagem_ponto_a_ponto_n1d#2 [usinagem_1d] 18.5x60.0x18.5
+      D _inst__x_formula=0
+      D _inst__y_formula=-parent!leny+lenx+parent!mygripprofile
+      D _inst__z_formula=if(upmdisable=1,parent!lenz/2+leny/2,parent!lenz+parent!mz1)
+      D _lenx_formula=parent!depthgripprofile
+      D _leny_formula=parent!heightgripprofile
+      D _lenz_formula=parent!a3_thickness
+      D _name=usinagem_1d
+      D description=Usinagem avulsa
+      D itemcode=CM_USI_AV
+      D name=Usinagem
+      F correctiontool: Correção da fresa (LIST) &Centro=0&esquerda=1&direita=2&
+      F inst___iscollapsed:  () 
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      F lenx: Comprimento (TEXTBOX) 
+      F leny: Largura (TEXTBOX) 
+      F lenz: Profundidade (TEXTBOX) 
+      F scaletool: scaletool () 
+      F toolused: Nome do trabalho (LIST) &usi_line=usi_line&r_pass_cabo=r_pass_cabo&usi_arc=usi_arc&usi_circle=usi_circle&usi_point_to_point=usi_point_to_point&u
+      I _name=usinagem_1d
+      I _x_formula=0
+      I _y_formula=-parent!leny+lenx+parent!mygripprofile
+      I _z_formula=if(upmdisable=1,parent!lenz/2+leny/2,parent!lenz+parent!mz1)
+      C transfer_milling#12 [transfer_milling] 18.5x50.0x18.5
+        D _inst__x_formula=0
+        D _inst__y_formula=0
+        D _inst__z_formula=0
+        D _keyalert_formula=if(dmilling>maxdepth+0.01,0,1)
+        D _lenx_formula=parent!lenx
+        D _leny_formula=parent!leny
+        D _lenz_formula=parent!lenz
+        D _name=transfer_milling
+        D description=Usinagem ponto a ponto
+        D keyalert=1
+        D name=Usinagem
+        F dmilling: Profundidade: (TEXTBOX) &
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F lenx: Comprimento: (TEXTBOX) 
+        F leny: Largura: (TEXTBOX) 
+        I _x_formula=0
+        I _y_formula=0
+        I _z_formula=0
+        I keyalert=1
+    C usinagem_ponto_a_ponto_n2d#2 [usinagem_2d] 18.5x60.0x18.5
+      D _inst__x_formula=0
+      D _inst__y_formula=-parent!leny+lenx+parent!mygripprofile
+      D _inst__z_formula=if(upmdisable=0,parent!lenz-leny+parent!mz2-if(parent!gripprofilenumber=7,parent!usefulspace1+parent!heightgripprofile,if(parent!gripprofilenumber=8,parent!usefulspace2+parent!heightgripprofile,parent
+      D _lenx_formula=parent!depthgripprofile
+      D _leny_formula=parent!heightgripprofile
+      D _lenz_formula=parent!a3_thickness
+      D _name=usinagem_2d
+      D description=Usinagem avulsa
+      D itemcode=CM_USI_AV
+      D name=Usinagem
+      F correctiontool: Correção da fresa (LIST) &Centro=0&esquerda=1&direita=2&
+      F inst___iscollapsed:  () 
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      F lenx: Comprimento (TEXTBOX) 
+      F leny: Largura (TEXTBOX) 
+      F lenz: Profundidade (TEXTBOX) 
+      F scaletool: scaletool () 
+      F toolused: Nome do trabalho (LIST) &usi_line=usi_line&r_pass_cabo=r_pass_cabo&usi_arc=usi_arc&usi_circle=usi_circle&usi_point_to_point=usi_point_to_point&u
+      I _name=usinagem_2d
+      I _x_formula=0
+      I _y_formula=-parent!leny+lenx+parent!mygripprofile
+      I _z_formula=if(upmdisable=0,parent!lenz-leny+parent!mz2-if(parent!gripprofilenumber=7,parent!usefulspace1+parent!heightgripprofile,if(parent!gripprofilenumber=8,parent!usefulspace2+parent!heightgripprofile,parent
+      C transfer_milling#13 [transfer_milling] 18.5x50.0x18.5
+        D _inst__x_formula=0
+        D _inst__y_formula=0
+        D _inst__z_formula=0
+        D _keyalert_formula=if(dmilling>maxdepth+0.01,0,1)
+        D _lenx_formula=parent!lenx
+        D _leny_formula=parent!leny
+        D _lenz_formula=parent!lenz
+        D _name=transfer_milling
+        D description=Usinagem ponto a ponto
+        D keyalert=1
+        D name=Usinagem
+        F dmilling: Profundidade: (TEXTBOX) &
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F lenx: Comprimento: (TEXTBOX) 
+        F leny: Largura: (TEXTBOX) 
+        I _x_formula=0
+        I _y_formula=0
+        I _z_formula=0
+        I keyalert=1
+    C usinagem_ponto_a_ponto_n6d#2 [usinagem_6d] 18.5x41.5x18.5
+      D _inst__x_formula=0
+      D _inst__y_formula=-parent!leny+lenx+parent!mxgripprofile
+      D _inst__z_formula=if(upmdisable=0,leny+0.001,parent!lenz/2+leny/2)
+      D _lenx_formula=parent!depthgripprofile
+      D _leny_formula=parent!heightgripprofile-parent!a3_thickness
+      D _lenz_formula=parent!a3_thickness
+      D _name=usinagem_6d
+      D description=Usinagem avulsa
+      D itemcode=CM_USI_AV
+      D name=Usinagem
+      F correctiontool: Correção da fresa (LIST) &Centro=0&esquerda=1&direita=2&
+      F inst___iscollapsed:  () 
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      F lenx: Comprimento (TEXTBOX) 
+      F leny: Largura (TEXTBOX) 
+      F lenz: Profundidade (TEXTBOX) 
+      F scaletool: scaletool () 
+      F toolused: Nome do trabalho (LIST) &usi_line=usi_line&r_pass_cabo=r_pass_cabo&usi_arc=usi_arc&usi_circle=usi_circle&usi_point_to_point=usi_point_to_point&u
+      I _name=usinagem_6d
+      I _x_formula=0
+      I _y_formula=-parent!leny+lenx+parent!mxgripprofile
+      I _z_formula=if(upmdisable=0,leny+0.001,parent!lenz/2+leny/2)
+      C transfer_milling#8 [transfer_milling] 18.5x50.0x18.5
+        D _inst__x_formula=0
+        D _inst__y_formula=0
+        D _inst__z_formula=0
+        D _keyalert_formula=if(dmilling>maxdepth+0.01,0,1)
+        D _lenx_formula=parent!lenx
+        D _leny_formula=parent!leny
+        D _lenz_formula=parent!lenz
+        D _name=transfer_milling
+        D description=Usinagem ponto a ponto
+        D keyalert=1
+        D name=Usinagem
+        F dmilling: Profundidade: (TEXTBOX) &
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F lenx: Comprimento: (TEXTBOX) 
+        F leny: Largura: (TEXTBOX) 
+        I _x_formula=0
+        I _y_formula=0
+        I _z_formula=0
+        I keyalert=1
+    C usinagem_ponto_a_ponto_n4d#1 [usinagem_4d] 18.5x60.0x18.5
+      D _inst__x_formula=0
+      D _inst__y_formula=-parent!leny+lenx+parent!mygripprofile
+      D _inst__z_formula=if(upmdisable=0,parent!lenz-leny+parent!mz4-if(parent!gripprofilenumber=8,3*(parent!usefulspace2+parent!heightgripprofile),3*parent!usefulspace),parent!lenz/2+leny/2)
+      D _lenx_formula=parent!depthgripprofile
+      D _leny_formula=parent!heightgripprofile
+      D _lenz_formula=parent!a3_thickness
+      D _name=usinagem_4d
+      D description=Usinagem avulsa
+      D itemcode=CM_USI_AV
+      D name=Usinagem
+      F correctiontool: Correção da fresa (LIST) &Centro=0&esquerda=1&direita=2&
+      F inst___iscollapsed:  () 
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      F lenx: Comprimento (TEXTBOX) 
+      F leny: Largura (TEXTBOX) 
+      F lenz: Profundidade (TEXTBOX) 
+      F scaletool: scaletool () 
+      F toolused: Nome do trabalho (LIST) &usi_line=usi_line&r_pass_cabo=r_pass_cabo&usi_arc=usi_arc&usi_circle=usi_circle&usi_point_to_point=usi_point_to_point&u
+      I _name=usinagem_4d
+      I _x_formula=0
+      I _y_formula=-parent!leny+lenx+parent!mygripprofile
+      I _z_formula=if(upmdisable=0,parent!lenz-leny+parent!mz4-if(parent!gripprofilenumber=8,3*(parent!usefulspace2+parent!heightgripprofile),3*parent!usefulspace),parent!lenz/2+leny/2)
+      C transfer_milling#1 [transfer_milling] 18.5x50.0x18.5
+        D _inst__x_formula=0
+        D _inst__y_formula=0
+        D _inst__z_formula=0
+        D _keyalert_formula=if(dmilling>maxdepth+0.01,0,1)
+        D _lenx_formula=parent!lenx
+        D _leny_formula=parent!leny
+        D _lenz_formula=parent!lenz
+        D _name=transfer_milling
+        D description=Usinagem ponto a ponto
+        D keyalert=1
+        D name=Usinagem
+        F dmilling: Profundidade: (TEXTBOX) &
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F lenx: Comprimento: (TEXTBOX) 
+        F leny: Largura: (TEXTBOX) 
+        I _x_formula=0
+        I _y_formula=0
+        I _z_formula=0
+        I keyalert=1
+    C usinagem_ponto_a_ponto_n5d#2 [usinagem_5d] 18.5x60.0x18.5
+      D _inst__x_formula=0
+      D _inst__y_formula=-parent!leny+lenx+parent!mygripprofile
+      D _inst__z_formula=if(upmdisable=0,parent!lenz-leny+parent!mz5-4*parent!usefulspace,parent!lenz/2-leny/2)
+      D _lenx_formula=parent!depthgripprofile
+      D _leny_formula=parent!heightgripprofile
+      D _lenz_formula=parent!a3_thickness
+      D _name=usinagem_5d
+      D description=Usinagem avulsa
+      D itemcode=CM_USI_AV
+      D name=Usinagem
+      F correctiontool: Correção da fresa (LIST) &Centro=0&esquerda=1&direita=2&
+      F inst___iscollapsed:  () 
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      F lenx: Comprimento (TEXTBOX) 
+      F leny: Largura (TEXTBOX) 
+      F lenz: Profundidade (TEXTBOX) 
+      F scaletool: scaletool () 
+      F toolused: Nome do trabalho (LIST) &usi_line=usi_line&r_pass_cabo=r_pass_cabo&usi_arc=usi_arc&usi_circle=usi_circle&usi_point_to_point=usi_point_to_point&u
+      I _name=usinagem_5d
+      I _x_formula=0
+      I _y_formula=-parent!leny+lenx+parent!mygripprofile
+      I _z_formula=if(upmdisable=0,parent!lenz-leny+parent!mz5-4*parent!usefulspace,parent!lenz/2-leny/2)
+      C transfer_milling#4 [transfer_milling] 18.5x50.0x18.5
+        D _inst__x_formula=0
+        D _inst__y_formula=0
+        D _inst__z_formula=0
+        D _keyalert_formula=if(dmilling>maxdepth+0.01,0,1)
+        D _lenx_formula=parent!lenx
+        D _leny_formula=parent!leny
+        D _lenz_formula=parent!lenz
+        D _name=transfer_milling
+        D description=Usinagem ponto a ponto
+        D keyalert=1
+        D name=Usinagem
+        F dmilling: Profundidade: (TEXTBOX) &
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F lenx: Comprimento: (TEXTBOX) 
+        F leny: Largura: (TEXTBOX) 
+        I _x_formula=0
+        I _y_formula=0
+        I _z_formula=0
+        I keyalert=1
+    C usinagem_ponto_a_ponto_n3d#2 [usinagem_3d] 18.5x60.0x18.5
+      D _inst__x_formula=0
+      D _inst__y_formula=-parent!leny+lenx+parent!mygripprofile
+      D _inst__z_formula=if(upmdisable=0,parent!lenz-leny+parent!mz3-if(parent!gripprofilenumber=7,parent!lenz/2-leny/2,if(parent!gripprofilenumber=8,2*(parent!usefulspace2+parent!heightgripprofile),2*parent!usefulspace)),par
+      D _lenx_formula=parent!depthgripprofile
+      D _leny_formula=parent!heightgripprofile
+      D _lenz_formula=parent!a3_thickness
+      D _name=usinagem_3d
+      D description=Usinagem avulsa
+      D itemcode=CM_USI_AV
+      D name=Usinagem
+      F correctiontool: Correção da fresa (LIST) &Centro=0&esquerda=1&direita=2&
+      F inst___iscollapsed:  () 
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      F lenx: Comprimento (TEXTBOX) 
+      F leny: Largura (TEXTBOX) 
+      F lenz: Profundidade (TEXTBOX) 
+      F scaletool: scaletool () 
+      F toolused: Nome do trabalho (LIST) &usi_line=usi_line&r_pass_cabo=r_pass_cabo&usi_arc=usi_arc&usi_circle=usi_circle&usi_point_to_point=usi_point_to_point&u
+      I _name=usinagem_3d
+      I _x_formula=0
+      I _y_formula=-parent!leny+lenx+parent!mygripprofile
+      I _z_formula=if(upmdisable=0,parent!lenz-leny+parent!mz3-if(parent!gripprofilenumber=7,parent!lenz/2-leny/2,if(parent!gripprofilenumber=8,2*(parent!usefulspace2+parent!heightgripprofile),2*parent!usefulspace)),par
+      C transfer_milling#14 [transfer_milling] 18.5x50.0x18.5
+        D _inst__x_formula=0
+        D _inst__y_formula=0
+        D _inst__z_formula=0
+        D _keyalert_formula=if(dmilling>maxdepth+0.01,0,1)
+        D _lenx_formula=parent!lenx
+        D _leny_formula=parent!leny
+        D _lenz_formula=parent!lenz
+        D _name=transfer_milling
+        D description=Usinagem ponto a ponto
+        D keyalert=1
+        D name=Usinagem
+        F dmilling: Profundidade: (TEXTBOX) &
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F lenx: Comprimento: (TEXTBOX) 
+        F leny: Largura: (TEXTBOX) 
+        I _x_formula=0
+        I _y_formula=0
+        I _z_formula=0
+        I keyalert=1
+  C lateral_esquerda#8 [lateral_esquerda] 20.5x550.0x703.0
+    D _inst__x_formula=0+mx
+    D _inst__y_formula=+my
+    D _inst__z_formula=0+mz+if(parent!typeassembly=0,a3_thickness)
+    D _lenx_formula=a3_thickness
+    D _leny_formula=if(a2_depth>max_depth,max_depth,if(a2_depth<min_depth,min_depth,a2_depth))
+    D _lenz_formula=if(a1_height>max_height,max_height,if(a1_height<min_height,min_height,a1_height))
+    D _name=lateral_esquerda
+    D description=Lateral Esquerda
+    D itemcode=CM_LAT_ESQ
+    D materialoptions=peças
+    D name=Lateral Esquerda
+    D type=peace
+    F addy: Adicionar a profundidade (+ -): (TEXTBOX) &
+    F addz: Adicionar a altura (+ -): (TEXTBOX) &
+    F inst___iscollapsed:  () 
+    F inst__rotx:  () 
+    F inst__roty:  () 
+    F inst__rotz:  () 
+    F inst__x:  () 
+    F inst__y:  () 
+    F inst__z:  () 
+    F mx: Mover em X(+ -): (TEXTBOX) &
+    F my: Mover em Y(+ -): (TEXTBOX) &
+    F mz: Mover em Z(+ -): (TEXTBOX) &
+    F zobservation: Observação: (TEXTBOX) &
+    I _x_formula=0+mx
+    I _y_formula=+my
+    I _z_formula=0+mz+if(parent!typeassembly=0,a3_thickness)
+    I materialoptions=peças
+    I type=peace
+    C kit_minifix15_twister#59 [kit_minifix] 20.5x44.0x531.5
+      D _inst__x_formula=px
+      D _inst__y_formula=py
+      D _inst__z_formula=pz
+      D _itemcode_formula="CM_KIT_MIN15TW_"&if(thicknesspeace=1.55,"16_","19_")&upmfinish
+      D _lenx_formula=thicknesspeace+0.2
+      D _leny_formula=3.25
+      D _lenz_formula=choose(quadrant,parent!lenz,parent!lenz,parent!leny,parent!leny)+addz
+      D _name=kit_minifix
+      D atttransfer=addz|quadrant|mx|my|mz|inverte|margin|quantity|atttransfer|upmdisable|hidden|_mz_formula|_upmdisable_formula|_hidden_formula|_margin_formula
+      D componentedit=1
+      D description=Kit de ferragens Minifix Pino Twister
+      D itemcode=CM_KIT_MIN15TW_19_PLAST_BRANCO
+      D materialoptions=tampa minifix
+      D modeloptions=fixação lateral
+      D name=kit ferragem
+      F addz: Adicionar Comprimento (+ -): (TEXTBOX) &
+      F counterpeace: Espessura peça contra: (LIST) &6mm=0.6&8mm=0.8&10mm=1.0&16mm=1.6&17mm=1.7&19mm=1.9&19,5mm=1.95&20mm=2.0&21mm=2.1&30mm=3.0&
+      F disablecover: Desativar Tampa: (LIST) &não=0&sim=1&
+      F inst___iscollapsed:  () 
+      F inst__copies:  () 
+      F inst__copy:  () 
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      F inverte: Inverter lado: (LIST) &n%E3o=0&sim=1&
+      F margin: Margem: (TEXTBOX) &
+      F mpeg: Margem Cavilha: (TEXTBOX) &
+      F my: Mover em Y(+ -): (TEXTBOX) &
+      F mz: Mover em Z(+ -): (TEXTBOX) &
+      F pegoff: Somente 1 cavilha (LIST) &N%E3o=0&Sim=1&
+      F quadrant: Quadrante: (LIST) &Frontal=1&Traseiro=2&Inferior=3&Superior=4&
+      F quantity: Quantidade: (TEXTBOX) &
+      I _x_formula=px
+      I _y_formula=py
+      I _z_formula=pz
+      I atttransfer=addz|quadrant|mx|my|mz|inverte|margin|quantity|atttransfer|upmdisable|hidden|_mz_formula|_upmdisable_formula|_hidden_formula|_margin_formula
+      I description=Kit de ferragens Minifix Pino Twister
+      I itemcode=CM_KIT_MIN15TW_19_PLAST_BRANCO
+      G Agrupar#108 [guia] 500.0x0.0x18.5
+        I _lenx_formula=parent!thicknesspeace
+        I _leny_formula=0
+        I _lenz_formula=parent!lenz
+        I _name=guia
+        I _x_formula=if(parent!inverte=1,0.2,0)
+        I _y_formula=-parent!leny
+        I _z_formula=0
+      C mini_fix#94 [mini_fix] 17.0x44.0x15.5
+        D _inst__x_formula=if(parent!inverte=0,thicknesspeace-lenz,lenz+0.2)
+        D _inst__y_formula=-parent!leny+2.4
+        D _inst__z_formula=parent!margin+if(parent!quantity>1,copy*(parent!spaceutil/Copies),0)
+        D _lenx_formula=1.5
+        D _leny_formula=1.5
+        D _lenz_formula=1.2
+        D _name=mini_fix
+        D materialoptions=tampa minifix
+        F inst___iscollapsed:  () 
+        F inst__copies:  () 
+        F inst__copy:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        I _name=mini_fix
+        I _x_formula=if(parent!inverte=0,thicknesspeace-lenz,lenz+0.2)
+        I _y_formula=-parent!leny+2.4
+        I _z_formula=parent!margin+if(parent!quantity>1,copy*(parent!spaceutil/Copies),0)
+        I materialoptions=tampa minifix
+      C mini_fix#88 [mini_fix] 17.0x44.0x15.5
+        D _inst__x_formula=if(parent!inverte=0,thicknesspeace-lenz,lenz+0.2)
+        D _inst__y_formula=-parent!leny+2.4
+        D _inst__z_formula=parent!margin+if(parent!quantity>1,copy*(parent!spaceutil/Copies),0)
+        D _lenx_formula=1.5
+        D _leny_formula=1.5
+        D _lenz_formula=1.2
+        D _name=mini_fix
+        D _x_formula=if(parent!inverte=0,thicknesspeace-lenz,lenz+0.2)
+        D _y_formula=-parent!leny+2.4
+        D _z_formula=parent!margin+if(parent!quantity>1,copy*(parent!spaceutil/Copies),0)
+        D materialoptions=tampa minifix
+        F inst___iscollapsed:  () 
+        F inst__copies:  () 
+        F inst__copy:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        I _name=mini_fix
+        I _x_formula=if(parent!inverte=0,thicknesspeace-lenz,lenz+0.2)
+        I _y_formula=-parent!leny+2.4
+        I _z_formula=parent!margin+if(parent!quantity>1,copy*(parent!spaceutil/Copies),0)
+        I materialoptions=tampa minifix
+      C cavilha#112 [cavilha] 8.0x28.0x8.0
+        D _inst__x_formula=thicknesspeace/2-parent!px
+        D _inst__y_formula=-parent!leny
+        D _inst__z_formula=if(upmdisable=1,lenx/2,parent!mpeg+copy*(parent!spaceutilpeg))
+        D _lenx_formula=0.8
+        D _leny_formula=2.8
+        D _lenz_formula=0.8
+        D _name=cavilha
+        D description=Cavilhas de fixação 8 x 28
+        D name=Cavilhas
+        F inst___iscollapsed:  () 
+        F inst__copies:  () 
+        F inst__copy:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F thicknesspeace: Espessura da peça (LIST) &15mm=1.55&18mm=1.85&25mm=2.55&
+        I _name=cavilha
+        I _x_formula=thicknesspeace/2-parent!px
+        I _y_formula=-parent!leny
+        I _z_formula=if(upmdisable=1,lenx/2,parent!mpeg+copy*(parent!spaceutilpeg))
+        I description=Cavilhas de fixação 8 x 28
+        I name=Cavilhas
+      C cavilha#111 [cavilha] 8.0x28.0x8.0
+        D _inst__x_formula=thicknesspeace/2-parent!px
+        D _inst__y_formula=-parent!leny
+        D _inst__z_formula=if(upmdisable=1,lenx/2,parent!mpeg+copy*(parent!spaceutilpeg))
+        D _lenx_formula=0.8
+        D _leny_formula=2.8
+        D _lenz_formula=0.8
+        D _name=cavilha
+        D _x_formula=thicknesspeace/2-parent!px
+        D _y_formula=-parent!leny
+        D _z_formula=if(upmdisable=1,lenx/2,parent!mpeg+copy*(parent!spaceutilpeg))
+        D description=Cavilhas de fixação 8 x 28
+        D name=Cavilhas
+        F inst___iscollapsed:  () 
+        F inst__copies:  () 
+        F inst__copy:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F thicknesspeace: Espessura da peça (LIST) &15mm=1.55&18mm=1.85&25mm=2.55&
+        I _name=cavilha
+        I _x_formula=thicknesspeace/2-parent!px
+        I _y_formula=-parent!leny
+        I _z_formula=if(upmdisable=1,lenx/2,parent!mpeg+copy*(parent!spaceutilpeg))
+        I description=Cavilhas de fixação 8 x 28
+        I name=Cavilhas
+    C usinagem_ponto_a_ponto_n1e#2 [usinagem_1e] 18.5x60.0x18.5
+      D _inst__x_formula=parent!a3_thickness
+      D _inst__y_formula=-parent!leny+parent!mygripprofile
+      D _inst__z_formula=if(upmdisable=1,parent!lenz/2-leny/2,parent!lenz-leny+parent!mz1)
+      D _lenx_formula=parent!depthgripprofile
+      D _leny_formula=parent!heightgripprofile
+      D _lenz_formula=parent!a3_thickness
+      D _name=usinagem_1e
+      D description=Usinagem avulsa
+      D itemcode=CM_USI_AV
+      D name=Usinagem
+      F correctiontool: Correção da fresa (LIST) &Centro=0&esquerda=1&direita=2&
+      F inst___iscollapsed:  () 
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      F lenx: Comprimento (TEXTBOX) 
+      F leny: Largura (TEXTBOX) 
+      F lenz: Profundidade (TEXTBOX) 
+      F scaletool: scaletool () 
+      F toolused: Nome do trabalho (LIST) &usi_line=usi_line&r_pass_cabo=r_pass_cabo&usi_arc=usi_arc&usi_circle=usi_circle&usi_point_to_point=usi_point_to_point&u
+      I _name=usinagem_1e
+      I _x_formula=parent!a3_thickness
+      I _y_formula=-parent!leny+parent!mygripprofile
+      I _z_formula=if(upmdisable=1,parent!lenz/2-leny/2,parent!lenz-leny+parent!mz1)
+      C transfer_milling#15 [transfer_milling] 18.5x50.0x18.5
+        D _inst__x_formula=0
+        D _inst__y_formula=0
+        D _inst__z_formula=0
+        D _keyalert_formula=if(dmilling>maxdepth+0.01,0,1)
+        D _lenx_formula=parent!lenx
+        D _leny_formula=parent!leny
+        D _lenz_formula=parent!lenz
+        D _name=transfer_milling
+        D description=Usinagem ponto a ponto
+        D keyalert=1
+        D name=Usinagem
+        F dmilling: Profundidade: (TEXTBOX) &
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F lenx: Comprimento: (TEXTBOX) 
+        F leny: Largura: (TEXTBOX) 
+        I _x_formula=0
+        I _y_formula=0
+        I _z_formula=0
+        I keyalert=1
+    C usinagem_ponto_a_ponto_n6e#2 [usinagem_6e] 18.5x41.5x18.5
+      D _inst__x_formula=parent!a3_thickness
+      D _inst__y_formula=-parent!leny+parent!mygripprofile
+      D _inst__z_formula=if(upmdisable=0,leny+0.001,parent!lenz/2+leny/2)
+      D _lenx_formula=parent!depthgripprofile
+      D _leny_formula=parent!heightgripprofile-parent!a3_thickness
+      D _lenz_formula=parent!a3_thickness
+      D _name=usinagem_6e
+      D description=Usinagem avulsa
+      D itemcode=CM_USI_AV
+      D name=Usinagem
+      F correctiontool: Correção da fresa (LIST) &Centro=0&esquerda=1&direita=2&
+      F inst___iscollapsed:  () 
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      F lenx: Comprimento (TEXTBOX) 
+      F leny: Largura (TEXTBOX) 
+      F lenz: Profundidade (TEXTBOX) 
+      F scaletool: scaletool () 
+      F toolused: Nome do trabalho (LIST) &usi_line=usi_line&r_pass_cabo=r_pass_cabo&usi_arc=usi_arc&usi_circle=usi_circle&usi_point_to_point=usi_point_to_point&u
+      I _name=usinagem_6e
+      I _x_formula=parent!a3_thickness
+      I _y_formula=-parent!leny+parent!mygripprofile
+      I _z_formula=if(upmdisable=0,leny+0.001,parent!lenz/2+leny/2)
+      C transfer_milling#3 [transfer_milling] 18.5x50.0x18.5
+        D _inst__x_formula=0
+        D _inst__y_formula=0
+        D _inst__z_formula=0
+        D _keyalert_formula=if(dmilling>maxdepth+0.01,0,1)
+        D _lenx_formula=parent!lenx
+        D _leny_formula=parent!leny
+        D _lenz_formula=parent!lenz
+        D _name=transfer_milling
+        D description=Usinagem ponto a ponto
+        D keyalert=1
+        D name=Usinagem
+        F dmilling: Profundidade: (TEXTBOX) &
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F lenx: Comprimento: (TEXTBOX) 
+        F leny: Largura: (TEXTBOX) 
+        I _x_formula=0
+        I _y_formula=0
+        I _z_formula=0
+        I keyalert=1
+    C usinagem_ponto_a_ponto_n4e#1 [usinagem_4e] 18.5x60.0x18.5
+      D _inst__x_formula=parent!a3_thickness
+      D _inst__y_formula=-parent!leny+parent!mygripprofile
+      D _inst__z_formula=if(upmdisable=0,parent!lenz+parent!mz4-if(parent!gripprofilenumber=8,3*(parent!usefulspace2+parent!heightgripprofile),3*parent!usefulspace),parent!lenz/2+leny/2)
+      D _lenx_formula=parent!depthgripprofile
+      D _leny_formula=parent!heightgripprofile
+      D _lenz_formula=parent!a3_thickness
+      D _name=usinagem_4e
+      D description=Usinagem avulsa
+      D itemcode=CM_USI_AV
+      D name=Usinagem
+      F correctiontool: Correção da fresa (LIST) &Centro=0&esquerda=1&direita=2&
+      F inst___iscollapsed:  () 
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      F lenx: Comprimento (TEXTBOX) 
+      F leny: Largura (TEXTBOX) 
+      F lenz: Profundidade (TEXTBOX) 
+      F scaletool: scaletool () 
+      F toolused: Nome do trabalho (LIST) &usi_line=usi_line&r_pass_cabo=r_pass_cabo&usi_arc=usi_arc&usi_circle=usi_circle&usi_point_to_point=usi_point_to_point&u
+      I _name=usinagem_4e
+      I _x_formula=parent!a3_thickness
+      I _y_formula=-parent!leny+parent!mygripprofile
+      I _z_formula=if(upmdisable=0,parent!lenz+parent!mz4-if(parent!gripprofilenumber=8,3*(parent!usefulspace2+parent!heightgripprofile),3*parent!usefulspace),parent!lenz/2+leny/2)
+      C transfer_milling#2 [transfer_milling] 18.5x50.0x18.5
+        D _inst__x_formula=0
+        D _inst__y_formula=0
+        D _inst__z_formula=0
+        D _keyalert_formula=if(dmilling>maxdepth+0.01,0,1)
+        D _lenx_formula=parent!lenx
+        D _leny_formula=parent!leny
+        D _lenz_formula=parent!lenz
+        D _name=transfer_milling
+        D description=Usinagem ponto a ponto
+        D keyalert=1
+        D name=Usinagem
+        F dmilling: Profundidade: (TEXTBOX) &
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F lenx: Comprimento: (TEXTBOX) 
+        F leny: Largura: (TEXTBOX) 
+        I _x_formula=0
+        I _y_formula=0
+        I _z_formula=0
+        I keyalert=1
+    C usinagem_ponto_a_ponto_n2e#2 [usinagem_2e] 18.5x60.0x18.5
+      D _inst__x_formula=parent!a3_thickness
+      D _inst__y_formula=-parent!leny+parent!mygripprofile
+      D _inst__z_formula=if(upmdisable=0,parent!lenz+parent!mz2-if(parent!gripprofilenumber=7,parent!usefulspace1+parent!heightgripprofile,if(parent!gripprofilenumber=8,parent!usefulspace2+parent!heightgripprofile,parent!usef
+      D _lenx_formula=parent!depthgripprofile
+      D _leny_formula=parent!heightgripprofile
+      D _lenz_formula=parent!a3_thickness
+      D _name=usinagem_2e
+      D description=Usinagem avulsa
+      D itemcode=CM_USI_AV
+      D name=Usinagem
+      F correctiontool: Correção da fresa (LIST) &Centro=0&esquerda=1&direita=2&
+      F inst___iscollapsed:  () 
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      F lenx: Comprimento (TEXTBOX) 
+      F leny: Largura (TEXTBOX) 
+      F lenz: Profundidade (TEXTBOX) 
+      F scaletool: scaletool () 
+      F toolused: Nome do trabalho (LIST) &usi_line=usi_line&r_pass_cabo=r_pass_cabo&usi_arc=usi_arc&usi_circle=usi_circle&usi_point_to_point=usi_point_to_point&u
+      I _name=usinagem_2e
+      I _x_formula=parent!a3_thickness
+      I _y_formula=-parent!leny+parent!mygripprofile
+      I _z_formula=if(upmdisable=0,parent!lenz+parent!mz2-if(parent!gripprofilenumber=7,parent!usefulspace1+parent!heightgripprofile,if(parent!gripprofilenumber=8,parent!usefulspace2+parent!heightgripprofile,parent!usef
+      C transfer_milling#16 [transfer_milling] 18.5x50.0x18.5
+        D _inst__x_formula=0
+        D _inst__y_formula=0
+        D _inst__z_formula=0
+        D _keyalert_formula=if(dmilling>maxdepth+0.01,0,1)
+        D _lenx_formula=parent!lenx
+        D _leny_formula=parent!leny
+        D _lenz_formula=parent!lenz
+        D _name=transfer_milling
+        D description=Usinagem ponto a ponto
+        D keyalert=1
+        D name=Usinagem
+        F dmilling: Profundidade: (TEXTBOX) &
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F lenx: Comprimento: (TEXTBOX) 
+        F leny: Largura: (TEXTBOX) 
+        I _x_formula=0
+        I _y_formula=0
+        I _z_formula=0
+        I keyalert=1
+    C usinagem_ponto_a_ponto_n3e#2 [usinagem_3e] 18.5x60.0x18.5
+      D _inst__x_formula=parent!a3_thickness
+      D _inst__y_formula=-parent!leny+parent!mygripprofile
+      D _inst__z_formula=if(upmdisable=0,parent!lenz+parent!mz3-if(parent!gripprofilenumber=7,parent!lenz/2-leny/2,if(parent!gripprofilenumber=8,2*(parent!usefulspace2+parent!heightgripprofile),2*parent!usefulspace)),parent!l
+      D _lenx_formula=parent!depthgripprofile
+      D _leny_formula=parent!heightgripprofile
+      D _lenz_formula=parent!a3_thickness
+      D _name=usinagem_3e
+      D description=Usinagem avulsa
+      D itemcode=CM_USI_AV
+      D name=Usinagem
+      F correctiontool: Correção da fresa (LIST) &Centro=0&esquerda=1&direita=2&
+      F inst___iscollapsed:  () 
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      F lenx: Comprimento (TEXTBOX) 
+      F leny: Largura (TEXTBOX) 
+      F lenz: Profundidade (TEXTBOX) 
+      F scaletool: scaletool () 
+      F toolused: Nome do trabalho (LIST) &usi_line=usi_line&r_pass_cabo=r_pass_cabo&usi_arc=usi_arc&usi_circle=usi_circle&usi_point_to_point=usi_point_to_point&u
+      I _name=usinagem_3e
+      I _x_formula=parent!a3_thickness
+      I _y_formula=-parent!leny+parent!mygripprofile
+      I _z_formula=if(upmdisable=0,parent!lenz+parent!mz3-if(parent!gripprofilenumber=7,parent!lenz/2-leny/2,if(parent!gripprofilenumber=8,2*(parent!usefulspace2+parent!heightgripprofile),2*parent!usefulspace)),parent!l
+      C transfer_milling#17 [transfer_milling] 18.5x50.0x18.5
+        D _inst__x_formula=0
+        D _inst__y_formula=0
+        D _inst__z_formula=0
+        D _keyalert_formula=if(dmilling>maxdepth+0.01,0,1)
+        D _lenx_formula=parent!lenx
+        D _leny_formula=parent!leny
+        D _lenz_formula=parent!lenz
+        D _name=transfer_milling
+        D description=Usinagem ponto a ponto
+        D keyalert=1
+        D name=Usinagem
+        F dmilling: Profundidade: (TEXTBOX) &
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F lenx: Comprimento: (TEXTBOX) 
+        F leny: Largura: (TEXTBOX) 
+        I _x_formula=0
+        I _y_formula=0
+        I _z_formula=0
+        I keyalert=1
+    C usinagem_ponto_a_ponto_n5e#2 [usinagem_5e] 18.5x60.0x18.5
+      D _inst__x_formula=parent!a3_thickness
+      D _inst__y_formula=-parent!leny+parent!mygripprofile
+      D _inst__z_formula=if(upmdisable=0,parent!lenz+parent!mz5-4*parent!usefulspace,parent!lenz/2+leny/2)
+      D _lenx_formula=parent!depthgripprofile
+      D _leny_formula=parent!heightgripprofile
+      D _lenz_formula=parent!a3_thickness
+      D _name=usinagem_5e
+      D description=Usinagem avulsa
+      D itemcode=CM_USI_AV
+      D name=Usinagem
+      F correctiontool: Correção da fresa (LIST) &Centro=0&esquerda=1&direita=2&
+      F inst___iscollapsed:  () 
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      F lenx: Comprimento (TEXTBOX) 
+      F leny: Largura (TEXTBOX) 
+      F lenz: Profundidade (TEXTBOX) 
+      F scaletool: scaletool () 
+      F toolused: Nome do trabalho (LIST) &usi_line=usi_line&r_pass_cabo=r_pass_cabo&usi_arc=usi_arc&usi_circle=usi_circle&usi_point_to_point=usi_point_to_point&u
+      I _name=usinagem_5e
+      I _x_formula=parent!a3_thickness
+      I _y_formula=-parent!leny+parent!mygripprofile
+      I _z_formula=if(upmdisable=0,parent!lenz+parent!mz5-4*parent!usefulspace,parent!lenz/2+leny/2)
+      C transfer_milling#5 [transfer_milling] 18.5x50.0x18.5
+        D _inst__x_formula=0
+        D _inst__y_formula=0
+        D _inst__z_formula=0
+        D _keyalert_formula=if(dmilling>maxdepth+0.01,0,1)
+        D _lenx_formula=parent!lenx
+        D _leny_formula=parent!leny
+        D _lenz_formula=parent!lenz
+        D _name=transfer_milling
+        D description=Usinagem ponto a ponto
+        D keyalert=1
+        D name=Usinagem
+        F dmilling: Profundidade: (TEXTBOX) &
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F lenx: Comprimento: (TEXTBOX) 
+        F leny: Largura: (TEXTBOX) 
+        I _x_formula=0
+        I _y_formula=0
+        I _z_formula=0
+        I keyalert=1
+  G Agrupar#118 [alert] 136.2x19.4x181.8
+    I _lenx_formula=if(parent!lenx>parent!lenz,parent!lenz*0.5,parent!lenx*0.5)
+    I _leny_formula=parent!leny
+    I _lenz_formula=Lenx
+    I _name=alert
+    I _x_formula=parent!lenx/2
+    I _y_formula=-parent!leny
+    I _z_formula=parent!lenz/2
+  C conjunto_fixação_dianteira#7 [conjunto_fixação_dianteiro] 900.0x38.5x60.0
+    D _inst__x_formula=px
+    D _inst__y_formula=py
+    D _inst__z_formula=pz
+    D _keyalert_formula=if(or(direcional!mz1choice<0,and(direcional!mz1choice<>0,gripprofilenumber=2)),0,1)
+    D _lenx_formula=parent!lenx+addx
+    D _leny_formula=depthgripprofile
+    D _lenz_formula=parent!lenz
+    D _name=conjunto_fixação_dianteiro
+    D atttransfer=thickness|upmfinish
+    D componentedit=1
+    D description=Conjunto de fixação dianteiro com régua
+    D keyalert=1
+    D modeloptions=régua dianteira
+    D name=Conjunto fixação
+    D parentrefresh=1
+    F addx: Adicionar ao comprimento (+ -): (TEXTBOX) &
+    F depthgripprofile: Espessura: (LIST) &15mm=1.55&18mm=1.85&25mm=2.55&
+    F gripprofilenumber: Quantidade de perfis pega (LIST) &1%20pega%20superior=1&1%20pega%20inferior=2&2%20pegas=3&3%20pegas=4&4%20pegas=5&5%20pegas=6&2%20pegas%20sup.%20e%201%20
+    F heightgripprofile: Altura da Régua: (TEXTBOX) &
+    F inst___iscollapsed:  () 
+    F inst__copies:  () 
+    F inst__copy:  () 
+    F inst__rotx:  () 
+    F inst__roty:  () 
+    F inst__rotz:  () 
+    F inst__x:  () 
+    F inst__y:  () 
+    F inst__z:  () 
+    F mx: Mover em X(+ -): (TEXTBOX) &
+    F my: Mover em Y(+ -): (TEXTBOX) &
+    I _x_formula=px
+    I _y_formula=py
+    I _z_formula=pz
+    I keyalert=1
+    I parentrefresh=1
+    C regua_deitada#11 [regua_deitada] 900.0x60.0x18.5
+      D _inst__x_formula=0
+      D _inst__y_formula=-a3_thickness
+      D _inst__z_formula=if(parent!gripprofilenumber=2,0,parent!lenz-leny)+copy*(choose(parent!gripprofilenumber,0,0,-usefulspace,-usefulspace,-usefulspace,-usefulspace,-(usefulspace1+parent!heightgripprofile),-(usefulspace2+
+      D _lenx_formula=if(a1_length>max_length,max_length,if(a1_length<min_length,min_length,a1_length))
+      D _leny_formula=if(a2_width>max_width,max_width,if(a2_width<min_width,min_width,a2_width))
+      D _lenz_formula=a3_thickness
+      D _name=regua_deitada
+      D _x_formula=0
+      D _y_formula=-a3_thickness
+      D _z_formula=if(parent!gripprofilenumber=2,0,parent!lenz-leny)+copy*(choose(parent!gripprofilenumber,0,0,-usefulspace,-usefulspace,-usefulspace,-usefulspace,-(usefulspace1+parent!heightgripprofile),-(usefulspace2+
+      D description=Regua Perfil Pega
+      D itemcode=CM_REG
+      D materialoptions=peças
+      D name=Regua Deitada
+      D type=peace
+      F inst___iscollapsed:  () 
+      F inst__copies:  () 
+      F inst__copy:  () 
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      F zobservation: Observação: (TEXTBOX) &
+      I _x_formula=0
+      I _y_formula=-a3_thickness
+      I _z_formula=if(parent!gripprofilenumber=2,0,parent!lenz-leny)+copy*(choose(parent!gripprofilenumber,0,0,-usefulspace,-usefulspace,-usefulspace,-usefulspace,-(usefulspace1+parent!heightgripprofile),-(usefulspace2+
+      I description=Regua Perfil Pega
+      I materialoptions=peças
+      I type=peace
+    C direcional#3 [direcional] 20.0x137.4x0.0
+      D _inst__x_formula=parent!thicknessbase
+      D _inst__y_formula=lenx
+      D _inst__z_formula=parent!lenz-leny
+      D _lenx_formula=2
+      D _leny_formula=2
+      D _lenz_formula=0
+      D _name=direcional
+      D componentedit=1
+      D parentrefresh=3
+      F inst___iscollapsed:  () 
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      F mz1choice: Mover na altura perfil pega 1(+ -): (TEXTBOX) &
+      F mz2: Mover na altura perfil pega 2(+ -): (TEXTBOX) &
+      F mz3: Mover na altura perfil pega 3(+ -): (TEXTBOX) &
+      F mz4: Mover na altura perfil pega 4(+ -): (TEXTBOX) &
+      F mz5: Mover na altura perfil pega 5(+ -): (TEXTBOX) &
+      I _name=direcional
+      I _x_formula=parent!thicknessbase
+      I _y_formula=lenx
+      I _z_formula=parent!lenz-leny
+      I componentedit=1
+      I parentrefresh=3
+      G Agrupar#762 [] 58.7x60.0x0.0
+      G Agrupar#760 [] 58.7x60.0x0.0
+      G Agrupar#763 [] 58.7x60.0x0.0
+      G Agrupar#761 [] 58.7x60.0x0.0
+    G Agrupar#118 [alert] 136.2x19.4x181.8
+      I _lenx_formula=parent!heightgripprofile
+      I _leny_formula=parent!leny
+      I _lenz_formula=Lenx
+      I _name=alert
+      I _x_formula=parent!lenx/2
+      I _y_formula=-parent!leny
+      I _z_formula=if(parent!gripprofilenumber=2,lenz/2,parent!lenz-lenz/2+parent!mz1)
+  C fundo_horizontal_rasgo#6 [fundo] 886.0x7.0x706.5
+    D _inst__x_formula=px
+    D _inst__y_formula=py
+    D _inst__z_formula=pz
+    D _keyalert_formula=if(or(a1_height>max_height,a2_width>max_width,and(thickness<0.65,material<>"BRANCO_TX")),0,1)
+    D _lenx_formula=if(a2_width>max_width,max_width,if(a2_width<min_width,min_width,a2_width))
+    D _leny_formula=a3_thickness
+    D _lenz_formula=if(a1_height>max_height,max_height,if(a1_height<min_height,min_height,a1_height))
+    D _name=fundo
+    D atttransfer=addx|addz|edge_front|edge_left|edge_rear|edge_right|mx|my|mz|tearbottom|tearleft|tearright|tearupper|upmfinish|thickness|reduceforcut|py|parentrefresh|atttransfer|a0positionbackground|a1_height|a2_wid
+    D description=Fundo Horizontal com rasgo
+    D itemcode=CM_FUN_HOR
+    D keyalert=1
+    D materialoptions=peças
+    D modeloptions=fundos
+    D name=Fundo Horizontal
+    D parentrefresh=2
+    D type=peace
+    F a0positionbackground: Posição do fundo (TEXTBOX) 
+    F addx: Adicionar ao comprimento (+ -): (TEXTBOX) &
+    F addz: Adicionar a altura (+ -): (TEXTBOX) &
+    F inst___iscollapsed:  () 
+    F inst__rotx:  () 
+    F inst__roty:  () 
+    F inst__rotz:  () 
+    F inst__x:  () 
+    F inst__y:  () 
+    F inst__z:  () 
+    F mx: Mover em X(+ -): (TEXTBOX) &
+    F my: Mover em Y(+ -): (TEXTBOX) &
+    F mz: Mover em Z(+ -): (TEXTBOX) &
+    F reduceforcut: Redução para corte(para cada lado): (TEXTBOX) &
+    F tearbottom: Prof. rasgo inferior: (TEXTBOX) &
+    F tearleft: Prof. rasgo esquerdo: (TEXTBOX) &
+    F tearright: Prof. rasgo direito: (TEXTBOX) &
+    F tearupper: Prof. rasgo superior: (TEXTBOX) &
+    F thickness: Espessura: (LIST) &6mm=0.6&8mm=0.8&10mm=1.0&16mm=1.6&17mm=1.7&19mm=1.9&19,5mm=1.95&20mm=2.0&21mm=2.1&30mm=3.0&
+    F zobservation: Observação: (TEXTBOX) &
+    I _name=fundo
+    I _x_formula=px
+    I _y_formula=py
+    I _z_formula=pz
+    I atttransfer=addx|addz|edge_front|edge_left|edge_rear|edge_right|mx|my|mz|tearbottom|tearleft|tearright|tearupper|upmfinish|thickness|reduceforcut|py|parentrefresh|atttransfer|a0positionbackground|a1_height|a2_wid
+    I keyalert=1
+    I parentrefresh=2
+    G Agrupar#35 [alert] 142.7x18.5x181.8
+      I _lenx_formula=if(parent!lenx>parent!lenz,parent!lenz*0.5,parent!lenx*0.5)
+      I _leny_formula=parent!thickness
+      I _lenz_formula=LenX
+      I _name=alert
+      I _x_formula=parent!lenx/2
+      I _y_formula=-parent!thickness
+      I _z_formula=parent!lenz/2
+    C corte_de_serra#5 [transfer_saw] 300.0x14.0x15.5
+      D _inst__x_formula=parent!lenx+parent!transpassteartotal/2
+      D _inst__y_formula=-parent!thickness
+      D _inst__z_formula=parent!lenz-if(parent!tearupper<0,0,parent!tearupper)
+      D _lenx_formula=parent!lenx+parent!transpassteartotal
+      D _leny_formula=parent!thickness+parent!clearance
+      D _lenz_formula=if(parent!tearupper<0,0,parent!tearupper)
+      D _name=transfer_saw
+      D description=Rebaixo para fundo
+      D name=Corte de serra - rebaixo
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      I _x_formula=parent!lenx+parent!transpassteartotal/2
+      I _y_formula=-parent!thickness
+      I _z_formula=parent!lenz-if(parent!tearupper<0,0,parent!tearupper)
+      I description=Rebaixo para fundo
+      G Grupo175#13 [] 300.0x14.0x0.0
+    C corte_de_serra#2 [transfer_saw] 300.0x14.0x15.5
+      D _inst__x_formula=if(parent!tearleft<0,0,parent!tearleft)
+      D _inst__y_formula=-parent!thickness
+      D _inst__z_formula=parent!lenz+parent!transpassteartotal/2
+      D _lenx_formula=parent!lenz+parent!transpassteartotal
+      D _leny_formula=parent!thickness+parent!clearance
+      D _lenz_formula=if(parent!tearleft<0,0,parent!tearleft)
+      D _name=transfer_saw
+      D description=Rebaixo para fundo
+      D name=Corte de serra - rebaixo
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      I _x_formula=if(parent!tearleft<0,0,parent!tearleft)
+      I _y_formula=-parent!thickness
+      I _z_formula=parent!lenz+parent!transpassteartotal/2
+      I description=Rebaixo para fundo
+      G Grupo179#1 [guia_rebaixo] 300.0x14.0x0.0
+        I _name=guia_rebaixo
+    C corte_de_serra#4 [transfer_saw] 300.0x14.0x15.5
+      D _inst__x_formula=parent!lenx-if(parent!tearright<0,0,parent!tearright)
+      D _inst__y_formula=-parent!thickness
+      D _inst__z_formula=-parent!transpassteartotal/2
+      D _lenx_formula=parent!lenz+parent!transpassteartotal
+      D _leny_formula=parent!thickness+parent!clearance
+      D _lenz_formula=if(parent!tearright<0,0,parent!tearright)
+      D _name=transfer_saw
+      D description=Rebaixo para fundo
+      D name=Corte de serra - rebaixo
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      I _x_formula=parent!lenx-if(parent!tearright<0,0,parent!tearright)
+      I _y_formula=-parent!thickness
+      I _z_formula=-parent!transpassteartotal/2
+      I description=Rebaixo para fundo
+      G Grupo179#2 [] 300.0x14.0x0.0
+    C corte_de_serra#3 [transfer_saw] 300.0x14.0x15.5
+      D _inst__x_formula=-parent!transpassteartotal/2
+      D _inst__y_formula=-parent!thickness
+      D _inst__z_formula=if(parent!tearbottom<0,0,parent!tearbottom)
+      D _lenx_formula=parent!lenx+parent!transpassteartotal
+      D _leny_formula=parent!thickness+parent!clearance
+      D _lenz_formula=if(parent!tearbottom<0,0,parent!tearbottom)
+      D _name=transfer_saw
+      D description=Rebaixo para fundo
+      D name=Corte de serra - rebaixo
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      I _x_formula=-parent!transpassteartotal/2
+      I _y_formula=-parent!thickness
+      I _z_formula=if(parent!tearbottom<0,0,parent!tearbottom)
+      I description=Rebaixo para fundo
+      G Grupo179#3 [] 300.0x14.0x0.0
+  C conjunto_fixação_traseira#6 [conjunto_fixação_traseira] 886.0x20.5x80.0
+    D _inst__x_formula=px
+    D _inst__y_formula=py
+    D _inst__z_formula=pz
+    D _lenx_formula=parent!lenx-2*parent!thickness
+    D _leny_formula=thickness
+    D _lenz_formula=heightrule
+    D _name=conjunto_fixação_traseira
+    D atttransfer=atttransfer|heightrule
+    D componentedit=1
+    D description=Conjunto de fixação traseiro com régua
+    D name=Conjunto fixação
+    F heightrule: Altura das Réguas (TEXTBOX) &
+    F inst___iscollapsed:  () 
+    F inst__rotx:  () 
+    F inst__roty:  () 
+    F inst__rotz:  () 
+    F inst__x:  () 
+    F inst__y:  () 
+    F inst__z:  () 
+    I _x_formula=px
+    I _y_formula=py
+    I _z_formula=pz
+    C regua_deitada#12 [regua_deitada] 886.0x80.0x20.5
+      D _inst__x_formula=0+mx
+      D _inst__y_formula=-a3_thickness+my
+      D _inst__z_formula=parent!lenz-LenY+mz
+      D _lenx_formula=if(a1_length>max_length,max_length,if(a1_length<min_length,min_length,a1_length))
+      D _leny_formula=if(a2_width>max_width,max_width,if(a2_width<min_width,min_width,a2_width))
+      D _lenz_formula=a3_thickness
+      D _name=regua_deitada
+      D description=Regua
+      D itemcode=CM_REG
+      D materialoptions=peças
+      D name=Regua Deitada
+      D type=peace
+      F addx: Adicionar ao comprimento (+ -): (TEXTBOX) &
+      F addz: Adicionar a altura (+ -): (TEXTBOX) &
+      F inst___iscollapsed:  () 
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      F mx: Mover em X(+ -): (TEXTBOX) &
+      F my: Mover em Y(+ -): (TEXTBOX) &
+      F mz: Mover em Z(+ -): (TEXTBOX) &
+      F zobservation: Observação: (TEXTBOX) &
+      I _x_formula=0+mx
+      I _y_formula=-a3_thickness+my
+      I _z_formula=parent!lenz-LenY+mz
+      I materialoptions=peças
+      I type=peace
+      C kit_minifix15_twister#52 [kit_minifix] 80.0x44.0x20.5
+        D _inst__x_formula=px
+        D _inst__y_formula=py
+        D _inst__z_formula=pz
+        D _itemcode_formula="CM_KIT_MIN15TW_"&if(thicknesspeace=1.55,"16_","19_")&upmfinish
+        D _lenx_formula=choose(quadrant,parent!lenx,parent!lenx,parent!leny,parent!leny)+addx
+        D _leny_formula=3.25
+        D _lenz_formula=thicknesspeace+0.2
+        D _name=kit_minifix
+        D atttransfer=mx|my|mz|quadrant|inverte|addx|atttransfer|quantity|margin|_margin_formula
+        D componentedit=1
+        D description=Kit de ferragens Minifix Pino Twister
+        D itemcode=CM_KIT_MIN15TW_19_PLAST_BRANCO
+        D materialoptions=tampa minifix
+        D modeloptions=fixação régua deitada
+        D name=kit ferragem
+        D onclick=set("turn",1,0)
+        F addx: Adicionar Comprimento (+ -): (TEXTBOX) &
+        F counterpeace: Espessura peça contra: (LIST) &6mm=0.6&8mm=0.8&10mm=1.0&16mm=1.6&17mm=1.7&19mm=1.9&19,5mm=1.95&20mm=2.0&21mm=2.1&30mm=3.0&
+        F disablecover: Desativar Tampa: (LIST) &não=0&sim=1&
+        F inst___iscollapsed:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F inverte: Inverter lado: (LIST) &n%E3o=0&sim=1&
+        F margin: Margem: (TEXTBOX) &
+        F mpeg: Margem cavilha: (TEXTBOX) &
+        F mx: Mover em X(+ -): (TEXTBOX) &
+        F my: Mover em Y(+ -): (TEXTBOX) &
+        F quadrant: Quadrante: (LIST) &Frontal=1&Traseiro=2&Esquerdo=3&Direito=4&
+        F quantity: Quantidade: (TEXTBOX) &
+        F quantitypeg: Quantidade de cavilhas: (TEXTBOX) 
+        F rotx:  () 
+        F roty:  () 
+        F rotz:  () 
+        F scaletool: ScaleTool () 
+        F x:  () 
+        F y:  () 
+        F z:  () 
+        I _x_formula=px
+        I _y_formula=py
+        I _z_formula=pz
+        I atttransfer=mx|my|mz|quadrant|inverte|addx|atttransfer|quantity|margin|_margin_formula
+        I description=Kit de ferragens Minifix Pino Twister
+        I itemcode=CM_KIT_MIN15TW_19_PLAST_BRANCO
+      C kit_minifix15_twister#51 [kit_minifix] 80.0x44.0x20.5
+        D _inst__x_formula=px
+        D _inst__y_formula=py
+        D _inst__z_formula=pz
+        D _itemcode_formula="CM_KIT_MIN15TW_"&if(thicknesspeace=1.55,"16_","19_")&upmfinish
+        D _lenx_formula=choose(quadrant,parent!lenx,parent!lenx,parent!leny,parent!leny)+addx
+        D _leny_formula=3.25
+        D _lenz_formula=thicknesspeace+0.2
+        D _name=kit_minifix
+        D atttransfer=mx|my|mz|quadrant|inverte|addx|atttransfer|quantity|margin|_margin_formula
+        D componentedit=1
+        D description=Kit de ferragens Minifix Pino Twister
+        D itemcode=CM_KIT_MIN15TW_19_PLAST_BRANCO
+        D materialoptions=tampa minifix
+        D modeloptions=fixação régua deitada
+        D name=kit ferragem
+        D onclick=set("turn",1,0)
+        F addx: Adicionar Comprimento (+ -): (TEXTBOX) &
+        F counterpeace: Espessura peça contra: (LIST) &6mm=0.6&8mm=0.8&10mm=1.0&16mm=1.6&17mm=1.7&19mm=1.9&19,5mm=1.95&20mm=2.0&21mm=2.1&30mm=3.0&
+        F disablecover: Desativar Tampa: (LIST) &não=0&sim=1&
+        F inst___iscollapsed:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F inverte: Inverter lado: (LIST) &n%E3o=0&sim=1&
+        F margin: Margem: (TEXTBOX) &
+        F mpeg: Margem cavilha: (TEXTBOX) &
+        F mx: Mover em X(+ -): (TEXTBOX) &
+        F my: Mover em Y(+ -): (TEXTBOX) &
+        F quadrant: Quadrante: (LIST) &Frontal=1&Traseiro=2&Esquerdo=3&Direito=4&
+        F quantity: Quantidade: (TEXTBOX) &
+        F quantitypeg: Quantidade de cavilhas: (TEXTBOX) 
+        F rotx:  () 
+        F roty:  () 
+        F rotz:  () 
+        F scaletool: ScaleTool () 
+        F x:  () 
+        F y:  () 
+        F z:  () 
+        I _x_formula=px
+        I _y_formula=py
+        I _z_formula=pz
+        I atttransfer=mx|my|mz|quadrant|inverte|addx|atttransfer|quantity|margin|_margin_formula
+        I description=Kit de ferragens Minifix Pino Twister
+        I itemcode=CM_KIT_MIN15TW_19_PLAST_BRANCO
+  C base#6 [base] 900.0x550.0x20.5
+    D _inst__x_formula=0+mx+if(parent!typeassembly=1,a3_thickness)
+    D _inst__y_formula=+my
+    D _inst__z_formula=0+mz
+    D _lenx_formula=if(a1_length>max_length,max_length,if(a1_length<min_length,min_length,a1_length))
+    D _leny_formula=if(a2_width>max_width,max_width,if(a2_width<min_width,min_width,a2_width))
+    D _lenz_formula=a3_thickness
+    D _name=base
+    D description=Base MDF
+    D itemcode=CM_BAS
+    D materialoptions=peças
+    D name=Base
+    D type=peace
+    F addx: Adicionar ao comprimento (+ -): (TEXTBOX) &
+    F addy: Adicionar a profundidade (+ -): (TEXTBOX) &
+    F inst___iscollapsed:  () 
+    F inst__rotx:  () 
+    F inst__roty:  () 
+    F inst__rotz:  () 
+    F inst__x:  () 
+    F inst__y:  () 
+    F inst__z:  () 
+    F mx: Mover em X(+ -): (TEXTBOX) &
+    F my: Mover em Y(+ -): (TEXTBOX) &
+    F mz: Mover em Z(+ -): (TEXTBOX) &
+    F zobservation: Observação: (TEXTBOX) &
+    I _x_formula=0+mx+if(parent!typeassembly=1,a3_thickness)
+    I _y_formula=+my
+    I _z_formula=0+mz
+    I materialoptions=peças
+    I type=peace
+    C kit_minifix15_twister#57 [kit_minfix] 550.0x44.0x20.5
+      D _inst__x_formula=px
+      D _inst__y_formula=py
+      D _inst__z_formula=pz
+      D _itemcode_formula="CM_KIT_MIN15TW_"&if(thicknesspeace=1.55,"16_","19_")&upmfinish
+      D _lenx_formula=choose(quadrant,parent!lenx,parent!lenx,parent!leny,parent!leny)+addx
+      D _leny_formula=3.25
+      D _lenz_formula=thicknesspeace+0.2
+      D _name=kit_minfix
+      D atttransfer=addz|quadrant|mx|my|mz|inverte|margin|quantity|atttransfer|upmdisable|hidden|_mx_formula|_upmdisable_formula|_hidden_formula|_margin_formula|_mx_formula
+      D componentedit=1
+      D description=Kit de ferragens Minifix Pino Twister
+      D itemcode=CM_KIT_MIN15TW_19_PLAST_BRANCO
+      D materialoptions=tampa minifix
+      D modeloptions=fixação base
+      D name=kit ferragem
+      F addx: Adicionar Comprimento (+ -): (TEXTBOX) &
+      F counterpeace: Espessura peça contra: (LIST) &6mm=0.6&8mm=0.8&10mm=1.0&16mm=1.6&17mm=1.7&19mm=1.9&19,5mm=1.95&20mm=2.0&21mm=2.1&30mm=3.0&
+      F disablecover: Desativar Tampa: (LIST) &não=0&sim=1&
+      F inst___iscollapsed:  () 
+      F inst__copies:  () 
+      F inst__copy:  () 
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      F inverte: Inverter lado: (LIST) &n%E3o=1&sim=0&
+      F margin: Margem: (TEXTBOX) &
+      F mpeg: Margem cavilha: (TEXTBOX) &
+      F mx: Mover em X(+ -): (TEXTBOX) &
+      F my: Mover em Y(+ -): (TEXTBOX) &
+      F quadrant: Quadrante: (LIST) &Frontal=1&Traseiro=2&Esquerdo=3&Direito=4&
+      F quantity: Quantidade: (TEXTBOX) &
+      F scaletool: ScaleTool () 
+      I _x_formula=px
+      I _y_formula=py
+      I _z_formula=pz
+      I atttransfer=addz|quadrant|mx|my|mz|inverte|margin|quantity|atttransfer|upmdisable|hidden|_mx_formula|_upmdisable_formula|_hidden_formula|_margin_formula|_mx_formula
+      I description=Kit de ferragens Minifix Pino Twister
+      I itemcode=CM_KIT_MIN15TW_19_PLAST_BRANCO
+      G Agrupar#108 [guia] 500.0x0.0x18.5
+        I _lenx_formula=parent!lenx
+        I _leny_formula=0
+        I _lenz_formula=parent!thicknesspeace
+        I _name=guia
+        I _x_formula=0
+        I _y_formula=-parent!leny
+        I _z_formula=-(parent!z)
+      C mini_fix#87 [mini_fix] 17.0x44.0x15.5
+        D _inst__x_formula=parent!margin+copy*(parent!spaceutil/copies)
+        D _inst__y_formula=-(parent!leny-2.4)
+        D _inst__z_formula=if(roty=180,lenz+0.2,parent!thicknesspeace-lenz)
+        D _lenx_formula=1.5
+        D _leny_formula=1.5
+        D _lenz_formula=1.2
+        D _name=mini_fix
+        D materialoptions=tampa minifix
+        F inst___iscollapsed:  () 
+        F inst__copies:  () 
+        F inst__copy:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        I _name=mini_fix
+        I _x_formula=parent!margin+copy*(parent!spaceutil/copies)
+        I _y_formula=-(parent!leny-2.4)
+        I _z_formula=if(roty=180,lenz+0.2,parent!thicknesspeace-lenz)
+        I materialoptions=tampa minifix
+      C mini_fix#90 [mini_fix] 17.0x44.0x15.5
+        D _inst__x_formula=parent!margin+copy*(parent!spaceutil/copies)
+        D _inst__y_formula=-(parent!leny-2.4)
+        D _inst__z_formula=if(roty=180,lenz+0.2,parent!thicknesspeace-lenz)
+        D _lenx_formula=1.5
+        D _leny_formula=1.5
+        D _lenz_formula=1.2
+        D _name=mini_fix
+        D _x_formula=parent!margin+copy*(parent!spaceutil/copies)
+        D _y_formula=-(parent!leny-2.4)
+        D _z_formula=if(roty=180,lenz+0.2,parent!thicknesspeace-lenz)
+        D materialoptions=tampa minifix
+        F inst___iscollapsed:  () 
+        F inst__copies:  () 
+        F inst__copy:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        I _name=mini_fix
+        I _x_formula=parent!margin+copy*(parent!spaceutil/copies)
+        I _y_formula=-(parent!leny-2.4)
+        I _z_formula=if(roty=180,lenz+0.2,parent!thicknesspeace-lenz)
+        I materialoptions=tampa minifix
+      C cavilha#116 [cavilha] 8.0x28.0x8.0
+        D _inst__x_formula=if(upmdisable=1,lenx/2,parent!mpeg+copy*(parent!spaceutilpeg))
+        D _inst__y_formula=-parent!leny
+        D _inst__z_formula=thicknesspeace/2-parent!pz
+        D _lenx_formula=0.8
+        D _leny_formula=2.8
+        D _lenz_formula=0.8
+        D _name=cavilha
+        D description=Cavilhas de fixação 8 x 28
+        D name=Cavilhas
+        F inst___iscollapsed:  () 
+        F inst__copies:  () 
+        F inst__copy:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F thicknesspeace: Espessura da peça (LIST) &15mm=1.55&18mm=1.85&25mm=2.55&
+        I _name=cavilha
+        I _x_formula=if(upmdisable=1,lenx/2,parent!mpeg+copy*(parent!spaceutilpeg))
+        I _y_formula=-parent!leny
+        I _z_formula=thicknesspeace/2-parent!pz
+        I description=Cavilhas de fixação 8 x 28
+        I name=Cavilhas
+      C cavilha#113 [cavilha] 8.0x28.0x8.0
+        D _inst__x_formula=if(upmdisable=1,lenx/2,parent!mpeg+copy*(parent!spaceutilpeg))
+        D _inst__y_formula=-parent!leny
+        D _inst__z_formula=thicknesspeace/2-parent!pz
+        D _lenx_formula=0.8
+        D _leny_formula=2.8
+        D _lenz_formula=0.8
+        D _name=cavilha
+        D _x_formula=if(upmdisable=1,lenx/2,parent!mpeg+copy*(parent!spaceutilpeg))
+        D _y_formula=-parent!leny
+        D _z_formula=thicknesspeace/2-parent!pz
+        D description=Cavilhas de fixação 8 x 28
+        D name=Cavilhas
+        F inst___iscollapsed:  () 
+        F inst__copies:  () 
+        F inst__copy:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F thicknesspeace: Espessura da peça (LIST) &15mm=1.55&18mm=1.85&25mm=2.55&
+        I _name=cavilha
+        I _x_formula=if(upmdisable=1,lenx/2,parent!mpeg+copy*(parent!spaceutilpeg))
+        I _y_formula=-parent!leny
+        I _z_formula=thicknesspeace/2-parent!pz
+        I description=Cavilhas de fixação 8 x 28
+        I name=Cavilhas
+    C kit_minifix15_twister#56 [kit_minfix] 550.0x44.0x20.5
+      D _inst__x_formula=px
+      D _inst__y_formula=py
+      D _inst__z_formula=pz
+      D _itemcode_formula="CM_KIT_MIN15TW_"&if(thicknesspeace=1.55,"16_","19_")&upmfinish
+      D _lenx_formula=choose(quadrant,parent!lenx,parent!lenx,parent!leny,parent!leny)+addx
+      D _leny_formula=3.25
+      D _lenz_formula=thicknesspeace+0.2
+      D _name=kit_minfix
+      D atttransfer=addz|quadrant|mx|my|mz|inverte|margin|quantity|atttransfer|upmdisable|hidden|_mx_formula|_upmdisable_formula|_hidden_formula|_margin_formula|_mx_formula
+      D componentedit=1
+      D description=Kit de ferragens Minifix Pino Twister
+      D itemcode=CM_KIT_MIN15TW_19_PLAST_BRANCO
+      D materialoptions=tampa minifix
+      D modeloptions=fixação base
+      D name=kit ferragem
+      F addx: Adicionar Comprimento (+ -): (TEXTBOX) &
+      F counterpeace: Espessura peça contra: (LIST) &6mm=0.6&8mm=0.8&10mm=1.0&16mm=1.6&17mm=1.7&19mm=1.9&19,5mm=1.95&20mm=2.0&21mm=2.1&30mm=3.0&
+      F disablecover: Desativar Tampa: (LIST) &não=0&sim=1&
+      F inst___iscollapsed:  () 
+      F inst__copies:  () 
+      F inst__copy:  () 
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      F inverte: Inverter lado: (LIST) &n%E3o=1&sim=0&
+      F margin: Margem: (TEXTBOX) &
+      F mpeg: Margem cavilha: (TEXTBOX) &
+      F mx: Mover em X(+ -): (TEXTBOX) &
+      F my: Mover em Y(+ -): (TEXTBOX) &
+      F quadrant: Quadrante: (LIST) &Frontal=1&Traseiro=2&Esquerdo=3&Direito=4&
+      F quantity: Quantidade: (TEXTBOX) &
+      F scaletool: ScaleTool () 
+      I _x_formula=px
+      I _y_formula=py
+      I _z_formula=pz
+      I atttransfer=addz|quadrant|mx|my|mz|inverte|margin|quantity|atttransfer|upmdisable|hidden|_mx_formula|_upmdisable_formula|_hidden_formula|_margin_formula|_mx_formula
+      I description=Kit de ferragens Minifix Pino Twister
+      I itemcode=CM_KIT_MIN15TW_19_PLAST_BRANCO
+      G Agrupar#108 [guia] 500.0x0.0x18.5
+        I _lenx_formula=parent!lenx
+        I _leny_formula=0
+        I _lenz_formula=parent!thicknesspeace
+        I _name=guia
+        I _x_formula=0
+        I _y_formula=-parent!leny
+        I _z_formula=-(parent!z)
+      C mini_fix#91 [mini_fix] 17.0x44.0x15.5
+        D _inst__x_formula=parent!margin+copy*(parent!spaceutil/copies)
+        D _inst__y_formula=-(parent!leny-2.4)
+        D _inst__z_formula=if(roty=180,lenz+0.2,parent!thicknesspeace-lenz)
+        D _lenx_formula=1.5
+        D _leny_formula=1.5
+        D _lenz_formula=1.2
+        D _name=mini_fix
+        D materialoptions=tampa minifix
+        F inst___iscollapsed:  () 
+        F inst__copies:  () 
+        F inst__copy:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        I _name=mini_fix
+        I _x_formula=parent!margin+copy*(parent!spaceutil/copies)
+        I _y_formula=-(parent!leny-2.4)
+        I _z_formula=if(roty=180,lenz+0.2,parent!thicknesspeace-lenz)
+        I materialoptions=tampa minifix
+      C mini_fix#89 [mini_fix] 17.0x44.0x15.5
+        D _inst__x_formula=parent!margin+copy*(parent!spaceutil/copies)
+        D _inst__y_formula=-(parent!leny-2.4)
+        D _inst__z_formula=if(roty=180,lenz+0.2,parent!thicknesspeace-lenz)
+        D _lenx_formula=1.5
+        D _leny_formula=1.5
+        D _lenz_formula=1.2
+        D _name=mini_fix
+        D _x_formula=parent!margin+copy*(parent!spaceutil/copies)
+        D _y_formula=-(parent!leny-2.4)
+        D _z_formula=if(roty=180,lenz+0.2,parent!thicknesspeace-lenz)
+        D materialoptions=tampa minifix
+        F inst___iscollapsed:  () 
+        F inst__copies:  () 
+        F inst__copy:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        I _name=mini_fix
+        I _x_formula=parent!margin+copy*(parent!spaceutil/copies)
+        I _y_formula=-(parent!leny-2.4)
+        I _z_formula=if(roty=180,lenz+0.2,parent!thicknesspeace-lenz)
+        I materialoptions=tampa minifix
+      C cavilha#118 [cavilha] 8.0x28.0x8.0
+        D _inst__x_formula=if(upmdisable=1,lenx/2,parent!mpeg+copy*(parent!spaceutilpeg))
+        D _inst__y_formula=-parent!leny
+        D _inst__z_formula=thicknesspeace/2-parent!pz
+        D _lenx_formula=0.8
+        D _leny_formula=2.8
+        D _lenz_formula=0.8
+        D _name=cavilha
+        D description=Cavilhas de fixação 8 x 28
+        D name=Cavilhas
+        F inst___iscollapsed:  () 
+        F inst__copies:  () 
+        F inst__copy:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F thicknesspeace: Espessura da peça (LIST) &15mm=1.55&18mm=1.85&25mm=2.55&
+        I _name=cavilha
+        I _x_formula=if(upmdisable=1,lenx/2,parent!mpeg+copy*(parent!spaceutilpeg))
+        I _y_formula=-parent!leny
+        I _z_formula=thicknesspeace/2-parent!pz
+        I description=Cavilhas de fixação 8 x 28
+        I name=Cavilhas
+      C cavilha#114 [cavilha] 8.0x28.0x8.0
+        D _inst__x_formula=if(upmdisable=1,lenx/2,parent!mpeg+copy*(parent!spaceutilpeg))
+        D _inst__y_formula=-parent!leny
+        D _inst__z_formula=thicknesspeace/2-parent!pz
+        D _lenx_formula=0.8
+        D _leny_formula=2.8
+        D _lenz_formula=0.8
+        D _name=cavilha
+        D _x_formula=if(upmdisable=1,lenx/2,parent!mpeg+copy*(parent!spaceutilpeg))
+        D _y_formula=-parent!leny
+        D _z_formula=thicknesspeace/2-parent!pz
+        D description=Cavilhas de fixação 8 x 28
+        D name=Cavilhas
+        F inst___iscollapsed:  () 
+        F inst__copies:  () 
+        F inst__copy:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F thicknesspeace: Espessura da peça (LIST) &15mm=1.55&18mm=1.85&25mm=2.55&
+        I _name=cavilha
+        I _x_formula=if(upmdisable=1,lenx/2,parent!mpeg+copy*(parent!spaceutilpeg))
+        I _y_formula=-parent!leny
+        I _z_formula=thicknesspeace/2-parent!pz
+        I description=Cavilhas de fixação 8 x 28
+        I name=Cavilhas
+
+==================== balcao_com_tampo (6e1494bd66a6566fa2a3bd75bca55700__balcao_com_tampo.skp)
+C balcao_com_tampo#2 [balcao] 1010.5x657.0x905.5
+  D _keyalert_formula=if(or(lenx>max_width,leny>max_depth,lenz>max_height),0,1)
+  D _lenx_formula=97.95
+  D _leny_formula=62.400000000000006
+  D _lenz_formula=80.0
+  D _name=balcao
+  D componentedit=1
+  D description=Balcão com tampo
+  D itemcode=CM_BAL_TAM
+  D keyalert=1
+  D materialoptions=corpos
+  D name=Balcão
+  F 1elevation: Elevação: (TEXTBOX) 
+  F _iscollapsed:  () 
+  F activehiddenpeace: Ferramenta desabilitar peça: (LIST) &Ativa=1&Desabilitada=0&
+  F lenx: Comprimento: (TEXTBOX) &
+  F leny: Profundidade: (TEXTBOX) &
+  F lenz: Altura: (TEXTBOX) &
+  F positionbackground: Afastamento Traseiroem relação ao fundo: (TEXTBOX) &
+  F rotx:  () 
+  F roty:  () 
+  F rotz:  () 
+  F scaletool: ScaleTool () 
+  F thickness: Espessura: (LIST) &15mm=1.55&18mm=1.85&25mm=2.55&
+  F typeassembly: Tipo de montagem: (LIST) &Base%20passante=0&Lateral%20passante=1&
+  F x:  () 
+  F y:  () 
+  F z:  () 
+  C caixa_balcao#7 [caixa_balcao] 1010.5x657.0x905.5
+    D _inst__x_formula=0
+    D _inst__y_formula=0
+    D _inst__z_formula=0
+    D _keyalert_formula=parent!keyalert
+    D _lenx_formula=if(parent!lenx>parent!max_width,parent!max_width,parent!lenx)
+    D _leny_formula=if(parent!leny>parent!max_depth,parent!max_depth,parent!leny)
+    D _lenz_formula=if(parent!lenz>parent!max_height,parent!max_height,parent!lenz)
+    D _name=caixa_balcao
+    D keyalert=1
+    D type=conteiner_external|conteiner_bottom
+    F inst___iscollapsed:  () 
+    F inst__rotx:  () 
+    F inst__roty:  () 
+    F inst__rotz:  () 
+    F inst__x:  () 
+    F inst__y:  () 
+    F inst__z:  () 
+    I _name=caixa_balcao
+    I _x_formula=0
+    I _y_formula=0
+    I _z_formula=0
+    I keyalert=1
+    I type=conteiner_external|conteiner_bottom
+    C lateral_direita#12 [lateral_direita] 17.5x624.0x792.0
+      D _inst__x_formula=parent!lenx-a3_thickness+mx
+      D _inst__y_formula=0+my
+      D _inst__z_formula=0+mz+if(parent!typeassembly=0,a3_thickness)
+      D _lenx_formula=a3_thickness
+      D _leny_formula=if(a2_depth>max_depth,max_depth,if(a2_depth<min_depth,min_depth,a2_depth))
+      D _lenz_formula=if(a1_height>max_height,max_height,if(a1_height<min_height,min_height,a1_height))
+      D _name=lateral_direita
+      D description=Lateral Direita
+      D itemcode=CM_LAT_DIR
+      D materialoptions=peças
+      D name=Lateral Direita
+      D type=peace
+      F addy: Adicionar a profundidade (+ -): (TEXTBOX) &
+      F addz: Adicionar a altura (+ -): (TEXTBOX) &
+      F inst___iscollapsed:  () 
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      F mx: Mover em X(+ -): (TEXTBOX) &
+      F my: Mover em Y(+ -): (TEXTBOX) &
+      F mz: Mover em Z(+ -): (TEXTBOX) &
+      F zobservation: Observação: (TEXTBOX) &
+      I _x_formula=parent!lenx-a3_thickness+mx
+      I _y_formula=0+my
+      I _z_formula=0+mz+if(parent!typeassembly=0,a3_thickness)
+      I materialoptions=peças
+      I type=peace
+      C kit_minifix15_twister#66 [kit_minifix] 17.5x44.0x624.0
+        D _inst__x_formula=px
+        D _inst__y_formula=py
+        D _inst__z_formula=pz
+        D _itemcode_formula="CM_KIT_MIN15TW_"&if(thicknesspeace=1.55,"16_","19_")&if(disablecover=0,upmfinish)
+        D _lenx_formula=thicknesspeace+0.2
+        D _leny_formula=3.25
+        D _lenz_formula=choose(quadrant,parent!lenz,parent!lenz,parent!leny,parent!leny)+addz
+        D _name=kit_minifix
+        D atttransfer=addz|quadrant|mx|my|mz|_mz_formula|inverte|margin|quantity|atttransfer|upmdisable|hidden|_upmdisable_formula|_hidden_formula|_margin_formula
+        D componentedit=1
+        D description=Kit de ferragens Minifix Pino Twister
+        D itemcode=CM_KIT_MIN15TW_16_PLAST_BRANCO
+        D materialoptions=tampa minifix
+        D modeloptions=fixação lateral
+        D name=kit ferragem
+        F addz: Adicionar Comprimento (+ -): (TEXTBOX) &
+        F disablecover: Desativar Tampa: (LIST) &não=0&sim=1&
+        F inst___iscollapsed:  () 
+        F inst__copies:  () 
+        F inst__copy:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F inverte: Inverter lado: (LIST) &n%E3o=0&sim=1&
+        F margin: Margem: (TEXTBOX) &
+        F mpeg: Margem Cavilha: (TEXTBOX) &
+        F my: Mover em Y(+ -): (TEXTBOX) &
+        F mz: Mover em Z(+ -): (TEXTBOX) &
+        F pegoff: Somente 1 cavilha (LIST) &N%E3o=0&Sim=1&
+        F quadrant: Quadrante: (LIST) &Frontal=1&Traseiro=2&Inferior=3&Superior=4&
+        F quantity: Quantidade: (TEXTBOX) &
+        I _x_formula=px
+        I _y_formula=py
+        I _z_formula=pz
+        I atttransfer=addz|quadrant|mx|my|mz|_mz_formula|inverte|margin|quantity|atttransfer|upmdisable|hidden|_upmdisable_formula|_hidden_formula|_margin_formula
+        I description=Kit de ferragens Minifix Pino Twister
+        I itemcode=CM_KIT_MIN15TW_16_PLAST_BRANCO
+      C kit_minifix15_twister#68 [kit_minifix] 17.5x44.0x624.0
+        D _inst__x_formula=px
+        D _inst__y_formula=py
+        D _inst__z_formula=pz
+        D _itemcode_formula="CM_KIT_MIN15TW_"&if(thicknesspeace=1.55,"16_","19_")&if(disablecover=0,upmfinish)
+        D _lenx_formula=thicknesspeace+0.2
+        D _leny_formula=3.25
+        D _lenz_formula=choose(quadrant,parent!lenz,parent!lenz,parent!leny,parent!leny)+addz
+        D _name=kit_minifix
+        D atttransfer=addz|quadrant|mx|my|mz|inverte|margin|quantity|atttransfer|upmdisable|hidden|_mz_formula|_upmdisable_formula|_hidden_formula|_margin_formula
+        D componentedit=1
+        D description=Kit de ferragens Minifix Pino Twister
+        D itemcode=CM_KIT_MIN15TW_16_PLAST_BRANCO
+        D materialoptions=tampa minifix
+        D modeloptions=fixação lateral
+        D name=kit ferragem
+        F addz: Adicionar Comprimento (+ -): (TEXTBOX) &
+        F disablecover: Desativar Tampa: (LIST) &não=0&sim=1&
+        F inst___iscollapsed:  () 
+        F inst__copies:  () 
+        F inst__copy:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F inverte: Inverter lado: (LIST) &n%E3o=0&sim=1&
+        F margin: Margem: (TEXTBOX) &
+        F mpeg: Margem Cavilha: (TEXTBOX) &
+        F my: Mover em Y(+ -): (TEXTBOX) &
+        F mz: Mover em Z(+ -): (TEXTBOX) &
+        F pegoff: Somente 1 cavilha (LIST) &N%E3o=0&Sim=1&
+        F quadrant: Quadrante: (LIST) &Frontal=1&Traseiro=2&Inferior=3&Superior=4&
+        F quantity: Quantidade: (TEXTBOX) &
+        I _x_formula=px
+        I _y_formula=py
+        I _z_formula=pz
+        I atttransfer=addz|quadrant|mx|my|mz|inverte|margin|quantity|atttransfer|upmdisable|hidden|_mz_formula|_upmdisable_formula|_hidden_formula|_margin_formula
+        I description=Kit de ferragens Minifix Pino Twister
+        I itemcode=CM_KIT_MIN15TW_16_PLAST_BRANCO
+    C lateral_esquerda#9 [lateral_esquerda] 17.5x624.0x886.0
+      D _inst__x_formula=0+mx
+      D _inst__y_formula=0+my
+      D _inst__z_formula=0+mz+if(parent!typeassembly=0,a3_thickness)
+      D _lenx_formula=a3_thickness
+      D _leny_formula=if(a2_depth>max_depth,max_depth,if(a2_depth<min_depth,min_depth,a2_depth))
+      D _lenz_formula=if(a1_height>max_height,max_height,if(a1_height<min_height,min_height,a1_height))
+      D _name=lateral_esquerda
+      D description=Lateral Esquerda
+      D itemcode=CM_LAT_ESQ
+      D materialoptions=peças
+      D name=Lateral Esquerda
+      D type=peace
+      F addy: Adicionar a profundidade (+ -): (TEXTBOX) &
+      F addz: Adicionar a altura (+ -): (TEXTBOX) &
+      F inst___iscollapsed:  () 
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      F mx: Mover em X(+ -): (TEXTBOX) &
+      F my: Mover em Y(+ -): (TEXTBOX) &
+      F mz: Mover em Z(+ -): (TEXTBOX) &
+      F zobservation: Observação: (TEXTBOX) &
+      I _x_formula=0+mx
+      I _y_formula=0+my
+      I _z_formula=0+mz+if(parent!typeassembly=0,a3_thickness)
+      I materialoptions=peças
+      I type=peace
+      C kit_minifix15_twister#67 [kit_minifix] 17.5x44.0x624.0
+        D _inst__x_formula=px
+        D _inst__y_formula=py
+        D _inst__z_formula=pz
+        D _itemcode_formula="CM_KIT_MIN15TW_"&if(thicknesspeace=1.55,"16_","19_")&if(disablecover=0,upmfinish)
+        D _lenx_formula=thicknesspeace+0.2
+        D _leny_formula=3.25
+        D _lenz_formula=choose(quadrant,parent!lenz,parent!lenz,parent!leny,parent!leny)+addz
+        D _name=kit_minifix
+        D atttransfer=addz|quadrant|mx|my|mz|inverte|margin|quantity|atttransfer|upmdisable|hidden|_mz_formula|_upmdisable_formula|_hidden_formula|_margin_formula
+        D componentedit=1
+        D description=Kit de ferragens Minifix Pino Twister
+        D itemcode=CM_KIT_MIN15TW_16_PLAST_BRANCO
+        D materialoptions=tampa minifix
+        D modeloptions=fixação lateral
+        D name=kit ferragem
+        F addz: Adicionar Comprimento (+ -): (TEXTBOX) &
+        F disablecover: Desativar Tampa: (LIST) &não=0&sim=1&
+        F inst___iscollapsed:  () 
+        F inst__copies:  () 
+        F inst__copy:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F inverte: Inverter lado: (LIST) &n%E3o=0&sim=1&
+        F margin: Margem: (TEXTBOX) &
+        F mpeg: Margem Cavilha: (TEXTBOX) &
+        F my: Mover em Y(+ -): (TEXTBOX) &
+        F mz: Mover em Z(+ -): (TEXTBOX) &
+        F pegoff: Somente 1 cavilha (LIST) &N%E3o=0&Sim=1&
+        F quadrant: Quadrante: (LIST) &Frontal=1&Traseiro=2&Inferior=3&Superior=4&
+        F quantity: Quantidade: (TEXTBOX) &
+        I _x_formula=px
+        I _y_formula=py
+        I _z_formula=pz
+        I atttransfer=addz|quadrant|mx|my|mz|inverte|margin|quantity|atttransfer|upmdisable|hidden|_mz_formula|_upmdisable_formula|_hidden_formula|_margin_formula
+        I description=Kit de ferragens Minifix Pino Twister
+        I itemcode=CM_KIT_MIN15TW_16_PLAST_BRANCO
+    C base#8 [base] 497.5x624.0x17.5
+      D _inst__x_formula=0+mx+if(parent!typeassembly=1,a3_thickness)
+      D _inst__y_formula=0+my
+      D _inst__z_formula=0+mz
+      D _lenx_formula=if(a1_length>max_length,max_length,if(a1_length<min_length,min_length,a1_length))
+      D _leny_formula=if(a2_width>max_width,max_width,if(a2_width<min_width,min_width,a2_width))
+      D _lenz_formula=a3_thickness
+      D _name=base
+      D description=Base MDF
+      D itemcode=CM_BAS
+      D materialoptions=peças
+      D name=Base
+      D type=peace
+      F addx: Adicionar ao comprimento (+ -): (TEXTBOX) &
+      F addy: Adicionar a profundidade (+ -): (TEXTBOX) &
+      F inst___iscollapsed:  () 
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      F mx: Mover em X(+ -): (TEXTBOX) &
+      F my: Mover em Y(+ -): (TEXTBOX) &
+      F mz: Mover em Z(+ -): (TEXTBOX) &
+      F zobservation: Observação: (TEXTBOX) &
+      I _x_formula=0+mx+if(parent!typeassembly=1,a3_thickness)
+      I _y_formula=0+my
+      I _z_formula=0+mz
+      I materialoptions=peças
+      I type=peace
+      C kit_minifix15_twister#64 [kit_minfix] 624.0x44.0x17.5
+        D _inst__x_formula=px
+        D _inst__y_formula=py
+        D _inst__z_formula=pz
+        D _itemcode_formula="CM_KIT_MIN15TW_"&if(thicknesspeace=1.55,"16_","19_")&upmfinish
+        D _lenx_formula=choose(quadrant,parent!lenx,parent!lenx,parent!leny,parent!leny)+addx
+        D _leny_formula=3.25
+        D _lenz_formula=thicknesspeace+0.2
+        D _name=kit_minfix
+        D _x_formula=px
+        D _y_formula=py
+        D _z_formula=pz
+        D atttransfer=addz|quadrant|mx|my|mz|inverte|margin|quantity|atttransfer|upmdisable|hidden|_mx_formula|_upmdisable_formula|_hidden_formula|_margin_formula
+        D componentedit=1
+        D description=Kit de ferragens Minifix Pino Twister
+        D itemcode=CM_KIT_MIN15TW_16_PLAST_BRANCO
+        D materialoptions=tampa minifix
+        D modeloptions=fixação base
+        D name=kit ferragem
+        F addx: Adicionar Comprimento (+ -): (TEXTBOX) &
+        F disablecover: Desativar Tampa: (LIST) &não=0&sim=1&
+        F inst___iscollapsed:  () 
+        F inst__copies:  () 
+        F inst__copy:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F inverte: Inverter lado: (LIST) &n%E3o=1&sim=0&
+        F margin: Margem: (TEXTBOX) &
+        F mpeg: Margem cavilha: (TEXTBOX) &
+        F mx: Mover em X(+ -): (TEXTBOX) &
+        F my: Mover em Y(+ -): (TEXTBOX) &
+        F quadrant: Quadrante: (LIST) &Frontal=1&Traseiro=2&Esquerdo=3&Direito=4&
+        F quantity: Quantidade: (TEXTBOX) &
+        F scaletool: ScaleTool () 
+        I _x_formula=px
+        I _y_formula=py
+        I _z_formula=pz
+        I atttransfer=addz|quadrant|mx|my|mz|inverte|margin|quantity|atttransfer|upmdisable|hidden|_mx_formula|_upmdisable_formula|_hidden_formula|_margin_formula
+        I description=Kit de ferragens Minifix Pino Twister
+        I itemcode=CM_KIT_MIN15TW_16_PLAST_BRANCO
+      C kit_minifix15_twister#62 [kit_minfix] 624.0x44.0x17.5
+        D _inst__x_formula=px
+        D _inst__y_formula=py
+        D _inst__z_formula=pz
+        D _itemcode_formula="CM_KIT_MIN15TW_"&if(thicknesspeace=1.55,"16_","19_")&upmfinish
+        D _lenx_formula=choose(quadrant,parent!lenx,parent!lenx,parent!leny,parent!leny)+addx
+        D _leny_formula=3.25
+        D _lenz_formula=thicknesspeace+0.2
+        D _name=kit_minfix
+        D _x_formula=px
+        D _y_formula=py
+        D _z_formula=pz
+        D atttransfer=addz|quadrant|mx|my|mz|inverte|margin|quantity|atttransfer|upmdisable|hidden|_mx_formula|_upmdisable_formula|_hidden_formula|_margin_formula
+        D componentedit=1
+        D description=Kit de ferragens Minifix Pino Twister
+        D itemcode=CM_KIT_MIN15TW_16_PLAST_BRANCO
+        D materialoptions=tampa minifix
+        D modeloptions=fixação base
+        D name=kit ferragem
+        F addx: Adicionar Comprimento (+ -): (TEXTBOX) &
+        F disablecover: Desativar Tampa: (LIST) &não=0&sim=1&
+        F inst___iscollapsed:  () 
+        F inst__copies:  () 
+        F inst__copy:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F inverte: Inverter lado: (LIST) &n%E3o=1&sim=0&
+        F margin: Margem: (TEXTBOX) &
+        F mpeg: Margem cavilha: (TEXTBOX) &
+        F mx: Mover em X(+ -): (TEXTBOX) &
+        F my: Mover em Y(+ -): (TEXTBOX) &
+        F quadrant: Quadrante: (LIST) &Frontal=1&Traseiro=2&Esquerdo=3&Direito=4&
+        F quantity: Quantidade: (TEXTBOX) &
+        F scaletool: ScaleTool () 
+        I _x_formula=px
+        I _y_formula=py
+        I _z_formula=pz
+        I atttransfer=addz|quadrant|mx|my|mz|inverte|margin|quantity|atttransfer|upmdisable|hidden|_mx_formula|_upmdisable_formula|_hidden_formula|_margin_formula
+        I description=Kit de ferragens Minifix Pino Twister
+        I itemcode=CM_KIT_MIN15TW_16_PLAST_BRANCO
+    C tampo#8 [tampo] 979.5x624.0x17.5
+      D _inst__x_formula=0+mx+if(parent!typeassembly=1,a3_thickness,0)
+      D _inst__y_formula=0+my
+      D _inst__z_formula=parent!lenz-a3_thickness+mz
+      D _lenx_formula=if(a1_length>max_length,max_length,if(a1_length<min_length,min_length,a1_length))
+      D _leny_formula=if(a2_width>max_width,max_width,if(a2_width<min_width,min_width,a2_width))
+      D _lenz_formula=a3_thickness
+      D _name=tampo
+      D description=Tampo MDF
+      D itemcode=CM_TAM
+      D materialoptions=peças
+      D name=Tampo
+      D type=peace
+      F addx: Adicionar ao comprimento (+ -): (TEXTBOX) &
+      F addy: Adicionar a profundidade (+ -): (TEXTBOX) &
+      F inst___iscollapsed:  () 
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      F mx: Mover em X(+ -): (TEXTBOX) &
+      F my: Mover em Y(+ -): (TEXTBOX) &
+      F mz: Mover em Z(+ -): (TEXTBOX) &
+      F zobservation: Observação: (TEXTBOX) &
+      I _name=tampo
+      I _x_formula=0+mx+if(parent!typeassembly=1,a3_thickness,0)
+      I _y_formula=0+my
+      I _z_formula=parent!lenz-a3_thickness+mz
+      I description=Tampo MDF
+      I itemcode=CM_TAM
+      I materialoptions=peças
+      I name=Tampo
+      I type=peace
+      C kit_minifix15_twister#65 [kit_minfix] 624.0x44.0x17.5
+        D _inst__x_formula=px
+        D _inst__y_formula=py
+        D _inst__z_formula=pz
+        D _itemcode_formula="CM_KIT_MIN15TW_"&if(thicknesspeace=1.55,"16_","19_")&upmfinish
+        D _lenx_formula=choose(quadrant,parent!lenx,parent!lenx,parent!leny,parent!leny)+addx
+        D _leny_formula=3.25
+        D _lenz_formula=thicknesspeace+0.2
+        D _name=kit_minfix
+        D _x_formula=px
+        D _y_formula=py
+        D _z_formula=pz
+        D atttransfer=addz|quadrant|mx|my|mz|inverte|margin|quantity|atttransfer|upmdisable|hidden|_mx_formula|_upmdisable_formula|_hidden_formula|_margin_formula
+        D componentedit=1
+        D description=Kit de ferragens Minifix Pino Twister
+        D itemcode=CM_KIT_MIN15TW_16_PLAST_BRANCO
+        D materialoptions=tampa minifix
+        D modeloptions=fixação tampo
+        D name=kit ferragem
+        F addx: Adicionar Comprimento (+ -): (TEXTBOX) &
+        F disablecover: Desativar Tampa: (LIST) &não=0&sim=1&
+        F inst___iscollapsed:  () 
+        F inst__copies:  () 
+        F inst__copy:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F inverte: Inverter lado: (LIST) &n%E3o=0&sim=1&
+        F margin: Margem: (TEXTBOX) &
+        F mpeg: Margem cavilha: (TEXTBOX) &
+        F mx: Mover em X(+ -): (TEXTBOX) &
+        F my: Mover em Y(+ -): (TEXTBOX) &
+        F quadrant: Quadrante: (LIST) &Frontal=1&Traseiro=2&Esquerdo=3&Direito=4&
+        F quantity: Quantidade: (TEXTBOX) &
+        F scaletool: ScaleTool () 
+        I _x_formula=px
+        I _y_formula=py
+        I _z_formula=pz
+        I atttransfer=addz|quadrant|mx|my|mz|inverte|margin|quantity|atttransfer|upmdisable|hidden|_mx_formula|_upmdisable_formula|_hidden_formula|_margin_formula
+        I description=Kit de ferragens Minifix Pino Twister
+        I itemcode=CM_KIT_MIN15TW_16_PLAST_BRANCO
+      C kit_minifix15_twister#63 [kit_minfix] 624.0x44.0x17.5
+        D _inst__x_formula=px
+        D _inst__y_formula=py
+        D _inst__z_formula=pz
+        D _itemcode_formula="CM_KIT_MIN15TW_"&if(thicknesspeace=1.55,"16_","19_")&upmfinish
+        D _lenx_formula=choose(quadrant,parent!lenx,parent!lenx,parent!leny,parent!leny)+addx
+        D _leny_formula=3.25
+        D _lenz_formula=thicknesspeace+0.2
+        D _name=kit_minfix
+        D _x_formula=px
+        D _y_formula=py
+        D _z_formula=pz
+        D atttransfer=addz|quadrant|mx|my|mz|inverte|margin|quantity|atttransfer|upmdisable|hidden|_mx_formula|_upmdisable_formula|_hidden_formula|_margin_formula
+        D componentedit=1
+        D description=Kit de ferragens Minifix Pino Twister
+        D itemcode=CM_KIT_MIN15TW_16_PLAST_BRANCO
+        D materialoptions=tampa minifix
+        D modeloptions=fixação tampo
+        D name=kit ferragem
+        F addx: Adicionar Comprimento (+ -): (TEXTBOX) &
+        F disablecover: Desativar Tampa: (LIST) &não=0&sim=1&
+        F inst___iscollapsed:  () 
+        F inst__copies:  () 
+        F inst__copy:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F inverte: Inverter lado: (LIST) &n%E3o=0&sim=1&
+        F margin: Margem: (TEXTBOX) &
+        F mpeg: Margem cavilha: (TEXTBOX) &
+        F mx: Mover em X(+ -): (TEXTBOX) &
+        F my: Mover em Y(+ -): (TEXTBOX) &
+        F quadrant: Quadrante: (LIST) &Frontal=1&Traseiro=2&Esquerdo=3&Direito=4&
+        F quantity: Quantidade: (TEXTBOX) &
+        F scaletool: ScaleTool () 
+        I _x_formula=px
+        I _y_formula=py
+        I _z_formula=pz
+        I atttransfer=addz|quadrant|mx|my|mz|inverte|margin|quantity|atttransfer|upmdisable|hidden|_mx_formula|_upmdisable_formula|_hidden_formula|_margin_formula
+        I description=Kit de ferragens Minifix Pino Twister
+        I itemcode=CM_KIT_MIN15TW_16_PLAST_BRANCO
+    C conteiner#11 [conteiner] 972.5x642.5x793.0
+      D _inst__x_formula=thickness
+      D _inst__y_formula=0-parent!positionbackground
+      D _inst__z_formula=thickness
+      D _lenx_formula=parent!lenx-2*thickness
+      D _leny_formula=parent!leny-parent!positionbackground
+      D _lenz_formula=parent!lenz-2*thickness
+      D _name=conteiner
+      D type=conteiner_internal
+      F inst___iscollapsed:  () 
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      F rotx:  () 
+      F roty:  () 
+      F rotz:  () 
+      I _x_formula=thickness
+      I _y_formula=0-parent!positionbackground
+      I _z_formula=thickness
+      I type=conteiner_internal
+      C edge_conteiner#34 [edge_conteiner] 948.5x601.5x769.0
+        D _inst__x_formula=0
+        D _inst__y_formula=0
+        D _inst__z_formula=0
+        D _lenx_formula=parent!lenx
+        D _leny_formula=parent!leny
+        D _lenz_formula=parent!lenz
+        D _name=edge_conteiner
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        I _name=edge_conteiner
+        I _x_formula=0
+        I _y_formula=0
+        I _z_formula=0
+      C divisoria_1und#3 [divisoria_1und] 972.5x642.5x793.0
+        D _inst__x_formula=px
+        D _inst__y_formula=py
+        D _inst__z_formula=pz
+        D _lenx_formula=parent!lenx
+        D _leny_formula=parent!leny-indentation
+        D _lenz_formula=parent!lenz
+        D _name=divisoria_1und
+        D componentedit=1
+        D description=Uma unidade
+        D name=Conjunto divisorias
+        F bk0: Recuo traseiro esquerda: (TEXTBOX) &
+        F bk1: Recuo traseiro direito: (TEXTBOX) &
+        F centralize: Centralizar: (LIST) &sim=1&n%E3o=0&
+        F dividerdefineddepth: Profundidade definida: (TEXTBOX) &
+        F indentation: Recuo: (TEXTBOX) &
+        F inst___iscollapsed:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F positiona: Posição da Divisoria: (TEXTBOX) &
+        F rotx:  () 
+        F roty:  () 
+        F rotz:  () 
+        F thickness: Espessura: (LIST) &15mm=1.55&18mm=1.85&25mm=2.55&
+        F x:  () 
+        F y:  () 
+        F z:  () 
+        I _x_formula=px
+        I _y_formula=py
+        I _z_formula=pz
+    G Agrupar#118 [alert] 136.2x19.4x181.8
+      I _lenx_formula=if(parent!lenx>parent!lenz,parent!lenz*0.5,parent!lenx*0.5)
+      I _leny_formula=parent!leny
+      I _lenz_formula=Lenx
+      I _name=alert
+      I _x_formula=parent!lenx/2
+      I _y_formula=-parent!leny
+      I _z_formula=parent!lenz/2
+    C tamponamento#35 [tamponamento] 1010.5x655.0x815.5
+      D _inst__x_formula=px
+      D _inst__y_formula=py
+      D _inst__z_formula=pz
+      D _keyalert_formula=if(or(lenx>max_width,leny>max_depth,lenz>max_height),0,1)
+      D _lenx_formula=parent!lenx+2*thickness+addx
+      D _leny_formula=parent!leny+addy
+      D _lenz_formula=parent!lenz+2*thickness+addz
+      D _name=tamponamento
+      D _x_formula=px
+      D _y_formula=py
+      D _z_formula=pz
+      D atttransfer=atttransfer|upmfinish|typeassembly|mx|my|mz|addx|addy|addz
+      D componentedit=1
+      D description=Tamponamento MDF
+      D keyalert=1
+      D materialoptions=tamponamentos
+      D name=Tamponamento
+      D type=conteiner_top
+      F addx: Adicionar ao comprimento (+ -): (TEXTBOX) &
+      F addy: Adicionar a profundidade (+ -): (TEXTBOX) &
+      F addz: Adicionar a altura (+ -): (TEXTBOX) &
+      F inst___iscollapsed:  () 
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      F mx: Mover em X(+ -): (TEXTBOX) &
+      F my: Mover em Y(+ -): (TEXTBOX) &
+      F mz: Mover em Z(+ -): (TEXTBOX) &
+      F scaletool: ScaleTool () 
+      F thickness: Espessura: (LIST) &15mm=1.55&18mm=1.85&25mm=2.55&
+      F typeassembly: Tipo de montagem: (LIST) &Base%20passante=0&Lateral%20passante=1&
+      I _x_formula=px
+      I _y_formula=py
+      I _z_formula=pz
+      I keyalert=1
+      C caixa_tamponamento#35 [caixa_tamponamento] 1010.5x655.0x815.5
+        D _inst__x_formula=0
+        D _inst__y_formula=0
+        D _inst__z_formula=0
+        D _keyalert_formula=parent!keyalert
+        D _lenx_formula=if(parent!lenx>parent!max_width,parent!max_width,parent!lenx)
+        D _leny_formula=if(parent!leny>parent!max_depth,parent!max_depth,parent!leny)
+        D _lenz_formula=if(parent!lenz>parent!max_height,parent!max_height,parent!lenz)
+        D _name=caixa_tamponamento
+        D keyalert=1
+        F inst___iscollapsed:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        I _name=caixa_tamponamento
+        I _x_formula=0
+        I _y_formula=0
+        I _z_formula=0
+        I keyalert=1
+    C tamponamento#29 [tamponamento] 995.0x624.0x890.0
+      D _inst__x_formula=px
+      D _inst__y_formula=py
+      D _inst__z_formula=pz
+      D _keyalert_formula=if(or(lenx>max_width,leny>max_depth,lenz>max_height),0,1)
+      D _lenx_formula=parent!lenx+2*thickness+addx
+      D _leny_formula=parent!leny+addy
+      D _lenz_formula=parent!lenz+2*thickness+addz
+      D _name=tamponamento
+      D _x_formula=px
+      D _y_formula=py
+      D _z_formula=pz
+      D atttransfer=atttransfer|upmfinish|typeassembly|mx|my|mz|addx|addy|addz
+      D componentedit=1
+      D description=Tamponamento MDF
+      D keyalert=1
+      D materialoptions=tamponamentos
+      D name=Tamponamento
+      D type=conteiner_top
+      F addx: Adicionar ao comprimento (+ -): (TEXTBOX) &
+      F addy: Adicionar a profundidade (+ -): (TEXTBOX) &
+      F addz: Adicionar a altura (+ -): (TEXTBOX) &
+      F inst___iscollapsed:  () 
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      F mx: Mover em X(+ -): (TEXTBOX) &
+      F my: Mover em Y(+ -): (TEXTBOX) &
+      F mz: Mover em Z(+ -): (TEXTBOX) &
+      F scaletool: ScaleTool () 
+      F thickness: Espessura: (LIST) &15mm=1.55&18mm=1.85&25mm=2.55&
+      F typeassembly: Tipo de montagem: (LIST) &Base%20passante=0&Lateral%20passante=1&
+      I _x_formula=px
+      I _y_formula=py
+      I _z_formula=pz
+      I keyalert=1
+      C caixa_tamponamento#29 [caixa_tamponamento] 995.0x624.0x890.0
+        D _inst__x_formula=0
+        D _inst__y_formula=0
+        D _inst__z_formula=0
+        D _keyalert_formula=parent!keyalert
+        D _lenx_formula=if(parent!lenx>parent!max_width,parent!max_width,parent!lenx)
+        D _leny_formula=if(parent!leny>parent!max_depth,parent!max_depth,parent!leny)
+        D _lenz_formula=if(parent!lenz>parent!max_height,parent!max_height,parent!lenz)
+        D _name=caixa_tamponamento
+        D keyalert=1
+        F inst___iscollapsed:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        I _name=caixa_tamponamento
+        I _x_formula=0
+        I _y_formula=0
+        I _z_formula=0
+        I keyalert=1
+    C tamponamento#17 [tamponamento] 995.0x624.0x800.0
+      D _inst__x_formula=px
+      D _inst__y_formula=py
+      D _inst__z_formula=pz
+      D _keyalert_formula=if(or(lenx>max_width,leny>max_depth,lenz>max_height),0,1)
+      D _lenx_formula=parent!lenx+2*thickness+addx
+      D _leny_formula=parent!leny+addy
+      D _lenz_formula=parent!lenz+2*thickness+addz
+      D _name=tamponamento
+      D _x_formula=px
+      D _y_formula=py
+      D _z_formula=pz
+      D atttransfer=atttransfer|upmfinish|typeassembly|mx|my|mz|addx|addy|addz
+      D componentedit=1
+      D description=Tamponamento MDF
+      D keyalert=1
+      D materialoptions=tamponamentos
+      D name=Tamponamento
+      D type=conteiner_top
+      F addx: Adicionar ao comprimento (+ -): (TEXTBOX) &
+      F addy: Adicionar a profundidade (+ -): (TEXTBOX) &
+      F addz: Adicionar a altura (+ -): (TEXTBOX) &
+      F inst___iscollapsed:  () 
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      F mx: Mover em X(+ -): (TEXTBOX) &
+      F my: Mover em Y(+ -): (TEXTBOX) &
+      F mz: Mover em Z(+ -): (TEXTBOX) &
+      F scaletool: ScaleTool () 
+      F thickness: Espessura: (LIST) &15mm=1.55&18mm=1.85&25mm=2.55&
+      F typeassembly: Tipo de montagem: (LIST) &Base%20passante=0&Lateral%20passante=1&
+      I _x_formula=px
+      I _y_formula=py
+      I _z_formula=pz
+      I keyalert=1
+      C caixa_tamponamento#17 [caixa_tamponamento] 995.0x624.0x800.0
+        D _inst__x_formula=0
+        D _inst__y_formula=0
+        D _inst__z_formula=0
+        D _keyalert_formula=parent!keyalert
+        D _lenx_formula=if(parent!lenx>parent!max_width,parent!max_width,parent!lenx)
+        D _leny_formula=if(parent!leny>parent!max_depth,parent!max_depth,parent!leny)
+        D _lenz_formula=if(parent!lenz>parent!max_height,parent!max_height,parent!lenz)
+        D _name=caixa_tamponamento
+        D keyalert=1
+        F inst___iscollapsed:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        I _name=caixa_tamponamento
+        I _x_formula=0
+        I _y_formula=0
+        I _z_formula=0
+        I keyalert=1
+
+==================== conjunto_gavetas_2und (aa35259c1e640a218095d8dd94376305__conjunto_gavetas_2und.skp)
+C conjunto_gavetas_2und#6 [conjunto_gavetas] 409.3x466.5x253.0
+  D _inst__x_formula=px
+  D _inst__y_formula=py
+  D _inst__z_formula=pz
+  D _lenx_formula=parent!lenx
+  D _leny_formula=parent!leny-if(internal=1,thickness+0.1,0)+thickness
+  D _lenz_formula=parent!lenz-clearanceupdown
+  D _name=conjunto_gavetas
+  D _x_formula=px
+  D _y_formula=py
+  D _z_formula=pz
+  D componentedit=1
+  D description=Conjunto de gavetas 2 und
+  D name=Conjunto de gavetas
+  F heightmax: Altura maxima corpo gaveta: (TEXTBOX) &
+  F inst__rotx:  () 
+  F inst__roty:  () 
+  F inst__rotz:  () 
+  F inst__x:  () 
+  F inst__y:  () 
+  F inst__z:  () 
+  F internal: Interno: (LIST) &sim=1&n%E3o=0&
+  F positionbodyforfront: posicionar corpo em relação a frente (LIST) &mesma%20posi%E7ao=1&maximizar%20v%E3o=0&
+  F reduceagainstfront: Redução contra frente: (TEXTBOX) &
+  F rotx:  () 
+  F roty:  () 
+  F rotz:  () 
+  F spacebetween: Espaço entre corpo de  gavetas: (TEXTBOX) &
+  F transpassdown: Transpasse inferior: (TEXTBOX) &
+  F transpassleft: Transpasse esquerdo: (TEXTBOX) &
+  F transpassright: Transpasse direito: (TEXTBOX) &
+  F transpassup: Transpasse superior: (TEXTBOX) &
+  F x:  () 
+  F y:  () 
+  F z:  () 
+  C gaveta#33 [gaveta] 409.3x466.5x124.8
+    D _inst__x_formula=0
+    D _inst__y_formula=if(extract=1,-thickness,0)
+    D _inst__z_formula=0
+    D _keyalert_formula=if(or(and(thicknessbackground=0.3,positionbackground>-0.3),parent!leny<lengthrails+clearancerear,lengthrails>55,(spaceutil-abs(heightreduce))<heightmin,if(heightmax<>0,heightmax-abs(heightreduce)<heig
+    D _lengthrails_formula=if(lengthdefinition=0,if(lenyforextract>=700+clearancerear,70,if(lenyforextract>=65+clearancerear,65,if(lenyforextract>=60+clearancerear,60,if(lenyforextract>=55+clearancerear,55,if(lenyforextract>=50
+    D _lenx_formula=parent!lenx
+    D _leny_formula=parent!leny+if(extract=1,parent!leny+thickness,thickness)-thicknessparent
+    D _lenz_formula=if(heightmax=0,if((spaceutil-abs(heightreduce))<heightmin,heightmin,spaceutil-abs(heightreduce)),if((heightmax-abs(heightreduce))>heightmax,heightmax,if((heightmax-abs(heightreduce))<heightmin,heightm
+    D _name=gaveta
+    D componentedit=1
+    D description=Gaveta MDF
+    D extract=0
+    D keyalert=1
+    D lengthrails=45
+    D name=Gaveta
+    D onclick=set("extract",1,0)
+    D type=conteiner_drawer
+    F diffsidefront: Diferença laterais: (TEXTBOX) &
+    F drawerpositionadjustment: Ajuste de posição da gaveta: (TEXTBOX) &
+    F heightreduce: Redução na altura do corpo da gaveta: (TEXTBOX) &
+    F inst___iscollapsed:  () 
+    F inst__rotx:  () 
+    F inst__roty:  () 
+    F inst__rotz:  () 
+    F inst__x:  () 
+    F inst__y:  () 
+    F inst__z:  () 
+    F lengthdefinition: Profundidade definida: (LIST) &auto=0&250mm=25&300mm=30&350mm=35&400mm=40&450mm=45&500mm=50&550mm=55&600mm=60&650mm=65&700mm=70&
+    F positionbackground: Elevação do fundo: (TEXTBOX) &
+    F thickness: Espessura peças gaveta: (LIST) &15mm=1.55&18mm=1.85&
+    F thicknessbackground: Espessura do fundo: (LIST) &3mm=0.3&6mm=0.65&15mm=1.55&18mm=1.85&
+    F thicknessfront: Espessura frente gaveta: (LIST) &15mm=1.55&18mm=1.85&
+    I _name=gaveta
+    I _x_formula=0
+    I _y_formula=if(extract=1,-thickness,0)
+    I _z_formula=0
+    I componentedit=1
+    I description=Gaveta MDF
+    I extract=0
+    I keyalert=1
+    I lengthrails=45
+    I name=Gaveta
+    I onclick=set("extract",1,0)
+    I type=conteiner_drawer
+    C base_gaveta#42 [base_gaveta] 397.3x454.0x90.0
+      D _inst__x_formula=0
+      D _inst__y_formula=-parent!lenyforextract+leny+if(parent!extract=1,parent!thicknessparent,0)
+      D _inst__z_formula=reducenominal+parent!drawerpositionadjustment
+      D _lenx_formula=parent!lenx
+      D _leny_formula=parent!lengthrails
+      D _lenz_formula=parent!lenz-parent!reductiondrawer
+      D _name=base_gaveta
+      D atttransfer=atttransfer|upmfinish
+      D diffbodyrail=2.6
+      D extract=0
+      D materialoptions=corpo de gaveta
+      D modeloptions=sistema corrediça
+      D reduceforbody=0
+      F inst___iscollapsed:  () 
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      I _x_formula=0
+      I _y_formula=-parent!lenyforextract+leny+if(parent!extract=1,parent!thicknessparent,0)
+      I _z_formula=reducenominal+parent!drawerpositionadjustment
+      I atttransfer=atttransfer|upmfinish
+      I diffbodyrail=2.6
+      I extract=0
+      I reduceforbody=0
+      C corredica_tn_telescopica_normal#11 [corredica_tn] 397.3x451.0x44.0
+        D _inst__x_formula=0
+        D _inst__y_formula=0
+        D _inst__z_formula=if(positionrails=0,parent!lenz/2-lenz/2,0)
+        D _itemcode_formula="CM_KIT_COR_TN_H45_NR_"&upmdepth
+        D _keyalert_formula=if(or(lenyforopen*1<30,lenyforopen*1>50),0,1)
+        D _lenx_formula=parent!lenx
+        D _leny_formula=if(open=1,2*parent!leny,parent!leny)
+        D _lenz_formula=4.4
+        D _name=corredica_tn
+        D _open_formula=parent!extract
+        D atttransfer=positionrails
+        D componentedit=1
+        D description=Corrediça Telescopica TN H45
+        D itemcode=CM_KIT_COR_TN_H45_NR_450
+        D keyalert=1
+        D modeloptions=corrediça telescopica
+        D name=Corrediça
+        D open=0
+        F inst___iscollapsed:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F positionrails: Posição da corrediça: (LIST) &Centro=0&Inferior=1&
+        I _x_formula=0
+        I _y_formula=0
+        I _z_formula=if(positionrails=0,parent!lenz/2-lenz/2,0)
+        I itemcode=CM_KIT_COR_TN_H45_NR_450
+        I keyalert=1
+        I open=0
+      C corpo_gaveta#31 [corpo_gaveta] 366.3x453.0x90.0
+        D _inst__x_formula=parent!diffbodyrail/2
+        D _inst__y_formula=if(parent!extract=1,-parent!leny,0)
+        D _inst__z_formula=0
+        D _lenx_formula=parent!lenx-parent!diffbodyrail
+        D _leny_formula=parent!leny
+        D _lenz_formula=parent!lenz
+        D _name=corpo_gaveta
+        D modeloptions=corpo de gaveta
+        F inst___iscollapsed:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        I _x_formula=parent!diffbodyrail/2
+        I _y_formula=if(parent!extract=1,-parent!leny,0)
+        I _z_formula=0
+    G Agrupar#228 [alert] 142.7x18.5x181.8
+      I _lenx_formula=if(parent!lenx>parent!lenz,parent!lenz*0.5,parent!lenx*0.5)
+      I _leny_formula=parent!lengthrails
+      I _lenz_formula=LenX
+      I _name=alert
+      I _x_formula=parent!lenx/2
+      I _y_formula=if(parent!extract=0,-parent!leny,-parent!leny/2-leny-parent!thickness)
+      I _z_formula=parent!lenz/2
+    C frente_gaveta#18 [frente_gaveta] 409.3x15.5x124.8
+      D _inst__x_formula=px
+      D _inst__y_formula=py
+      D _inst__z_formula=pz
+      D _lenx_formula=parent!lenx+parent!transpassleft+parent!transpassright-if(parent!internal=1,2*parent!thicknessparent,0)
+      D _leny_formula=parent!thicknessfront
+      D _lenz_formula=parent!heightfront
+      D _name=frente_gaveta
+      D atttransfer=upmfinish|_upmfinish_formula|atttransfer|directioncame|difffrontbody|py|parentrefresh
+      D componentedit=1
+      D description=Frente de Gaveta Lisa
+      D itemcode=CM_FRE_GAV_LIS
+      D materialoptions=frente de gaveta
+      D modeloptions=frente de gaveta
+      D name=Frente de Gaveta
+      D parentrefresh=1
+      F directioncame: Direção do veio: (LIST) &Vertical=vertical&Horizontal=horizontal&
+      F heightpuller: Desconto puxador: (TEXTBOX) &
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      I _x_formula=px
+      I _y_formula=py
+      I _z_formula=pz
+      I atttransfer=upmfinish|_upmfinish_formula|atttransfer|directioncame|difffrontbody|py|parentrefresh
+      I parentrefresh=1
+      C chapa_frente_gaveta#18 [chapa_frente_gaveta] 409.3x15.5x124.8
+        D _inst__x_formula=0
+        D _inst__y_formula=0
+        D _inst__z_formula=if(parent!directioncame="vertical",0,lenx)
+        D _lenx_formula=if(a2_width>max_width,max_width,if(a2_width<min_width,min_width,a2_width))
+        D _leny_formula=a3_thickness
+        D _lenz_formula=if(a1_height>max_height,max_height,if(a1_height<min_height,max_height,a1_height))
+        D _name=chapa_frente_gaveta
+        D description=Chapa para Frente de Gaveta
+        D itemcode=CM_CHGAV
+        D materialoptions=peças
+        D name=Chapa MDF
+        D type=peace|drawer_fronts|edgechangethickness
+        F inst___iscollapsed:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F zobservation: Observação: (TEXTBOX) &
+        I _name=chapa_frente_gaveta
+        I _x_formula=0
+        I _y_formula=0
+        I _z_formula=if(parent!directioncame="vertical",0,lenx)
+        I description=Chapa para Frente de Gaveta
+        I itemcode=CM_CHGAV
+        I name=Chapa MDF
+        I type=peace|drawer_fronts|edgechangethickness
+  C gaveta#42 [gaveta] 409.3x466.5x124.8
+    D _inst__x_formula=0
+    D _inst__y_formula=if(extract=1,-thickness,0)
+    D _inst__z_formula=((quantity-1)*parent!spaceutil)+((quantity-1)*parent!spacebetween)
+    D _keyalert_formula=if(or(and(thicknessbackground=0.3,positionbackground>-0.3),parent!leny<lengthrails+clearancerear,lengthrails>55,(spaceutil-abs(heightreduce))<heightmin,if(heightmax<>0,heightmax-abs(heightreduce)<heig
+    D _lengthrails_formula=if(lengthdefinition=0,if(lenyforextract>=700+clearancerear,70,if(lenyforextract>=65+clearancerear,65,if(lenyforextract>=60+clearancerear,60,if(lenyforextract>=55+clearancerear,55,if(lenyforextract>=50
+    D _lenx_formula=parent!lenx
+    D _leny_formula=parent!leny+if(extract=1,parent!leny+thickness,thickness)-thicknessparent
+    D _lenz_formula=if(heightmax=0,if((spaceutil-abs(heightreduce))<heightmin,heightmin,spaceutil-abs(heightreduce)),if((heightmax-abs(heightreduce))>heightmax,heightmax,if((heightmax-abs(heightreduce))<heightmin,heightm
+    D _name=gaveta
+    D componentedit=1
+    D description=Gaveta MDF
+    D extract=0
+    D keyalert=1
+    D lengthrails=45
+    D name=Gaveta
+    D onclick=set("extract",1,0)
+    D type=conteiner_drawer
+    F diffsidefront: Diferença laterais: (TEXTBOX) &
+    F drawerpositionadjustment: Ajuste de posição da gaveta: (TEXTBOX) &
+    F heightreduce: Redução na altura do corpo da gaveta: (TEXTBOX) &
+    F inst__rotx:  () 
+    F inst__roty:  () 
+    F inst__rotz:  () 
+    F inst__x:  () 
+    F inst__y:  () 
+    F inst__z:  () 
+    F lengthdefinition: Profundidade definida: (LIST) &auto=0&250mm=25&300mm=30&350mm=35&400mm=40&450mm=45&500mm=50&550mm=55&600mm=60&650mm=65&700mm=70&
+    F positionbackground: Elevação do fundo: (TEXTBOX) &
+    F thickness: Espessura peças gaveta: (LIST) &15mm=1.55&18mm=1.85&
+    F thicknessbackground: Espessura do fundo: (LIST) &3mm=0.3&6mm=0.65&15mm=1.55&18mm=1.85&
+    F thicknessfront: Espessura frente gaveta: (LIST) &15mm=1.55&18mm=1.85&
+    I _name=gaveta
+    I _x_formula=0
+    I _y_formula=if(extract=1,-thickness,0)
+    I _z_formula=((quantity-1)*parent!spaceutil)+((quantity-1)*parent!spacebetween)
+    I componentedit=1
+    I description=Gaveta MDF
+    I extract=0
+    I keyalert=1
+    I lengthrails=45
+    I name=Gaveta
+    I onclick=set("extract",1,0)
+    I type=conteiner_drawer
+    C base_gaveta#33 [base_gaveta] 397.3x454.0x90.0
+      D _inst__x_formula=0
+      D _inst__y_formula=-parent!lenyforextract+leny+if(parent!extract=1,parent!thicknessparent,0)
+      D _inst__z_formula=reducenominal+parent!drawerpositionadjustment
+      D _lenx_formula=parent!lenx
+      D _leny_formula=parent!lengthrails
+      D _lenz_formula=parent!lenz-parent!reductiondrawer
+      D _name=base_gaveta
+      D atttransfer=atttransfer|upmfinish
+      D diffbodyrail=2.6
+      D extract=0
+      D materialoptions=corpo de gaveta
+      D modeloptions=sistema corrediça
+      D reduceforbody=0
+      F inst___iscollapsed:  () 
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      I _x_formula=0
+      I _y_formula=-parent!lenyforextract+leny+if(parent!extract=1,parent!thicknessparent,0)
+      I _z_formula=reducenominal+parent!drawerpositionadjustment
+      I atttransfer=atttransfer|upmfinish
+      I diffbodyrail=2.6
+      I extract=0
+      I reduceforbody=0
+      C corredica_tn_telescopica_normal#12 [corredica_tn] 397.3x451.0x44.0
+        D _inst__x_formula=0
+        D _inst__y_formula=0
+        D _inst__z_formula=if(positionrails=0,parent!lenz/2-lenz/2,0)
+        D _itemcode_formula="CM_KIT_COR_TN_H45_NR_"&upmdepth
+        D _keyalert_formula=if(or(lenyforopen*1<30,lenyforopen*1>50),0,1)
+        D _lenx_formula=parent!lenx
+        D _leny_formula=if(open=1,2*parent!leny,parent!leny)
+        D _lenz_formula=4.4
+        D _name=corredica_tn
+        D _open_formula=parent!extract
+        D atttransfer=positionrails
+        D componentedit=1
+        D description=Corrediça Telescopica TN H45
+        D itemcode=CM_KIT_COR_TN_H45_NR_450
+        D keyalert=1
+        D modeloptions=corrediça telescopica
+        D name=Corrediça
+        D open=0
+        F inst___iscollapsed:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F positionrails: Posição da corrediça: (LIST) &Centro=0&Inferior=1&
+        I _x_formula=0
+        I _y_formula=0
+        I _z_formula=if(positionrails=0,parent!lenz/2-lenz/2,0)
+        I itemcode=CM_KIT_COR_TN_H45_NR_450
+        I keyalert=1
+        I open=0
+      C corpo_gaveta#42 [corpo_gaveta] 366.3x453.0x90.0
+        D _inst__x_formula=parent!diffbodyrail/2
+        D _inst__y_formula=if(parent!extract=1,-parent!leny,0)
+        D _inst__z_formula=0
+        D _lenx_formula=parent!lenx-parent!diffbodyrail
+        D _leny_formula=parent!leny
+        D _lenz_formula=parent!lenz
+        D _name=corpo_gaveta
+        D modeloptions=corpo de gaveta
+        F inst___iscollapsed:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        I _x_formula=parent!diffbodyrail/2
+        I _y_formula=if(parent!extract=1,-parent!leny,0)
+        I _z_formula=0
+    G Agrupar#228 [alert] 142.7x18.5x181.8
+      I _lenx_formula=if(parent!lenx>parent!lenz,parent!lenz*0.5,parent!lenx*0.5)
+      I _leny_formula=parent!lengthrails
+      I _lenz_formula=LenX
+      I _name=alert
+      I _x_formula=parent!lenx/2
+      I _y_formula=if(parent!extract=0,-parent!leny,-parent!leny/2-leny-parent!thickness)
+      I _z_formula=parent!lenz/2
+    C frente_gaveta#17 [frente_gaveta] 409.3x15.5x124.8
+      D _inst__x_formula=px
+      D _inst__y_formula=py
+      D _inst__z_formula=pz
+      D _lenx_formula=parent!lenx+parent!transpassleft+parent!transpassright-if(parent!internal=1,2*parent!thicknessparent,0)
+      D _leny_formula=parent!thicknessfront
+      D _lenz_formula=parent!heightfront
+      D _name=frente_gaveta
+      D atttransfer=upmfinish|_upmfinish_formula|atttransfer|directioncame|difffrontbody|py|parentrefresh
+      D componentedit=1
+      D description=Frente de Gaveta Lisa
+      D itemcode=CM_FRE_GAV_LIS
+      D materialoptions=frente de gaveta
+      D modeloptions=frente de gaveta
+      D name=Frente de Gaveta
+      D parentrefresh=1
+      F directioncame: Direção do veio: (LIST) &Vertical=vertical&Horizontal=horizontal&
+      F heightpuller: Desconto puxador: (TEXTBOX) &
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      I _x_formula=px
+      I _y_formula=py
+      I _z_formula=pz
+      I atttransfer=upmfinish|_upmfinish_formula|atttransfer|directioncame|difffrontbody|py|parentrefresh
+      I parentrefresh=1
+      C chapa_frente_gaveta#19 [chapa_frente_gaveta] 409.3x15.5x124.8
+        D _inst__x_formula=0
+        D _inst__y_formula=0
+        D _inst__z_formula=if(parent!directioncame="vertical",0,lenx)
+        D _lenx_formula=if(a2_width>max_width,max_width,if(a2_width<min_width,min_width,a2_width))
+        D _leny_formula=a3_thickness
+        D _lenz_formula=if(a1_height>max_height,max_height,if(a1_height<min_height,max_height,a1_height))
+        D _name=chapa_frente_gaveta
+        D description=Chapa para Frente de Gaveta
+        D itemcode=CM_CHGAV
+        D materialoptions=peças
+        D name=Chapa MDF
+        D type=peace|drawer_fronts|edgechangethickness
+        F inst___iscollapsed:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F zobservation: Observação: (TEXTBOX) &
+        I _name=chapa_frente_gaveta
+        I _x_formula=0
+        I _y_formula=0
+        I _z_formula=if(parent!directioncame="vertical",0,lenx)
+        I description=Chapa para Frente de Gaveta
+        I itemcode=CM_CHGAV
+        I name=Chapa MDF
+        I type=peace|drawer_fronts|edgechangethickness
+
+==================== prateleira_1und (cad053b56938fdbed9d72eb3b0564a41__prateleira_1und.skp)
+C prateleira_1und#1 [prateleira_1und] 757.5x403.0x966.2
+  D _inst__x_formula=px
+  D _inst__y_formula=py
+  D _inst__z_formula=pz
+  D _lenx_formula=parent!lenx
+  D _leny_formula=parent!leny-indentation
+  D _lenz_formula=parent!lenz
+  D _name=prateleira_1und
+  D _x_formula=px
+  D _y_formula=py
+  D _z_formula=pz
+  D componentedit=1
+  D description=Multiplas
+  D name=Conjunto de prateleiras
+  F indentation: Recuo: (TEXTBOX) &
+  F inst__rotx:  () 
+  F inst__roty:  () 
+  F inst__rotz:  () 
+  F inst__x:  () 
+  F inst__y:  () 
+  F inst__z:  () 
+  F mz: Mover na vertical (TEXTBOX) &
+  F quantity: Quantidade: (LIST) &1=1&2=2&3=3&4=4&5=5&6=6&7=7&8=8&9=9&10=10&
+  F rotx:  () 
+  F roty:  () 
+  F rotz:  () 
+  F thickness: Espessura: (LIST) &15mm=1.55&18mm=1.85&25mm=2.55&
+  F x:  () 
+  F y:  () 
+  F z:  () 
+  C prateleira#3 [prateleira] 757.5x403.0x15.5
+    D _inst__x_formula=0+mx
+    D _inst__y_formula=0+my
+    D _inst__z_formula=parent!spacebetween+copy*(parent!thickness+parent!spacebetween)
+    D _lenx_formula=if(a1_length>max_length,max_length,if(a1_length<min_length,min_length,a1_length))
+    D _leny_formula=if(a2_width>max_width,max_width,if(a2_width<min_width,min_width,a2_width))
+    D _lenz_formula=a3_thickness
+    D _name=prateleira
+    D _x_formula=0+mx
+    D _y_formula=0+my
+    D _z_formula=parent!spacebetween+copy*(parent!thickness+parent!spacebetween)
+    D description=Prateleira MDF
+    D itemcode=CM_PRA
+    D materialoptions=peças
+    D name=Prateleria
+    D type=peace
+    F addx: Adicionar ao Comprimento (+ -): (TEXTBOX) &
+    F addy: Adicionar a profundidade (+ -): (TEXTBOX) &
+    F inst___iscollapsed:  () 
+    F inst__copies:  () 
+    F inst__copy:  () 
+    F inst__rotx:  () 
+    F inst__roty:  () 
+    F inst__rotz:  () 
+    F inst__x:  () 
+    F inst__y:  () 
+    F inst__z:  () 
+    F mx: Mover em X(+ -): (TEXTBOX) &
+    F my: Mover em Y(+ -): (TEXTBOX) &
+    F mz: Mover em Z(+ -): (TEXTBOX) &
+    F zobservation: Observação: (TEXTBOX) &
+    I _x_formula=0+mx
+    I _y_formula=0+my
+    I _z_formula=parent!spacebetween+copy*(parent!thickness+parent!spacebetween)
+    I materialoptions=peças
+    I type=peace
+  C prateleira#1 [prateleira] 757.5x403.0x15.5
+    D _inst__x_formula=0+mx
+    D _inst__y_formula=0+my
+    D _inst__z_formula=parent!spacebetween+copy*(parent!thickness+parent!spacebetween)
+    D _lenx_formula=if(a1_length>max_length,max_length,if(a1_length<min_length,min_length,a1_length))
+    D _leny_formula=if(a2_width>max_width,max_width,if(a2_width<min_width,min_width,a2_width))
+    D _lenz_formula=a3_thickness
+    D _name=prateleira
+    D _x_formula=0+mx
+    D _y_formula=0+my
+    D _z_formula=parent!spacebetween+copy*(parent!thickness+parent!spacebetween)
+    D description=Prateleira MDF
+    D itemcode=CM_PRA
+    D materialoptions=peças
+    D name=Prateleria
+    D type=peace
+    F addx: Adicionar ao Comprimento (+ -): (TEXTBOX) &
+    F addy: Adicionar a profundidade (+ -): (TEXTBOX) &
+    F inst___iscollapsed:  () 
+    F inst__copies:  () 
+    F inst__copy:  () 
+    F inst__rotx:  () 
+    F inst__roty:  () 
+    F inst__rotz:  () 
+    F inst__x:  () 
+    F inst__y:  () 
+    F inst__z:  () 
+    F mx: Mover em X(+ -): (TEXTBOX) &
+    F my: Mover em Y(+ -): (TEXTBOX) &
+    F mz: Mover em Z(+ -): (TEXTBOX) &
+    F zobservation: Observação: (TEXTBOX) &
+    I _x_formula=0+mx
+    I _y_formula=0+my
+    I _z_formula=parent!spacebetween+copy*(parent!thickness+parent!spacebetween)
+    I description=Prateleira MDF
+    I itemcode=CM_PRA
+    I materialoptions=peças
+    I name=Prateleria
+    I type=peace
+  C prateleira#2 [prateleira] 757.5x403.0x15.5
+    D _inst__x_formula=0+mx
+    D _inst__y_formula=0+my
+    D _inst__z_formula=parent!spacebetween+copy*(parent!thickness+parent!spacebetween)
+    D _lenx_formula=if(a1_length>max_length,max_length,if(a1_length<min_length,min_length,a1_length))
+    D _leny_formula=if(a2_width>max_width,max_width,if(a2_width<min_width,min_width,a2_width))
+    D _lenz_formula=a3_thickness
+    D _name=prateleira
+    D _x_formula=0+mx
+    D _y_formula=0+my
+    D _z_formula=parent!spacebetween+copy*(parent!thickness+parent!spacebetween)
+    D description=Prateleira MDF
+    D itemcode=CM_PRA
+    D materialoptions=peças
+    D name=Prateleria
+    D type=peace
+    F addx: Adicionar ao Comprimento (+ -): (TEXTBOX) &
+    F addy: Adicionar a profundidade (+ -): (TEXTBOX) &
+    F inst___iscollapsed:  () 
+    F inst__copies:  () 
+    F inst__copy:  () 
+    F inst__rotx:  () 
+    F inst__roty:  () 
+    F inst__rotz:  () 
+    F inst__x:  () 
+    F inst__y:  () 
+    F inst__z:  () 
+    F mx: Mover em X(+ -): (TEXTBOX) &
+    F my: Mover em Y(+ -): (TEXTBOX) &
+    F mz: Mover em Z(+ -): (TEXTBOX) &
+    F zobservation: Observação: (TEXTBOX) &
+    I _x_formula=0+mx
+    I _y_formula=0+my
+    I _z_formula=parent!spacebetween+copy*(parent!thickness+parent!spacebetween)
+    I description=Prateleira MDF
+    I itemcode=CM_PRA
+    I materialoptions=peças
+    I name=Prateleria
+    I type=peace
+  C prateleira [prateleira] 757.5x403.0x15.5
+    D _inst__x_formula=0+mx
+    D _inst__y_formula=0+my
+    D _inst__z_formula=parent!spacebetween+copy*(parent!thickness+parent!spacebetween)
+    D _lenx_formula=if(a1_length>max_length,max_length,if(a1_length<min_length,min_length,a1_length))
+    D _leny_formula=if(a2_width>max_width,max_width,if(a2_width<min_width,min_width,a2_width))
+    D _lenz_formula=a3_thickness
+    D _name=prateleira
+    D _x_formula=0+mx
+    D _y_formula=0+my
+    D _z_formula=parent!spacebetween+copy*(parent!thickness+parent!spacebetween)
+    D description=Prateleira MDF
+    D itemcode=CM_PRA
+    D materialoptions=peças
+    D name=Prateleria
+    D type=peace
+    F addx: Adicionar ao Comprimento (+ -): (TEXTBOX) &
+    F addy: Adicionar a profundidade (+ -): (TEXTBOX) &
+    F inst___iscollapsed:  () 
+    F inst__copies:  () 
+    F inst__copy:  () 
+    F inst__rotx:  () 
+    F inst__roty:  () 
+    F inst__rotz:  () 
+    F inst__x:  () 
+    F inst__y:  () 
+    F inst__z:  () 
+    F mx: Mover em X(+ -): (TEXTBOX) &
+    F my: Mover em Y(+ -): (TEXTBOX) &
+    F mz: Mover em Z(+ -): (TEXTBOX) &
+    F zobservation: Observação: (TEXTBOX) &
+    I _x_formula=0+mx
+    I _y_formula=0+my
+    I _z_formula=parent!spacebetween+copy*(parent!thickness+parent!spacebetween)
+    I description=Prateleira MDF
+    I itemcode=CM_PRA
+    I materialoptions=peças
+    I name=Prateleria
+    I type=peace
+
+==================== porta_de_giro_sem_puxdor (bfe42c46d996a82466cc5d3d3396552e__porta_de_giro_sem_puxdor.skp)
+C porta_de_giro_sem_puxdor#8 [porta_giro] 391.0x91.7x693.0
+  D _inst__x_formula=px
+  D _inst__y_formula=py
+  D _inst__z_formula=pz
+  D _keyalert_formula=if(or(lenx>max_width,lenz>max_height,thickness<thicknessparent),0,1)
+  D _lenx_formula=parent!lenx+thicknessparent*2-if(typehinge="s",thicknessparent,0)
+  D _leny_formula=depthhinge+thickness+if(open=1,lenx-thickness,0)
+  D _lenz_formula=parent!lenz+2*thicknessparent-if(typehinge="s",2*thicknessparent,0)
+  D _name=porta_giro
+  D _x_formula=px
+  D _y_formula=py
+  D _z_formula=pz
+  D atttransfer=atttransfer|open|positionopen|positionpuller|thickness|_thickness_formula|transpassdown|_transpassdown_formula|_transpassside_formula|transpassside|_transpassup_formula|transpassup|tselecttypehinge|up
+  D componentedit=1
+  D description=Porta de giro lisa, sem puxador
+  D itemcode=CM_POR_LIS
+  D keyalert=1
+  D materialoptions=portas
+  D modeloptions=portas de giro
+  D name=Conjunto Porta
+  D onclick=set(open,1,0)
+  D open=0
+  F heightpuller: Desconto para puxador: (TEXTBOX) &
+  F inst__rotx:  () 
+  F inst__roty:  () 
+  F inst__rotz:  () 
+  F inst__x:  () 
+  F inst__y:  () 
+  F inst__z:  () 
+  F positionopen: Posição de abertura: (LIST) &Esquerda=0&Direita=1&
+  F positionpuller: Posição do puxador: (LIST) &Baixo=1&Cima=2&Lateral=3&
+  F scaletool: ScaleTool () 
+  F thickness: Espessura: (LIST) &15mm=1.55&18mm=1.85&
+  F transpassdown: Transpasse Inferior: (TEXTBOX) &
+  F transpassside: Transpasse Lateral: (TEXTBOX) &
+  F transpassup: Transpasse Superior: (TEXTBOX) &
+  F tselecttypehinge: Tipo dobradiça (LIST) &Reta%20total=r0&Reta=r1&Alta=a&Super%20Alta=s&
+  C chapa_porta_vertical#2 [chapa_porta_vertical] 391.0x18.5x693.0
+    D _inst__x_formula=(if(and(parent!positionopen=0,parent!typehinge="r0"),0)+if(and(parent!positionopen=0,parent!typehinge="r1"),parent!clearancedefault)+if(and(parent!positionopen=0,parent!typehinge="a"),parent!thickness
+    D _inst__y_formula=if(and(parent!positionopen=0,parent!open=0),-parent!depthhinge,if(and(parent!positionopen=1,parent!open=1),-(lenx+parent!depthhinge),-parent!depthhinge))+if(parent!open=1,parent!thicknessparent-a3_thi
+    D _inst__z_formula=parent!thicknessparent-parent!transpassdown+choose(parent!positionpuller,heightpuller,0,0)
+    D _itemcode_formula="CM_CHPOR_VER"&if(parent!positionopen=0,"_ESQ","_DIR")
+    D _lenx_formula=if(a2_width>max_width,max_width,if(a2_width<min_width,min_width,a2_width))
+    D _leny_formula=a3_thickness
+    D _lenz_formula=if(a1_height>max_height,max_height,if(a1_height<min_height,min_height,a1_height))
+    D _name=chapa_porta_vertical
+    D _y_formula=if(and(parent!positionopen=0,parent!open=0),-parent!depthhinge,if(and(parent!positionopen=1,parent!open=1),-(lenx+parent!depthhinge),-parent!depthhinge))+if(parent!open=1,parent!thicknessparent-a3_thi
+    D description=Chapa porta vertical
+    D itemcode=CM_CHPOR_VER_DIR
+    D materialoptions=peças
+    D name=Chapa porta
+    D type=peace|door|edgechangethickness
+    F inst___iscollapsed:  () 
+    F inst__rotx:  () 
+    F inst__roty:  () 
+    F inst__rotz:  () 
+    F inst__x:  () 
+    F inst__y:  () 
+    F inst__z:  () 
+    F rotx:  () 
+    F roty:  () 
+    F zobservation: Observação: (TEXTBOX) &
+    I _name=chapa_porta_vertical
+    I _x_formula=(if(and(parent!positionopen=0,parent!typehinge="r0"),0)+if(and(parent!positionopen=0,parent!typehinge="r1"),parent!clearancedefault)+if(and(parent!positionopen=0,parent!typehinge="a"),parent!thickness
+    I _y_formula=if(and(parent!positionopen=0,parent!open=0),-parent!depthhinge,if(and(parent!positionopen=1,parent!open=1),-(lenx+parent!depthhinge),-parent!depthhinge))+if(parent!open=1,parent!thicknessparent-a3_thi
+    I _z_formula=parent!thicknessparent-parent!transpassdown+choose(parent!positionpuller,heightpuller,0,0)
+    I description=Chapa porta vertical
+    I itemcode=CM_CHPOR_VER_DIR
+    I materialoptions=peças
+    I name=Chapa porta
+    I type=peace|door|edgechangethickness
+  G Agrupar#30 [alert] 142.7x18.5x181.8
+    I _lenx_formula=if(parent!lenx>parent!lenz,parent!lenz*0.5,parent!lenx*0.5)
+    I _leny_formula=parent!leny
+    I _lenz_formula=LenX
+    I _name=alert
+    I _x_formula=parent!lenx/2
+    I _y_formula=-leny
+    I _z_formula=parent!lenz/2
+  C conjunto_dobradica_hafele_110_sm_click#1 [conjunto_dobradica] 46.3x91.7x595.2
+    D _inst__x_formula=px
+    D _inst__y_formula=py
+    D _inst__z_formula=pz
+    D _lenx_formula=if(open=1,0.675,3.7)+widthtypehinge
+    D _leny_formula=if(open=1,9.91,5.7)
+    D _lenz_formula=(parent!lenz-2*parent!thicknessparent)+parent!transpassup+parent!transpassdown
+    D _name=conjunto_dobradica
+    D _open_formula=parent!open
+    D _x_formula=px
+    D _y_formula=py
+    D _z_formula=pz
+    D atttransfer=atttransfer|addquantity|margin|thickness|parentrefresh|lenx|leny|lenz|position0|position1|position2|position3|position4|position5|positions|pz|px|py|rx|ry|rz|parenttestbounds
+    D componentedit=1
+    D description=Conjunto Dobradiça HAFELE 110 SM 35mm amortecedor com calço fixo Reta
+    D modeloptions=dobradiças
+    D name=Conjunto Dobradiça
+    D open=0
+    D parentrefresh=2
+    F addquantity: Adicionar dobradiça: (TEXTBOX) &
+    F inst___iscollapsed:  () 
+    F inst__rotx:  () 
+    F inst__roty:  () 
+    F inst__rotz:  () 
+    F inst__x:  () 
+    F inst__y:  () 
+    F inst__z:  () 
+    F margin: Margem Superior Inferior: (TEXTBOX) &
+    F poscup: Posição furo caneco: (LIST) &2mm=0.2&3mm=0.3&4mm=0.4&5mm=0.5&6mm=0.6&7mm=0.7&
+    I _x_formula=px
+    I _y_formula=py
+    I _z_formula=pz
+    I atttransfer=atttransfer|addquantity|margin|thickness|parentrefresh|lenx|leny|lenz|position0|position1|position2|position3|position4|position5|positions|pz|px|py|rx|ry|rz|parenttestbounds
+    I description=Conjunto Dobradiça HAFELE 110 SM 35mm amortecedor com calço fixo Reta
+    I open=0
+    I parentrefresh=2
+    C dobradica#9 [dobradica] 46.3x91.7x65.5
+      D _inst__x_formula=0
+      D _inst__y_formula=-parent!depthhinge
+      D _inst__z_formula=parent!margin+copy*(parent!spaceutil)+if(copy=0,direcional!movedb1,if(copy=1,direcional!movedb2,if(copy=2,direcional!movedb3,if(copy=3,direcional!movedb4,if(copy=4,direcional!movedb5,if(copy=5,direcio
+      D _itemcode_formula="CM_KIT_HAFELE_DOB_"&if(typehinge="r0","RET",if(typehinge="r1","RET",if(typehinge = "a","ALT","SUP")))&"_110_SM_CF4_NIQ"
+      D _lenx_formula=0.9
+      D _leny_formula=9.601
+      D _lenz_formula=6.4
+      D _name=dobradica
+      D _open_formula=parent!open
+      D _x_formula=0
+      D _y_formula=-parent!depthhinge
+      D _z_formula=parent!margin+copy*(parent!spaceutil)+if(copy=0,direcional!movedb1,if(copy=1,direcional!movedb2,if(copy=2,direcional!movedb3,if(copy=3,direcional!movedb4,if(copy=4,direcional!movedb5,if(copy=5,direcio
+      D description=Dobradiça HAFELE 110 SM 35mm Reta Amortecedor calço fixo
+      D itemcode=CM_KIT_HAFELE_DOB_RET_110_SM_CF4_NIQ
+      D name=Dobradiça
+      D open=0
+      F inst___iscollapsed:  () 
+      F inst__copies:  () 
+      F inst__copy:  () 
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      I _name=dobradica
+      I _x_formula=0
+      I _y_formula=-parent!depthhinge
+      I _z_formula=parent!margin+copy*(parent!spaceutil)+if(copy=0,direcional!movedb1,if(copy=1,direcional!movedb2,if(copy=2,direcional!movedb3,if(copy=3,direcional!movedb4,if(copy=4,direcional!movedb5,if(copy=5,direcio
+      I description=Dobradiça HAFELE 110 SM 35mm Reta Amortecedor calço fixo
+      I itemcode=CM_KIT_HAFELE_DOB_RET_110_SM_CF4_NIQ
+      I name=Dobradiça
+      I open=0
+      C Caneco_Dobradiça#5 [Caneco_Dobradiça] 12.5x37.0x65.5
+        D _inst__x_formula=if(parent!open=1,position_open,position_closed)+if(parent!open=0,parent!poscup,0)
+        D _inst__y_formula=if(parent!open=1,parent!poscup,0)
+        D _inst__z_formula=0
+        D _lenx_formula=0.3
+        D _leny_formula=3.702556
+        D _lenz_formula=6.55
+        D _name=Caneco_Dobradiça
+        D _x_formula=if(parent!open=1,position_open,position_closed)+if(parent!open=0,parent!poscup,0)
+        D _y_formula=if(parent!open=1,parent!poscup,0)
+        F inst___iscollapsed:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        I _name=Caneco_Dobradiça
+        I _x_formula=if(parent!open=1,position_open,position_closed)+if(parent!open=0,parent!poscup,0)
+        I _y_formula=if(parent!open=1,parent!poscup,0)
+        I _z_formula=0
+      C calco_dobradica_hardt_4f#5 [calco_dobradica_hardt_4f] 12.0x43.0x52.0
+        D _inst__x_formula=0
+        D _inst__y_formula=4
+        D _inst__z_formula=0
+        D _lenx_formula=0.9
+        D _leny_formula=4.30184
+        D _lenz_formula=5.2
+        D _name=calco_dobradica_hardt_4f
+        F inst___iscollapsed:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        I _name=calco_dobradica_hardt_4f
+        I _x_formula=0
+        I _y_formula=4
+        I _z_formula=0
+      C dob_hafele_eng_s_curva#1 [dob_hafele_eng_s_curva#1] 17.0x87.0x29.9
+        D _inst__x_formula=1.45
+        D _inst__y_formula=-2.1
+        D _inst__z_formula=0.8
+        D _lenx_formula=1.698089
+        D _leny_formula=10.417489
+        D _lenz_formula=4.356588
+        D _name=dob_hafele_eng_s_curva#1
+        D _open_formula=parent!open
+        D open=0
+        F inst___iscollapsed:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        I _name=dob_hafele_eng_s_curva#1
+        I _x_formula=1.45
+        I _y_formula=-2.1
+        I _z_formula=0.8
+        I open=0
+      C dob_hafele_eng_ret#1 [dob_hafele_eng_ret#1] 17.0x86.9x30.7
+        D _inst__x_formula=-0.4
+        D _inst__y_formula=-2
+        D _inst__z_formula=0.8
+        D _lenx_formula=1.698089
+        D _leny_formula=8.184234
+        D _lenz_formula=2.299211
+        D _name=dob_hafele_eng_ret#1
+        D _open_formula=parent!open
+        D open=0
+        F inst___iscollapsed:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        I _name=dob_hafele_eng_ret#1
+        I _x_formula=-0.4
+        I _y_formula=-2
+        I _z_formula=0.8
+        I open=0
+      C dob_hafele_eng_curva#1 [dob_hafele_eng_curva#1] 17.0x86.9x28.6
+        D _inst__x_formula=0.6
+        D _inst__y_formula=-2.3
+        D _inst__z_formula=0.8
+        D _lenx_formula=1.698089
+        D _leny_formula=10.417489
+        D _lenz_formula=4.227994
+        D _name=dob_hafele_eng_curva#1
+        D _open_formula=parent!open
+        D open=0
+        F inst___iscollapsed:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        I _name=dob_hafele_eng_curva#1
+        I _x_formula=0.6
+        I _y_formula=-2.3
+        I _z_formula=0.8
+        I open=0
+      G Agrupar#2615 [] 11.0x9.8x10.2
+    C direcional#5 [direcional] 20.0x137.4x0.0
+      D _inst__x_formula=0
+      D _inst__y_formula=-parent!depthhinge+LenX+0.1
+      D _inst__z_formula=5
+      D _lenx_formula=2
+      D _leny_formula=2
+      D _lenz_formula=0
+      D _name=direcional
+      D componentedit=1
+      D parentrefresh=1
+      F inst___iscollapsed:  () 
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      F movedb1: Mover dobradiça 01:(+ -): (TEXTBOX) &
+      F movedb2: Mover dobradiça 02:(+ -): (TEXTBOX) &
+      F movedb3: Mover dobradiça 03:(+ -): (TEXTBOX) &
+      F movedb4: Mover dobradiça 04:(+ -): (TEXTBOX) &
+      F movedb5: Mover dobradiça 05:(+ -): (TEXTBOX) &
+      F movedb6: Mover dobradiça 06:(+ -): (TEXTBOX) &
+      I _name=direcional
+      I _x_formula=0
+      I _y_formula=-parent!depthhinge+LenX+0.1
+      I _z_formula=5
+      I componentedit=1
+      I parentrefresh=1
+      G Agrupar#2617 [] 58.7x60.0x0.0
+      G Agrupar#2620 [] 58.7x60.0x0.0
+      G Agrupar#2619 [] 58.7x60.0x0.0
+      G Agrupar#2618 [] 58.7x60.0x0.0
+    C dobradica#6 [dobradica] 46.3x91.7x65.5
+      D _inst__x_formula=0
+      D _inst__y_formula=-parent!depthhinge
+      D _inst__z_formula=parent!margin+copy*(parent!spaceutil)+if(copy=0,direcional!movedb1,if(copy=1,direcional!movedb2,if(copy=2,direcional!movedb3,if(copy=3,direcional!movedb4,if(copy=4,direcional!movedb5,if(copy=5,direcio
+      D _itemcode_formula="CM_KIT_HAFELE_DOB_"&if(typehinge="r0","RET",if(typehinge="r1","RET",if(typehinge = "a","ALT","SUP")))&"_110_SM_CF4_NIQ"
+      D _lenx_formula=0.9
+      D _leny_formula=9.601
+      D _lenz_formula=6.4
+      D _name=dobradica
+      D _open_formula=parent!open
+      D _x_formula=0
+      D _y_formula=-parent!depthhinge
+      D _z_formula=parent!margin+copy*(parent!spaceutil)+if(copy=0,direcional!movedb1,if(copy=1,direcional!movedb2,if(copy=2,direcional!movedb3,if(copy=3,direcional!movedb4,if(copy=4,direcional!movedb5,if(copy=5,direcio
+      D description=Dobradiça HAFELE 110 SM 35mm Reta Amortecedor calço fixo
+      D itemcode=CM_KIT_HAFELE_DOB_RET_110_SM_CF4_NIQ
+      D name=Dobradiça
+      D open=0
+      F inst___iscollapsed:  () 
+      F inst__copies:  () 
+      F inst__copy:  () 
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      I _name=dobradica
+      I _x_formula=0
+      I _y_formula=-parent!depthhinge
+      I _z_formula=parent!margin+copy*(parent!spaceutil)+if(copy=0,direcional!movedb1,if(copy=1,direcional!movedb2,if(copy=2,direcional!movedb3,if(copy=3,direcional!movedb4,if(copy=4,direcional!movedb5,if(copy=5,direcio
+      I description=Dobradiça HAFELE 110 SM 35mm Reta Amortecedor calço fixo
+      I itemcode=CM_KIT_HAFELE_DOB_RET_110_SM_CF4_NIQ
+      I name=Dobradiça
+      I open=0
+      C Caneco_Dobradiça#6 [Caneco_Dobradiça] 12.5x37.0x65.5
+        D _inst__x_formula=if(parent!open=1,position_open,position_closed)+if(parent!open=0,parent!poscup,0)
+        D _inst__y_formula=if(parent!open=1,parent!poscup,0)
+        D _inst__z_formula=0
+        D _lenx_formula=0.3
+        D _leny_formula=3.702556
+        D _lenz_formula=6.55
+        D _name=Caneco_Dobradiça
+        D _x_formula=if(parent!open=1,position_open,position_closed)+if(parent!open=0,parent!poscup,0)
+        D _y_formula=if(parent!open=1,parent!poscup,0)
+        F inst___iscollapsed:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        I _name=Caneco_Dobradiça
+        I _x_formula=if(parent!open=1,position_open,position_closed)+if(parent!open=0,parent!poscup,0)
+        I _y_formula=if(parent!open=1,parent!poscup,0)
+        I _z_formula=0
+      C calco_dobradica_hardt_4f#6 [calco_dobradica_hardt_4f] 12.0x43.0x52.0
+        D _inst__x_formula=0
+        D _inst__y_formula=4
+        D _inst__z_formula=0
+        D _lenx_formula=0.9
+        D _leny_formula=4.30184
+        D _lenz_formula=5.2
+        D _name=calco_dobradica_hardt_4f
+        F inst___iscollapsed:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        I _name=calco_dobradica_hardt_4f
+        I _x_formula=0
+        I _y_formula=4
+        I _z_formula=0
+      C dob_hafele_eng_s_curva#2 [dob_hafele_eng_s_curva#1] 17.0x87.0x29.9
+        D _inst__x_formula=1.45
+        D _inst__y_formula=-2.1
+        D _inst__z_formula=0.8
+        D _lenx_formula=1.698089
+        D _leny_formula=10.417489
+        D _lenz_formula=4.356588
+        D _name=dob_hafele_eng_s_curva#1
+        D _open_formula=parent!open
+        D open=0
+        F inst___iscollapsed:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        I _name=dob_hafele_eng_s_curva#1
+        I _x_formula=1.45
+        I _y_formula=-2.1
+        I _z_formula=0.8
+        I open=0
+      C dob_hafele_eng_ret#2 [dob_hafele_eng_ret#1] 17.0x86.9x30.7
+        D _inst__x_formula=-0.4
+        D _inst__y_formula=-2
+        D _inst__z_formula=0.8
+        D _lenx_formula=1.698089
+        D _leny_formula=8.184234
+        D _lenz_formula=2.299211
+        D _name=dob_hafele_eng_ret#1
+        D _open_formula=parent!open
+        D open=0
+        F inst___iscollapsed:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        I _name=dob_hafele_eng_ret#1
+        I _x_formula=-0.4
+        I _y_formula=-2
+        I _z_formula=0.8
+        I open=0
+      C dob_hafele_eng_curva#2 [dob_hafele_eng_curva#1] 17.0x86.9x28.6
+        D _inst__x_formula=0.6
+        D _inst__y_formula=-2.3
+        D _inst__z_formula=0.8
+        D _lenx_formula=1.698089
+        D _leny_formula=10.417489
+        D _lenz_formula=4.227994
+        D _name=dob_hafele_eng_curva#1
+        D _open_formula=parent!open
+        D open=0
+        F inst___iscollapsed:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        I _name=dob_hafele_eng_curva#1
+        I _x_formula=0.6
+        I _y_formula=-2.3
+        I _z_formula=0.8
+        I open=0
+      G Agrupar#2616 [] 11.0x9.8x10.2
+
+==================== kit_corredica_invisivel_generica (93bede48cea2815337cdb43f9d4a6374__kit_corredica_invisivel_generica.skp)
+C kit_corredica_invisivel_generica#4 [kit_corredica_invisivel] 176.0x449.0x48.5
+  D _inst__x_formula=0
+  D _inst__y_formula=0
+  D _inst__z_formula=-2.75+0.85+0.4
+  D _itemcode_formula="COR_INV_TOP_"&LenY
+  D _keyalert_formula=if(or(leny>maxlength,leny<minlength),0,1)
+  D _lenx_formula=parent!lenx
+  D _leny_formula=parent!leny
+  D _lenz_formula=4.85
+  D _name=kit_corredica_invisivel
+  D _open_formula=parent!extract
+  D componentedit=1
+  D description=Corrediça Invisivel Generica(somente guia com furos)
+  D itemcode=COR_INV_TOP_44
+  D keyalert=1
+  D modeloptions=corrediça invisivel
+  D name=Corrediça
+  D open=0
+  D parentrefresh=3
+  F inst___iscollapsed:  () 
+  F inst__rotx:  () 
+  F inst__roty:  () 
+  F inst__rotz:  () 
+  F inst__x:  () 
+  F inst__y:  () 
+  F inst__z:  () 
+  C corredica_esquerda#10 [corredica_esquerda] 54.5x449.0x48.5
+    D _inst__x_formula=0
+    D _inst__y_formula=-parent!leny
+    D _inst__z_formula=0
+    D _lenx_formula=5.25
+    D _leny_formula=parent!leny
+    D _lenz_formula=4.85
+    D _name=corredica_esquerda
+    D _open_formula=parent!open
+    D open=0
+    F inst___iscollapsed:  () 
+    F inst__rotx:  () 
+    F inst__roty:  () 
+    F inst__rotz:  () 
+    F inst__x:  () 
+    F inst__y:  () 
+    F inst__z:  () 
+    I _name=corredica_esquerda
+    I _x_formula=0
+    I _y_formula=-parent!leny
+    I _z_formula=0
+    I open=0
+    C BaseCorredicaOculta#2 [BaseCorredicaOculta] 40.0x230.0x48.5
+      D _inst__x_formula=0
+      D _inst__y_formula=0.5
+      D _inst__z_formula=0
+      D _lenx_formula=4
+      D _leny_formula=28
+      D _lenz_formula=4.85
+      D _name=BaseCorredicaOculta
+      F inst___iscollapsed:  () 
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      I _name=BaseCorredicaOculta
+      I _x_formula=0
+      I _y_formula=0.5
+      I _z_formula=0
+    C carro_corredica#9 [carro] 23.4x586.8x20.8
+      D _inst__x_formula=2.2
+      D _inst__y_formula=if(parent!open=1,-(parent!leny-4.6),4.6)
+      D _inst__z_formula=1
+      D _leny_formula=parent!leny-4.6+0.9
+      F inst___iscollapsed:  () 
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      I _lenx_formula=2.95
+      I _lenz_formula=1.7
+      I _name=carro
+      I _x_formula=2.2
+      I _y_formula=if(parent!open=1,-(parent!leny-4.6),4.6)
+      I _z_formula=1
+      C Soft Closing#2 [] 29.0x5.2x0.0
+      C HD#2 [HD#2] 6.5x3.8x0.0
+        D _name=HD#2
+        F inst___iscollapsed:  () 
+    G Grupo13#6 [Transfer Hole] 0.0x0.0x10.0
+      I _lenx_formula=0
+      I _leny_formula=0
+      I _lenz_formula=0.3
+      I _name=Transfer Hole
+      I _x_formula=0
+      I _y_formula=3.3+0.5
+      I _z_formula=3.7
+      I name=transfer_hole
+    G Grupo13#8 [Transfer Hole] 0.0x0.0x10.0
+      I _lenx_formula=0
+      I _leny_formula=0
+      I _lenz_formula=0.3
+      I _name=Transfer Hole
+      I _x_formula=0
+      I _y_formula=16.1+0.5
+      I _z_formula=3.7
+      I name=transfer_hole
+    G Grupo13#1 [Transfer Hole] 0.0x0.0x10.0
+      I _lenx_formula=0
+      I _leny_formula=0
+      I _lenz_formula=0.3
+      I _name=Transfer Hole
+      I _x_formula=0
+      I _y_formula=25.7+0.5
+      I _z_formula=3.7
+      I name=transfer_hole
+    C pino_guia#10 [pino_guia] 7.5x12.0x11.5
+      D _inst__x_formula=3
+      D _inst__y_formula=if(parent!open=0,parent!leny+0.1,0.1)
+      D _inst__z_formula=2.7
+      F inst___iscollapsed:  () 
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      I _lenx_formula=0.752
+      I _leny_formula=1.2
+      I _lenz_formula=1.15
+      I _name=pino_guia
+      I _x_formula=3
+      I _y_formula=if(parent!open=0,parent!leny+0.1,0.1)
+      I _z_formula=2.7
+    G Grupo13#20 [Transfer Hole] 0.0x0.0x10.0
+      I _lenx_formula=0
+      I _leny_formula=0
+      I _lenz_formula=1
+      I _name=Transfer Hole
+      I _x_formula=3
+      I _y_formula=if(parent!open=0,parent!leny,0)
+      I _z_formula=3.8
+      I name=transfer_hole
+    C rebaixo_gaveta#6 [Transfer_vertical_saw_cut] 300.0x10.0x10.0
+      D _inst__x_formula=2.4
+      D _inst__y_formula=if(parent!open=1,0,parent!leny)
+      D _inst__z_formula=2.65
+      D _lenx_formula=parent!leny
+      D _leny_formula=0.75+0.4
+      D _lenz_formula=0.2
+      D _name=Transfer_vertical_saw_cut
+      D name=Transfer_vertical_saw_cut
+      F inst___iscollapsed:  () 
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      I _name=Transfer_vertical_saw_cut
+      I _x_formula=2.4
+      I _y_formula=if(parent!open=1,0,parent!leny)
+      I _z_formula=2.65
+      G Grupo9#15 [] 300.0x10.0x0.0
+  C corredica_direita#11 [corredica_direita] 54.5x449.0x48.5
+    D _inst__x_formula=parent!lenx
+    D _inst__y_formula=-parent!leny
+    D _inst__z_formula=0
+    D _lenx_formula=5.25
+    D _leny_formula=parent!leny
+    D _lenz_formula=4.85
+    D _name=corredica_direita
+    D _open_formula=parent!open
+    D open=0
+    F inst___iscollapsed:  () 
+    F inst__rotx:  () 
+    F inst__roty:  () 
+    F inst__rotz:  () 
+    F inst__x:  () 
+    F inst__y:  () 
+    F inst__z:  () 
+    I _name=corredica_direita
+    I _x_formula=parent!lenx
+    I _y_formula=-parent!leny
+    I _z_formula=0
+    I open=0
+    C BaseCorredicaOculta#1 [BaseCorredicaOculta] 40.0x230.0x48.5
+      D _inst__x_formula=0
+      D _inst__y_formula=0.5
+      D _inst__z_formula=0
+      D _lenx_formula=4
+      D _leny_formula=28
+      D _lenz_formula=4.85
+      D _name=BaseCorredicaOculta
+      F inst___iscollapsed:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      I _name=BaseCorredicaOculta
+      I _x_formula=0
+      I _y_formula=0.5
+      I _z_formula=0
+    C carro_corredica#1 [carro] 23.3x586.8x20.8
+      D _inst__x_formula=-2.2
+      D _inst__y_formula=if(parent!open=1,-(parent!leny-4.6),4.6)
+      D _inst__z_formula=1
+      D _lenx_formula=2.95
+      D _leny_formula=parent!leny-4.6+0.9
+      D _lenz_formula=1.7
+      F inst___iscollapsed:  () 
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      I _name=carro
+      I _x_formula=-2.2
+      I _y_formula=if(parent!open=1,-(parent!leny-4.6),4.6)
+      I _z_formula=1
+    G Grupo13#5 [Transfer Hole] 0.0x0.0x10.0
+      I _lenx_formula=0
+      I _leny_formula=0
+      I _lenz_formula=0.3
+      I _name=Transfer Hole
+      I _x_formula=0
+      I _y_formula=25.7+0.5
+      I _z_formula=3.7
+      I name=transfer_hole
+    G Grupo13#7 [Transfer Hole] 0.0x0.0x10.0
+      I _lenx_formula=0
+      I _leny_formula=0
+      I _lenz_formula=0.3
+      I _name=Transfer Hole
+      I _x_formula=0
+      I _y_formula=16.1+0.5
+      I _z_formula=3.7
+      I name=transfer_hole
+    G Grupo13#3 [Transfer Hole] 0.0x0.0x10.0
+      I _lenx_formula=0
+      I _leny_formula=0
+      I _lenz_formula=0.3
+      I _name=Transfer Hole
+      I _x_formula=0
+      I _y_formula=3.3+0.5
+      I _z_formula=3.7
+      I name=transfer_hole
+    G Grupo13#19 [Transfer Hole] 0.0x0.0x10.0
+      I _lenx_formula=0
+      I _leny_formula=0
+      I _lenz_formula=1
+      I _name=Transfer Hole
+      I _x_formula=-3
+      I _y_formula=if(parent!open=0,parent!leny,0)
+      I _z_formula=3.8
+      I name=transfer_hole
+    C pino_guia#9 [pino_guia] 7.5x12.0x11.5
+      D _inst__x_formula=-3
+      D _inst__y_formula=if(parent!open=0,parent!leny+0.1,0.1)
+      D _inst__z_formula=2.7
+      F inst___iscollapsed:  () 
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      I _lenx_formula=0.752
+      I _leny_formula=1.2
+      I _lenz_formula=1.15
+      I _name=pino_guia
+      I _x_formula=-3
+      I _y_formula=if(parent!open=0,parent!leny+0.1,0.1)
+      I _z_formula=2.7
+    C rebaixo_gaveta#1 [Transfer_vertical_saw_cut] 300.0x10.0x10.0
+      D _inst__x_formula=-2.4
+      D _inst__y_formula=if(parent!open=0,0,-parent!leny)
+      D _inst__z_formula=2.65
+      D _lenx_formula=parent!leny
+      D _leny_formula=0.75+0.4
+      D _lenz_formula=0.2
+      D _name=Transfer_vertical_saw_cut
+      D name=Transfer_vertical_saw_cut
+      F inst___iscollapsed:  () 
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      I _name=Transfer_vertical_saw_cut
+      I _x_formula=-2.4
+      I _y_formula=if(parent!open=0,0,-parent!leny)
+      I _z_formula=2.65
+      G Grupo9#16 [] 300.0x10.0x0.0
+  G Agrupar#235 [alert] 142.7x18.5x181.8
+    I _lenx_formula=if(parent!lenx>parent!lenz,parent!lenz*0.5,parent!lenx*0.5)
+    I _leny_formula=parent!leny
+    I _lenz_formula=LenX
+    I _name=alert
+    I _x_formula=parent!lenx/2
+    I _y_formula=-parent!leny-if(hidden=0,2,0)
+    I _z_formula=parent!lenz/2
+
+==================== corredica_tn_telescopica_normal (e48aa95f471e4f5f8714c3f720bc2875__corredica_tn_telescopica_normal.skp)
+C corredica_tn_telescopica_normal#28 [corredica_tn] 525.0x401.0x44.0
+  D _inst__x_formula=0
+  D _inst__y_formula=0
+  D _inst__z_formula=if(positionrails=0,parent!lenz/2-lenz/2,0)
+  D _itemcode_formula="CM_KIT_COR_TN_H45_NR_"&upmdepth
+  D _keyalert_formula=if(or(lenyforopen*1<30,lenyforopen*1>50),0,1)
+  D _lenx_formula=parent!lenx
+  D _leny_formula=if(open=1,2*parent!leny,parent!leny)
+  D _lenz_formula=4.4
+  D _name=corredica_tn
+  D _open_formula=parent!extract
+  D atttransfer=positionrails
+  D componentedit=1
+  D description=Corrediça Telescopica TN H45
+  D itemcode=CM_KIT_COR_TN_H45_NR_400
+  D keyalert=1
+  D modeloptions=corrediça telescopica
+  D name=Corrediça
+  D open=0
+  F inst___iscollapsed:  () 
+  F inst__rotx:  () 
+  F inst__roty:  () 
+  F inst__rotz:  () 
+  F inst__x:  () 
+  F inst__y:  () 
+  F inst__z:  () 
+  F positionrails: Posição da corrediça: (LIST) &Centro=0&Inferior=1&
+  C CorrediçaEsq#24 [CorrediçaEsq] 19.0x401.0x44.0
+    D _inst__x_formula=0
+    D _inst__y_formula=-leny
+    D _inst__z_formula=0
+    D _lenx_formula=1.85
+    D _leny_formula=parent!lenyforopen
+    D _lenz_formula=3.52
+    D _name=CorrediçaEsq
+    D _open_formula=parent!open
+    D open=0
+    F inst___iscollapsed:  () 
+    F inst__x:  () 
+    F inst__y:  () 
+    F inst__z:  () 
+    I _name=CorrediçaEsq
+    I _x_formula=0
+    I _y_formula=-leny
+    I _z_formula=0
+    I open=0
+    C BaseCorrediçaTelescopicaEsq#24 [BaseCorrediçaTelescopicaEsq] 14.0x400.0x44.0
+      D _inst__x_formula=0
+      D _inst__y_formula=+0.1
+      D _inst__z_formula=0
+      D _lenx_formula=1.1
+      D _leny_formula=parent!leny
+      D _lenz_formula=4.4
+      D _name=BaseCorrediçaTelescopicaEsq
+      F inst___iscollapsed:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      I _name=BaseCorrediçaTelescopicaEsq
+      I _x_formula=0
+      I _y_formula=+0.1
+      I _z_formula=0
+      G Agrupar#9 [Group] 11.0x40.0x35.2
+        I _lenx_formula=1.1
+        I _leny_formula=4
+        I _lenz_formula=4.4
+        I _name=Group
+        I _x_formula=0
+        I _y_formula=parent!leny-4
+        I _z_formula=0
+      G Agrupar#14 [Group] 11.0x460.0x35.2
+        I _lenx_formula=1.1
+        I _leny_formula=parent!leny-4
+        I _lenz_formula=4.4
+        I _name=Group
+        I _x_formula=0
+        I _y_formula=0
+        I _z_formula=0
+      G Grupo503#8 [Transfer Hole] 0.0x0.0x10.0
+        I _lenx_formula=0
+        I _leny_formula=0
+        I _lenz_formula=0.3
+        I _name=Transfer Hole
+        I _x_formula=0
+        I _y_formula=parent!positionhole1+parent!positionhole3
+        I _z_formula=parent!lenz/2
+        I name=transfer_hole
+      G Grupo503#11 [Transfer Hole] 0.0x0.0x10.0
+        I _lenx_formula=0
+        I _leny_formula=0
+        I _lenz_formula=0.3
+        I _name=Transfer Hole
+        I _x_formula=0
+        I _y_formula=parent!positionhole1+parent!positionhole2
+        I _z_formula=parent!lenz/2
+        I name=transfer_hole
+      G Grupo503#4 [Transfer Hole] 0.0x0.0x10.0
+        I _lenx_formula=0
+        I _leny_formula=0
+        I _lenz_formula=0.3
+        I _name=Transfer Hole
+        I _x_formula=0
+        I _y_formula=parent!positionhole1
+        I _z_formula=parent!lenz/2
+        I name=transfer_hole
+    C TrilhoCorrediçaTelescopicaEsq#24 [TrilhoCorrediçaTelescopicaEsq] 12.0x400.0x24.0
+      D _inst__x_formula=0.05
+      D _inst__y_formula=if(parent!open=0,0,-(leny))
+      D _inst__z_formula=0.59-0.15
+      D _lenx_formula=1.25
+      D _leny_formula=parent!leny
+      D _lenz_formula=2.4
+      D _name=TrilhoCorrediçaTelescopicaEsq
+      F inst___iscollapsed:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      I _name=TrilhoCorrediçaTelescopicaEsq
+      I _x_formula=0.05
+      I _y_formula=if(parent!open=0,0,-(leny))
+      I _z_formula=0.59-0.15
+      G Grupo503#5 [Transfer Hole] 0.0x0.0x10.0
+        I _lenx_formula=0
+        I _leny_formula=0
+        I _lenz_formula=0.3
+        I _name=Transfer Hole
+        I _x_formula=parent!lenx
+        I _y_formula=5.1
+        I _z_formula=1.76
+        I name=transfer_hole
+      G Grupo503#10 [Transfer Hole] 0.0x0.0x10.0
+        I _lenx_formula=0
+        I _leny_formula=0
+        I _lenz_formula=0.3
+        I _name=Transfer Hole
+        I _x_formula=parent!lenx
+        I _y_formula=if(parent!leny=25,3.5,if(parent!leny=30,25.9,if(parent!leny=35,29.1,if(parent!leny=40,35.5,if(parent!leny=45,38.7,if(parent!leny=50,45.1,if(parent!leny=55,45.1,if(parent!leny=60,45.1,if(parent!leny=65
+        I _z_formula=1.76
+        I name=transfer_hole
+      G Grupo503#10 [Transfer Hole] 0.0x0.0x10.0
+        I _lenx_formula=0
+        I _leny_formula=0
+        I _lenz_formula=0.3
+        I _name=Transfer Hole
+        I _x_formula=parent!lenx
+        I _y_formula=if(parent!leny=25,3.5,if(parent!leny=30,14.7,if(parent!leny=35,14.7,if(parent!leny=40,17.9,if(parent!leny=45,21.1,if(parent!leny=50,24.3,if(parent!leny=55,24.3,if(parent!leny=60,24.3,if(parent!leny=65
+        I _z_formula=1.76
+        I name=transfer_hole
+      C trilho_interno#37 [Group] 9.0x400.0x24.0
+        D _inst__x_formula=0.35
+        D _inst__y_formula=0
+        D _inst__z_formula=0.56
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        I _lenx_formula=0.9
+        I _leny_formula=parent!leny
+        I _lenz_formula=2.4
+        I _name=Group
+        I _x_formula=0.35
+        I _y_formula=0
+        I _z_formula=0.56
+  C CorrediçaDir#24 [CorrediçaDir] 19.0x401.0x44.0
+    D _inst__x_formula=parent!lenx
+    D _inst__y_formula=-LenY
+    D _inst__z_formula=0
+    D _lenx_formula=1.85
+    D _leny_formula=parent!lenyforopen
+    D _lenz_formula=3.52
+    D _name=CorrediçaDir
+    D _open_formula=parent!open
+    D open=0
+    F inst___iscollapsed:  () 
+    F inst__x:  () 
+    F inst__y:  () 
+    F inst__z:  () 
+    I _name=CorrediçaDir
+    I _x_formula=parent!lenx
+    I _y_formula=-LenY
+    I _z_formula=0
+    I open=0
+    C BaseCorrediçaTelescopicaDir#24 [BaseCorrediçaTelescopicaDir] 14.0x400.0x44.0
+      D _inst__x_formula=-LenX
+      D _inst__y_formula=+0.1
+      D _inst__z_formula=0
+      D _lenx_formula=1.1
+      D _leny_formula=parent!leny
+      D _lenz_formula=4.4
+      D _name=BaseCorrediçaTelescopicaDir
+      F inst___iscollapsed:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      I _name=BaseCorrediçaTelescopicaDir
+      I _x_formula=-LenX
+      I _y_formula=+0.1
+      I _z_formula=0
+      G Agrupar#8 [Group] 11.0x40.0x35.2
+        I _lenx_formula=1.1
+        I _leny_formula=4
+        I _lenz_formula=4.4
+        I _name=Group
+        I _x_formula=0
+        I _y_formula=parent!leny-4
+        I _z_formula=0
+      G Agrupar#4 [Group] 11.0x410.0x35.2
+        I _lenx_formula=1.1
+        I _leny_formula=parent!leny-4
+        I _lenz_formula=4.4
+        I _name=Group
+        I _x_formula=0
+        I _y_formula=0
+        I _z_formula=0
+      G Grupo503#9 [Transfer Hole] 0.0x0.0x10.0
+        I _lenx_formula=0
+        I _leny_formula=0
+        I _lenz_formula=0.3
+        I _name=Transfer Hole
+        I _x_formula=parent!lenx
+        I _y_formula=parent!positionhole1+parent!positionhole2
+        I _z_formula=PARENT!LENZ/2
+        I name=transfer_hole
+      G Grupo503#9 [Transfer Hole] 0.0x0.0x10.0
+        I _lenx_formula=0
+        I _leny_formula=0
+        I _lenz_formula=0.3
+        I _name=Transfer Hole
+        I _x_formula=parent!lenx
+        I _y_formula=parent!positionhole1
+        I _z_formula=PARENT!LENZ/2
+        I name=transfer_hole
+      G Grupo503#12 [Transfer Hole] 0.0x0.0x10.0
+        I _lenx_formula=0
+        I _leny_formula=0
+        I _lenz_formula=0.3
+        I _name=Transfer Hole
+        I _x_formula=parent!lenx
+        I _y_formula=parent!positionhole1+parent!positionhole3
+        I _z_formula=PARENT!LENZ/2
+        I name=transfer_hole
+    C TrilhoCorrediçaTelescopicaDir#24 [TrilhoCorrediçaTelescopicaEsq] 12.0x400.0x24.0
+      D _inst__x_formula=0-0.05
+      D _inst__y_formula=if(parent!open=0,0,-(leny))
+      D _inst__z_formula=0.29+0.15
+      D _lenx_formula=0.9
+      D _leny_formula=parent!leny
+      D _lenz_formula=2.4
+      D _name=TrilhoCorrediçaTelescopicaEsq
+      F inst___iscollapsed:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      I _name=TrilhoCorrediçaTelescopicaEsq
+      I _x_formula=0-0.05
+      I _y_formula=if(parent!open=0,0,-(leny))
+      I _z_formula=0.29+0.15
+      G Grupo503#9 [Transfer Hole] 0.0x0.0x10.0
+        I _lenx_formula=0
+        I _leny_formula=0
+        I _lenz_formula=0.3
+        I _name=Transfer Hole
+        I _x_formula=-1.25
+        I _y_formula=3.5
+        I _z_formula=1.76
+        I name=transfer_hole
+      G Grupo503#7 [Transfer Hole] 0.0x0.0x10.0
+        I _lenx_formula=0
+        I _leny_formula=0
+        I _lenz_formula=0.3
+        I _name=Transfer Hole
+        I _x_formula=-1.25
+        I _y_formula=if(parent!leny=25,3.5,if(parent!leny=30,25.9,if(parent!leny=35,29.1,if(parent!leny=40,35.5,if(parent!leny=45,38.7,if(parent!leny=50,45.1,if(parent!leny=55,45.1,if(parent!leny=60,45.1,if(parent!leny=65
+        I _z_formula=1.76
+        I name=transfer_hole
+      G Grupo503#9 [Transfer Hole] 0.0x0.0x10.0
+        I _lenx_formula=0
+        I _leny_formula=0
+        I _lenz_formula=0.3
+        I _name=Transfer Hole
+        I _x_formula=-1.25
+        I _y_formula=if(parent!leny=25,3.5,if(parent!leny=30,14.7,if(parent!leny=35,14.7,if(parent!leny=40,17.9,if(parent!leny=45,21.1,if(parent!leny=50,24.3,if(parent!leny=55,24.3,if(parent!leny=60,24.3,if(parent!leny=65
+        I _z_formula=1.76
+        I name=transfer_hole
+      C trilho_interno#38 [Group] 9.0x400.0x24.0
+        D _inst__x_formula=-1.25
+        D _inst__y_formula=0
+        D _inst__z_formula=0.56
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        I _lenx_formula=0.9
+        I _leny_formula=parent!leny
+        I _lenz_formula=2.4
+        I _name=Group
+        I _x_formula=-1.25
+        I _y_formula=0
+        I _z_formula=0.56
+  G Agrupar#228 [alert] 142.7x18.5x181.8
+    I _lenx_formula=if(parent!lenx>parent!lenz,parent!lenz*0.5,parent!lenx*0.5)
+    I _leny_formula=parent!leny
+    I _lenz_formula=LenX
+    I _name=alert
+    I _x_formula=parent!lenx/2
+    I _y_formula=-parent!leny
+    I _z_formula=parent!lenz/2
+
+==================== divisoria_1und (89b651ffd4b6b4c98e9203be3ffbfcb0__divisoria_1und.skp)
+C divisoria_1und#1 [divisoria_1und] 1737.5x863.0x760.5
+  D _inst__x_formula=px
+  D _inst__y_formula=py
+  D _inst__z_formula=pz
+  D _lenx_formula=parent!lenx
+  D _leny_formula=parent!leny-indentation
+  D _lenz_formula=parent!lenz
+  D _name=divisoria_1und
+  D _x_formula=px
+  D _y_formula=py
+  D _z_formula=pz
+  D componentedit=1
+  D description=Uma unidade
+  D name=Conjunto divisorias
+  F bk0: Recuo traseiro esquerda: (TEXTBOX) &
+  F bk1: Recuo traseiro direito: (TEXTBOX) &
+  F centralize: Centralizar: (LIST) &sim=1&n%E3o=0&
+  F indentation: Recuo: (TEXTBOX) &
+  F inst__rotx:  () 
+  F inst__roty:  () 
+  F inst__rotz:  () 
+  F inst__x:  () 
+  F inst__y:  () 
+  F inst__z:  () 
+  F positiona: Posição da Divisoria: (TEXTBOX) &
+  F rotx:  () 
+  F roty:  () 
+  F rotz:  () 
+  F thickness: Espessura: (LIST) &3mm=0.3&6mm=0.65&9mm=0.95&15mm=1.55&18mm=1.85&25mm=2.55&35mm=3.55&36mm=3.65&
+  F x:  () 
+  F y:  () 
+  F z:  () 
+  C conteiner#55 [conteiner] 1264.2x863.0x738.0
+    D _inst__x_formula=0
+    D _inst__y_formula=-parent!bk0
+    D _inst__z_formula=0
+    D _lenx_formula=if(parent!centralize=1,parent!lengthDifference/2,parent!positionA)
+    D _leny_formula=parent!leny-parent!bk0
+    D _lenz_formula=parent!lenz
+    D _name=conteiner
+    D type=conteiner_internal
+    F inst___iscollapsed:  () 
+    F inst__rotx:  () 
+    F inst__roty:  () 
+    F inst__rotz:  () 
+    F inst__x:  () 
+    F inst__y:  () 
+    F inst__z:  () 
+    F rotx:  () 
+    F roty:  () 
+    F rotz:  () 
+    F x:  () 
+    I _x_formula=0
+    I _y_formula=-parent!bk0
+    I _z_formula=0
+    I type=conteiner_internal
+    C edge_conteiner#55 [edge_conteiner] 1234.0x841.0x723.0
+      D _inst__x_formula=0
+      D _inst__y_formula=0
+      D _inst__z_formula=0
+      D _lenx_formula=parent!lenx
+      D _leny_formula=parent!leny
+      D _lenz_formula=parent!lenz
+      D _name=edge_conteiner
+      F inst___iscollapsed:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      I _name=edge_conteiner
+      I _x_formula=0
+      I _y_formula=0
+      I _z_formula=0
+    C porta_giro_dupla_sem_puxador [porta_giro_dupla] 1264.2x82.9x731.5
+      D _inst__x_formula=px
+      D _inst__y_formula=py
+      D _inst__z_formula=pz
+      D _lenx_formula=parent!lenx+2*thicknessparent
+      D _leny_formula=2.5
+      D _lenz_formula=parent!lenz+2*thicknessparent
+      D _name=porta_giro_dupla
+      D _x_formula=px
+      D _y_formula=py
+      D _z_formula=pz
+      D atttransfer=atttransfer|positionpuller|transpassdown|transpasscenter|transpassup|typehingeleft|typehingeright|upmfinish|_upmfinish_formula|_thickness_formula|_transpassdown_formula|_transpassup_formula
+      D componentedit=1
+      D description=Porta de giro lisa, sem puxador
+      D materialoptions=portas
+      D modeloptions=portas duplas
+      D name=Conjunto Porta Dupla
+      F heightpuller: Desconto para puxador: (TEXTBOX) &
+      F inst___iscollapsed:  () 
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      F positionpuller: Posição do puxador: (LIST) &Baixo=1&Cima=2&Lateral=3&
+      F thickness: Espessura: (LIST) &3mm=0.3&6mm=0.65&9mm=0.95&15mm=1.55&18mm=1.85&25mm=2.55&35mm=3.55&36mm=3.65&
+      F transpasscenter: Folga entre portas: (TEXTBOX) &
+      F transpassdown: Transpasse inferior: (TEXTBOX) &
+      F transpassup: Transpasse superior: (TEXTBOX) &
+      F typehingeleft: Tipo dobradiça esquerda: (LIST) &Reta%20total=r0&Reta%20=r1&Alta=a&Super%20Alta=s&
+      F typehingeright: Tipo dobradiça direita: (LIST) &Reta%20total=r0&Reta=r1&Alta=a&Super%20alta=s&
+      F widthdoorequals: Portas Iguais (LIST) &sim=1&nao=0&
+      I _x_formula=px
+      I _y_formula=py
+      I _z_formula=pz
+      C porta_de_giro [porta_giro] 628.3x82.9x731.5
+        D _keyalert_formula=if(or(lenx>max_width,lenz>max_height,thickness<thicknessparent,lenz<min_height),0,1)
+        D _lenx_formula=parent!lenx/2
+        D _leny_formula=depthhinge+thickness+if(open=1,lenx-thickness,0)
+        D _lenz_formula=parent!lenz-if(typehinge="s",2*thicknessparent,0)
+        D _name=porta_giro
+        D _x_formula=px
+        D _y_formula=py
+        D _z_formula=pz
+        D description=Porta de giro lisa, sem puxador
+        D itemcode=CM_POR_LIS
+        D keyalert=1
+        D name=Conjunto Porta
+        D onclick=set(open,1,0)
+        D open=0
+        D type=door
+        F scaletool: ScaleTool () 
+        I keyalert=1
+        I open=0
+        I type=door
+      C porta_de_giro#1 [porta_giro] 632.4x82.9x731.5
+        D _keyalert_formula=if(or(lenx>max_width,lenz>max_height,thickness<thicknessparent,lenz<min_height),0,1)
+        D _lenx_formula=parent!lenx/2
+        D _leny_formula=depthhinge+thickness+if(open=1,lenx-thickness,0)
+        D _lenz_formula=parent!lenz-if(typehinge="s",2*thicknessparent,0)
+        D _name=porta_giro
+        D _x_formula=px
+        D _y_formula=py
+        D _z_formula=pz
+        D description=Porta de giro lisa, sem puxador
+        D itemcode=CM_POR_LIS
+        D keyalert=1
+        D name=Conjunto Porta
+        D onclick=set(open,1,0)
+        D open=0
+        F scaletool: ScaleTool () 
+        I keyalert=1
+        I open=0
+    C prateleira_1und#2 [prateleira_1und] 1240.0x839.0x723.0
+      D _inst__x_formula=px
+      D _inst__y_formula=py
+      D _inst__z_formula=pz
+      D _lenx_formula=parent!lenx
+      D _leny_formula=parent!leny-indentation
+      D _lenz_formula=parent!lenz
+      D _name=prateleira_1und
+      D _x_formula=px
+      D _y_formula=py
+      D _z_formula=pz
+      D componentedit=1
+      D description=Uma unidade
+      D name=Conjunto de prateleiras
+      F bk0: Afastamento Traseiro inferior: (TEXTBOX) &
+      F bk1: Afastamento Traseiro superior: (TEXTBOX) &
+      F centralize: Centralizar: (LIST) &sim=1&n%E3o=0&
+      F indentation: Recuo: (TEXTBOX) &
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      F positiona: Posição da prateleira: (TEXTBOX) &
+      F rotx:  () 
+      F roty:  () 
+      F rotz:  () 
+      F thickness: Espessura: (LIST) &3mm=0.3&6mm=0.65&9mm=0.95&15mm=1.55&18mm=1.85&25mm=2.55&35mm=3.55&36mm=3.65&
+      F x:  () 
+      F y:  () 
+      F z:  () 
+      I _x_formula=px
+      I _y_formula=py
+      I _z_formula=pz
+      C conteiner#21 [conteiner] 1234.0x839.0x300.0
+        D _inst__x_formula=0
+        D _inst__y_formula=-parent!bk0
+        D _inst__z_formula=0
+        D _lenx_formula=parent!lenx
+        D _leny_formula=parent!leny-parent!bk0
+        D _lenz_formula=if(parent!centralize=1,parent!heightDifference/2,parent!positionA)
+        D _name=conteiner
+        D type=conteiner_internal
+        F inst___iscollapsed:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F rotx:  () 
+        F roty:  () 
+        F rotz:  () 
+        F x:  () 
+        F z:  () 
+        I _x_formula=0
+        I _y_formula=-parent!bk0
+        I _z_formula=0
+        I type=conteiner_internal
+      C conteiner#23 [conteiner] 1234.0x839.0x397.5
+        D _inst__x_formula=0
+        D _inst__y_formula=-parent!bk1
+        D _inst__z_formula=parent!lenz-LenZ
+        D _lenx_formula=parent!lenx
+        D _leny_formula=parent!leny-parent!bk1
+        D _lenz_formula=if(parent!centralize=1,parent!heightDifference/2,parent!heightDifference-parent!positionA)
+        D _name=conteiner
+        D type=conteiner_internal
+        F inst___iscollapsed:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F rotx:  () 
+        F roty:  () 
+        F rotz:  () 
+        F x:  () 
+        I _x_formula=0
+        I _y_formula=-parent!bk1
+        I _z_formula=parent!lenz-LenZ
+        I type=conteiner_internal
+      C prateleira#5 [prateleira] 1240.0x839.0x27.3
+        D _inst__x_formula=0+mx
+        D _inst__y_formula=0+my
+        D _inst__z_formula=if(parent!centralize=1,parent!heightDifference/2,parent!positionA)+mZ
+        D _lenx_formula=if(a1_length>max_length,max_length,if(a1_length<min_length,min_length,a1_length))
+        D _leny_formula=if(a2_width>max_width,max_width,if(a2_width<min_width,min_width,a2_width))
+        D _lenz_formula=a3_thickness
+        D _name=prateleira
+        D description=Prateleira MDF
+        D itemcode=CM_PRA
+        D materialoptions=peças
+        D name=Prateleria
+        D type=peace
+        F addx: Adicionar ao Comprimento (+ -): (TEXTBOX) &
+        F addy: Adicionar a profundidade (+ -): (TEXTBOX) &
+        F inst___iscollapsed:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F mx: Mover em X(+ -): (TEXTBOX) &
+        F my: Mover em Y(+ -): (TEXTBOX) &
+        F mz: Mover em Z(+ -): (TEXTBOX) &
+        F zobservation: Observação: (TEXTBOX) &
+        I _x_formula=0+mx
+        I _y_formula=0+my
+        I _z_formula=if(parent!centralize=1,parent!heightDifference/2,parent!positionA)+mZ
+        I materialoptions=peças
+        I type=peace
+  C conteiner#56 [conteiner] 478.0x860.5x738.0
+    D _inst__x_formula=if(parent!centralize=1,parent!lengthDifference/2+parent!thickness,parent!positionA+parent!thickness)
+    D _inst__y_formula=-parent!bk1
+    D _inst__z_formula=0
+    D _lenx_formula=if(parent!centralize=1,parent!lengthDifference/2,parent!lenx-parent!positionA-parent!thickness)
+    D _leny_formula=parent!leny-parent!bk1
+    D _lenz_formula=parent!lenz
+    D _name=conteiner
+    D type=conteiner_internal
+    F inst___iscollapsed:  () 
+    F inst__rotx:  () 
+    F inst__roty:  () 
+    F inst__rotz:  () 
+    F inst__x:  () 
+    F inst__y:  () 
+    F inst__z:  () 
+    F rotx:  () 
+    F roty:  () 
+    F rotz:  () 
+    I _x_formula=if(parent!centralize=1,parent!lengthDifference/2+parent!thickness,parent!positionA+parent!thickness)
+    I _y_formula=-parent!bk1
+    I _z_formula=0
+    I type=conteiner_internal
+    C edge_conteiner#56 [edge_conteiner] 447.5x841.0x723.0
+      D _inst__x_formula=0
+      D _inst__y_formula=0
+      D _inst__z_formula=0
+      D _lenx_formula=parent!lenx
+      D _leny_formula=parent!leny
+      D _lenz_formula=parent!lenz
+      D _name=edge_conteiner
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      I _name=edge_conteiner
+      I _x_formula=0
+      I _y_formula=0
+      I _z_formula=0
+    C conjunto_fixação_dianteira#8 [conjunto_fixação_dianteiro] 478.0x27.5x50.0
+      D _inst__x_formula=px
+      D _inst__y_formula=py
+      D _inst__z_formula=pz
+      D _lenx_formula=parent!lenx
+      D _leny_formula=thickness
+      D _lenz_formula=heightrule
+      D _name=conjunto_fixação_dianteiro
+      D _x_formula=px
+      D _y_formula=py
+      D _z_formula=pz
+      D componentedit=1
+      D description=Conjunto de fixação dianteiro com régua
+      D name=Conjunto fixação
+      F heightrule: Altura da Régua: (TEXTBOX) &
+      F inst___iscollapsed:  () 
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      F positionrule: Posição da regua: (LIST) &Deitada=90&Em%20p%E9=0&
+      F thickness: Espessura: (LIST) &3mm=0.3&6mm=0.65&9mm=0.95&15mm=1.55&18mm=1.85&25mm=2.55&35mm=3.55&36mm=3.65&
+      I _x_formula=px
+      I _y_formula=py
+      I _z_formula=pz
+      C regua_deitada#13 [regua_deitada] 478.0x50.0x27.5
+        D _inst__x_formula=0+mx
+        D _inst__y_formula=-a3_thickness+my
+        D _inst__z_formula=parent!lenz-LenY+mz
+        D _lenx_formula=if(a1_length>max_length,max_length,if(a1_length<min_length,min_length,a1_length))
+        D _leny_formula=if(a2_width>max_width,max_width,if(a2_width<min_width,min_width,a2_width))
+        D _lenz_formula=a3_thickness
+        D _name=regua_deitada
+        D description=Regua
+        D itemcode=CM_REG
+        D materialoptions=peças
+        D name=Regua Deitada
+        D type=peace
+        F addx: Adicionar ao comprimento (+ -): (TEXTBOX) &
+        F addz: Adicionar a altura (+ -): (TEXTBOX) &
+        F inst___iscollapsed:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F mx: Mover em X(+ -): (TEXTBOX) &
+        F my: Mover em Y(+ -): (TEXTBOX) &
+        F mz: Mover em Z(+ -): (TEXTBOX) &
+        F zobservation: Observação: (TEXTBOX) &
+        I _x_formula=0+mx
+        I _y_formula=-a3_thickness+my
+        I _z_formula=parent!lenz-LenY+mz
+        I materialoptions=peças
+        I type=peace
+    C divisão_horizontal_1#2 [divisoria_horizontal] 470.0x860.5x738.0
+      D _inst__x_formula=px
+      D _inst__y_formula=py
+      D _inst__z_formula=pz
+      D _lenx_formula=parent!lenx
+      D _leny_formula=parent!leny-indentation
+      D _lenz_formula=parent!lenz
+      D _name=divisoria_horizontal
+      D _x_formula=px
+      D _y_formula=py
+      D _z_formula=pz
+      D componentedit=1
+      D description=Divisão Horizontal
+      D name=Divisão 
+      F bk0: Afastamento Traseiro inferior: (TEXTBOX) &
+      F bk1: Afastamento Traseiro superior: (TEXTBOX) &
+      F centralize: Centralizar: (LIST) &sim=1&n%E3o=0&
+      F indentation: Recuo: (TEXTBOX) &
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      F positiona: Altura vão inferior: (TEXTBOX) &
+      F rotx:  () 
+      F roty:  () 
+      F rotz:  () 
+      F spacebetween: Espaço entre divisões: (TEXTBOX) &
+      F x:  () 
+      F y:  () 
+      F z:  () 
+      I _x_formula=px
+      I _y_formula=py
+      I _z_formula=pz
+      C conteiner#24 [conteiner] 470.0x860.5x353.3
+        D _inst__x_formula=0
+        D _inst__y_formula=-parent!bk0
+        D _inst__z_formula=0
+        D _lenx_formula=parent!lenx
+        D _leny_formula=parent!leny-parent!bk0
+        D _lenz_formula=if(parent!centralize=1,parent!heightDifference/2,parent!positionA)
+        D _name=conteiner
+        D type=conteiner_internal
+        F inst___iscollapsed:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F rotx:  () 
+        F roty:  () 
+        F rotz:  () 
+        F x:  () 
+        F z:  () 
+        I _x_formula=0
+        I _y_formula=-parent!bk0
+        I _z_formula=0
+        I type=conteiner_internal
+      C conteiner#28 [conteiner] 470.0x860.5x359.8
+        D _inst__x_formula=0
+        D _inst__y_formula=-parent!bk1
+        D _inst__z_formula=parent!lenz-LenZ
+        D _lenx_formula=parent!lenx
+        D _leny_formula=parent!leny-parent!bk1
+        D _lenz_formula=if(parent!centralize=1,parent!heightDifference/2,parent!heightDifference-parent!positionA)
+        D _name=conteiner
+        D type=conteiner_internal
+        F inst___iscollapsed:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F rotx:  () 
+        F roty:  () 
+        F rotz:  () 
+        F x:  () 
+        I _x_formula=0
+        I _y_formula=-parent!bk1
+        I _z_formula=parent!lenz-LenZ
+        I type=conteiner_internal
+  C divisoria#1 [divisoria] 18.5x841.0x760.5
+    D _inst__x_formula=if(parent!centralize=1,parent!lengthDifference/2,parent!positionA)+mx
+    D _inst__y_formula=my
+    D _inst__z_formula=mz
+    D _lenx_formula=a3_thickness
+    D _leny_formula=if(a2_depth>max_depth,max_depth,if(a2_depth<min_depth,min_depth,a2_depth))
+    D _lenz_formula=if(a1_height>max_height,max_height,if(a1_height<min_height,min_height,a1_height))
+    D _name=divisoria
+    D atttransfer=upmtextaggregates|mx|my|mz|addy|addz|atttransfer
+    D description=Divisoria
+    D itemcode=CM_DIV
+    D materialoptions=peças
+    D modeloptions=divisorias especiais
+    D name=Divisoria
+    D type=peace
+    F addy: Adicionar a profundidade(+ -): (TEXTBOX) &
+    F addz: Adicionar a altura(+ -): (TEXTBOX) &
+    F inst___iscollapsed:  () 
+    F inst__rotx:  () 
+    F inst__roty:  () 
+    F inst__rotz:  () 
+    F inst__x:  () 
+    F inst__y:  () 
+    F inst__z:  () 
+    F mx: Mover em X(+ -): (TEXTBOX) &
+    F my: Mover em Y(+ -): (TEXTBOX) &
+    F mz: Mover em Z(+ -): (TEXTBOX) &
+    F zobservation: Observação: (TEXTBOX) &
+    I _x_formula=if(parent!centralize=1,parent!lengthDifference/2,parent!positionA)+mx
+    I _y_formula=my
+    I _z_formula=mz
+    I atttransfer=upmtextaggregates|mx|my|mz|addy|addz|atttransfer
+    I materialoptions=peças
+    I modeloptions=divisorias especiais
+    I type=peace
+    C kit_parafuso#77 [kit_parafuso] 18.5x37.0x841.0
+      D _inst__x_formula=px
+      D _inst__y_formula=py
+      D _inst__z_formula=pz
+      D _itemcode_formula="CM_KIT_PAR_"&if(counterpeace=1.55,"4X40",if(counterpeace=1.85,"4X45",if(counterpeace=2.55,"4X50",if(counterpeace=3.1,"4.5X60",if(counterpeace=3.7,"4.5X60","4.5X60")))))
+      D _lenx_formula=thicknesspeace
+      D _leny_formula=thicknesspeace+0.3+0.05
+      D _lenz_formula=choose(quadrant,parent!lenz,parent!lenz,parent!leny,parent!leny)+addz
+      D _name=kit_parafuso
+      D _x_formula=px
+      D _y_formula=py
+      D _z_formula=pz
+      D atttransfer=addz|quadrant|mx|my|mz|inverte|margin|quantity|atttransfer
+      D componentedit=1
+      D description=Kit de ferragens parafuso 4x45
+      D itemcode=CM_KIT_PAR_4X45
+      D modeloptions=fixação divisoria
+      D name=kit ferragem
+      F addz: Adicionar Comprimento (+ -): (TEXTBOX) &
+      F counterpeace: Espessura peça contra: (LIST) &15mm=1.55&18mm=1.85&25mm=2.55&30mm=3.1&36mm=3.7&
+      F inst___iscollapsed:  () 
+      F inst__copies:  () 
+      F inst__copy:  () 
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      F margin: Margem: (TEXTBOX) &
+      F mpeg: Margem Cavilha: (TEXTBOX) &
+      F my: Mover em Y(+ -): (TEXTBOX) &
+      F mz: Mover em Z(+ -): (TEXTBOX) &
+      F quadrant: Quadrante: (LIST) &Frontal=1&Traseiro=2&Inferior=3&Superior=4&
+      F quantity: Quantidade: (TEXTBOX) &
+      I _x_formula=px
+      I _y_formula=py
+      I _z_formula=pz
+      I atttransfer=addz|quadrant|mx|my|mz|inverte|margin|quantity|atttransfer
+      I description=Kit de ferragens parafuso 4x45
+      I itemcode=CM_KIT_PAR_4X45
+      G Agrupar#108 [guia] 500.0x0.0x18.5
+        I _lenx_formula=parent!thicknesspeace
+        I _leny_formula=0
+        I _lenz_formula=parent!lenz
+        I _name=guia
+        I _x_formula=0
+        I _y_formula=-0.3
+        I _z_formula=0
+      C parafuso#218 [parafuso] 7.0x22.0x7.0
+        D _inst__x_formula=thicknesspeace/2-LenX/2
+        D _inst__y_formula=0
+        D _inst__z_formula=(parent!margin-lenz/2)+copy*(parent!spaceutil/Copies)
+        D _lenx_formula=0.7
+        D _leny_formula=counterpeace+0.05+0.3
+        D _lenz_formula=thicknesspeace
+        D _name=parafuso
+        D _x_formula=thicknesspeace/2-LenX/2
+        D _y_formula=0
+        D _z_formula=(parent!margin-lenz/2)+copy*(parent!spaceutil/Copies)
+        F inst___iscollapsed:  () 
+        F inst__copies:  () 
+        F inst__copy:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F thicknesspeace: Espessura da peça (LIST) &15mm=1.55&18mm=1.85&25mm=2.55&
+        I _name=parafuso
+        I _x_formula=thicknesspeace/2-LenX/2
+        I _y_formula=0
+        I _z_formula=(parent!margin-lenz/2)+copy*(parent!spaceutil/Copies)
+      C parafuso#219 [parafuso] 7.0x22.0x7.0
+        D _inst__x_formula=thicknesspeace/2-LenX/2
+        D _inst__y_formula=0
+        D _inst__z_formula=(parent!margin-lenz/2)+copy*(parent!spaceutil/Copies)
+        D _lenx_formula=0.7
+        D _leny_formula=counterpeace+0.05+0.3
+        D _lenz_formula=thicknesspeace
+        D _name=parafuso
+        D _x_formula=thicknesspeace/2-LenX/2
+        D _y_formula=0
+        D _z_formula=(parent!margin-lenz/2)+copy*(parent!spaceutil/Copies)
+        F inst___iscollapsed:  () 
+        F inst__copies:  () 
+        F inst__copy:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F thicknesspeace: Espessura da peça (LIST) &15mm=1.55&18mm=1.85&25mm=2.55&
+        I _name=parafuso
+        I _x_formula=thicknesspeace/2-LenX/2
+        I _y_formula=0
+        I _z_formula=(parent!margin-lenz/2)+copy*(parent!spaceutil/Copies)
+      C cavilha#166 [cavilha] 8.0x28.0x8.0
+        D _inst__x_formula=thicknesspeace/2
+        D _inst__y_formula=-0.3
+        D _inst__z_formula=if(upmdisable=1,lenx/2,parent!mpeg+copy*(parent!spaceutilpeg))
+        D _lenx_formula=0.8
+        D _leny_formula=2.8
+        D _lenz_formula=0.8
+        D _name=cavilha
+        D _x_formula=thicknesspeace/2
+        D _y_formula=-0.3
+        D _z_formula=if(upmdisable=1,lenx/2,parent!mpeg+copy*(parent!spaceutilpeg))
+        D description=Cavilhas de fixação 8 x 28
+        D name=Cavilhas
+        F inst___iscollapsed:  () 
+        F inst__copies:  () 
+        F inst__copy:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F thicknesspeace: Espessura da peça (LIST) &15mm=1.55&18mm=1.85&25mm=2.55&
+        I _name=cavilha
+        I _x_formula=thicknesspeace/2
+        I _y_formula=-0.3
+        I _z_formula=if(upmdisable=1,lenx/2,parent!mpeg+copy*(parent!spaceutilpeg))
+        I description=Cavilhas de fixação 8 x 28
+        I name=Cavilhas
+      C cavilha#165 [cavilha] 8.0x28.0x8.0
+        D _inst__x_formula=thicknesspeace/2
+        D _inst__y_formula=-0.3
+        D _inst__z_formula=if(upmdisable=1,lenx/2,parent!mpeg+copy*(parent!spaceutilpeg))
+        D _lenx_formula=0.8
+        D _leny_formula=2.8
+        D _lenz_formula=0.8
+        D _name=cavilha
+        D _x_formula=thicknesspeace/2
+        D _y_formula=-0.3
+        D _z_formula=if(upmdisable=1,lenx/2,parent!mpeg+copy*(parent!spaceutilpeg))
+        D description=Cavilhas de fixação 8 x 28
+        D name=Cavilhas
+        F inst___iscollapsed:  () 
+        F inst__copies:  () 
+        F inst__copy:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F thicknesspeace: Espessura da peça (LIST) &15mm=1.55&18mm=1.85&25mm=2.55&
+        I _name=cavilha
+        I _x_formula=thicknesspeace/2
+        I _y_formula=-0.3
+        I _z_formula=if(upmdisable=1,lenx/2,parent!mpeg+copy*(parent!spaceutilpeg))
+        I description=Cavilhas de fixação 8 x 28
+        I name=Cavilhas
+      C parafuso#220 [parafuso] 7.0x22.0x7.0
+        D _inst__x_formula=thicknesspeace/2-LenX/2
+        D _inst__y_formula=0
+        D _inst__z_formula=(parent!margin-lenz/2)+copy*(parent!spaceutil/Copies)
+        D _lenx_formula=0.7
+        D _leny_formula=counterpeace+0.05+0.3
+        D _lenz_formula=thicknesspeace
+        D _name=parafuso
+        D _x_formula=thicknesspeace/2-LenX/2
+        D _y_formula=0
+        D _z_formula=(parent!margin-lenz/2)+copy*(parent!spaceutil/Copies)
+        F inst___iscollapsed:  () 
+        F inst__copies:  () 
+        F inst__copy:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F thicknesspeace: Espessura da peça (LIST) &15mm=1.55&18mm=1.85&25mm=2.55&
+        I _name=parafuso
+        I _x_formula=thicknesspeace/2-LenX/2
+        I _y_formula=0
+        I _z_formula=(parent!margin-lenz/2)+copy*(parent!spaceutil/Copies)
+      C parafuso#221 [parafuso] 7.0x22.0x7.0
+        D _inst__x_formula=thicknesspeace/2-LenX/2
+        D _inst__y_formula=0
+        D _inst__z_formula=(parent!margin-lenz/2)+copy*(parent!spaceutil/Copies)
+        D _lenx_formula=0.7
+        D _leny_formula=counterpeace+0.05+0.3
+        D _lenz_formula=thicknesspeace
+        D _name=parafuso
+        D _x_formula=thicknesspeace/2-LenX/2
+        D _y_formula=0
+        D _z_formula=(parent!margin-lenz/2)+copy*(parent!spaceutil/Copies)
+        F inst___iscollapsed:  () 
+        F inst__copies:  () 
+        F inst__copy:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F thicknesspeace: Espessura da peça (LIST) &15mm=1.55&18mm=1.85&25mm=2.55&
+        I _name=parafuso
+        I _x_formula=thicknesspeace/2-LenX/2
+        I _y_formula=0
+        I _z_formula=(parent!margin-lenz/2)+copy*(parent!spaceutil/Copies)
+      C parafuso#222 [parafuso] 7.0x22.0x7.0
+        D _inst__x_formula=thicknesspeace/2-LenX/2
+        D _inst__y_formula=0
+        D _inst__z_formula=(parent!margin-lenz/2)+copy*(parent!spaceutil/Copies)
+        D _lenx_formula=0.7
+        D _leny_formula=counterpeace+0.05+0.3
+        D _lenz_formula=thicknesspeace
+        D _name=parafuso
+        D _x_formula=thicknesspeace/2-LenX/2
+        D _y_formula=0
+        D _z_formula=(parent!margin-lenz/2)+copy*(parent!spaceutil/Copies)
+        F inst___iscollapsed:  () 
+        F inst__copies:  () 
+        F inst__copy:  () 
+        F inst__rotx:  () 
+        F inst__roty:  () 
+        F inst__rotz:  () 
+        F inst__x:  () 
+        F inst__y:  () 
+        F inst__z:  () 
+        F thicknesspeace: Espessura da peça (LIST) &15mm=1.55&18mm=1.85&25mm=2.55&
+        I _name=parafuso
+        I _x_formula=thicknesspeace/2-LenX/2
+        I _y_formula=0
+        I _z_formula=(parent!margin-lenz/2)+copy*(parent!spaceutil/Copies)
+
+==================== frente_gaveta (cf9e2e63bbb6e84d8dcafb082c22da58__frente_gaveta.skp)
+C frente_gaveta#11 [frente_gaveta] 371.0x15.5x736.0
+  D _inst__x_formula=px
+  D _inst__y_formula=py
+  D _inst__z_formula=pz
+  D _lenx_formula=parent!lenx+transpassleft+transpassright-if(parent!internal=1,2*parent!thicknessparent,0)
+  D _leny_formula=parent!thicknessfront
+  D _lenz_formula=parent!heightfront
+  D _name=frente_gaveta
+  D atttransfer=upmfinish|_upmfinish_formula|atttransfer|directioncame|difffrontbody
+  D componentedit=1
+  D description=Frente de Gaveta Lisa
+  D itemcode=CM_FRE_GAV_LIS
+  D materialoptions=frente de gaveta
+  D modeloptions=frente de gaveta
+  D name=Frente de Gaveta
+  F directioncame: Direção do veio: (LIST) &Vertical=vertical&Horizontal=horizontal&
+  F heightpuller: Desconto puxador: (TEXTBOX) &
+  F inst___iscollapsed:  () 
+  F inst__rotx:  () 
+  F inst__roty:  () 
+  F inst__rotz:  () 
+  F inst__x:  () 
+  F inst__y:  () 
+  F inst__z:  () 
+  F positionpuller: Posição do Puxador: (LIST) &Cima=5&Centro=6&
+  C caixa_frente_de_gaveta#2 [caixa_frente_de_gaveta] 371.0x15.5x736.0
+    D _inst__x_formula=0
+    D _inst__y_formula=0
+    D _inst__z_formula=if(parent!directioncame="vertical",0,lenx)
+    D _itemcode_formula="CM_FRE"
+    D _lenx_formula=if(a2_width>max_width,max_width,if(a2_width<min_width,min_width,a2_width))
+    D _leny_formula=a3_thickness
+    D _lenz_formula=if(a1_height>max_height,max_height,if(a1_height<min_height,min_height,a1_height))
+    D _name=caixa_frente_de_gaveta
+    D description=Frente de Gaveta
+    D itemcode=CM_FRE
+    D type=door
+    F inst___iscollapsed:  () 
+    F inst__rotx:  () 
+    F inst__roty:  () 
+    F inst__rotz:  () 
+    F inst__x:  () 
+    F inst__y:  () 
+    F inst__z:  () 
+    I _name=caixa_frente_de_gaveta
+    I _x_formula=0
+    I _y_formula=0
+    I _z_formula=if(parent!directioncame="vertical",0,lenx)
+    I description=Frente de Gaveta
+    I itemcode=CM_FRE
+    I type=door
+    C chapa_frontal#3 [chapa_frontal] 371.0x15.5x736.0
+      D _inst__x_formula=px
+      D _inst__y_formula=py
+      D _inst__z_formula=pz
+      D _itemcode_formula=parent!itemcode
+      D _lenx_formula=if(a2_width>max_width,max_width,if(a2_width<min_width,min_width,a2_width))
+      D _leny_formula=a3_thickness
+      D _lenz_formula=if(a1_height>max_height,max_height,if(a1_height<min_height,min_height,a1_height))
+      D _name=chapa_frontal
+      D description=Frente de Gaveta Lisa
+      D itemcode=CM_FRE
+      D materialoptions=peças
+      D modeloptions=frentes
+      D name=Chapa porta
+      D type=peace|edgechangethickness
+      F inst___iscollapsed:  () 
+      F inst__rotx:  () 
+      F inst__roty:  () 
+      F inst__rotz:  () 
+      F inst__x:  () 
+      F inst__y:  () 
+      F inst__z:  () 
+      F rotx:  () 
+      F roty:  () 
+      F zobservation: Observação: (TEXTBOX) &
+      I _x_formula=px
+      I _y_formula=py
+      I _z_formula=pz
+      I description=Frente de Gaveta Lisa
+      I itemcode=CM_FRE
