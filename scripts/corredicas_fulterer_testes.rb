@@ -2,12 +2,12 @@
 # Mostra os furos do movel (base/lado) e da gaveta (trilho) em mm da frente do movel (kit fica 1 mm a frente).
 DA = 'dynamic_attributes'
 dcc = $dc_observers.get_latest_class
-LENS = [27, 30, 35, 40, 45, 50, 55, 60]
+LENS = [25, 27, 30, 35, 40, 45, 50, 55, 60, 65, 70]
 m = ->(v) { (v.to_f * 25.4).round(1) }
 kits = []
 model.entities.grep(Sketchup::ComponentInstance).each do |g|
   next unless g.definition.name =~ /\Aconteiner_gaveta_(fulterer|fgvtn_unihide)/
-  fk = ->(i) { i.definition.entities.grep(Sketchup::ComponentInstance).each { |c| (c.definition.name =~ /\A(corredica_fulterer|kit_corredica_fgvtn)/) ? kits << [g, c] : fk.(c) } }
+  fk = ->(i) { i.definition.entities.grep(Sketchup::ComponentInstance).each { |c| (c.definition.name =~ /\A(corredica_fulterer|kit_corredica_fgvtn|kit_corredica_fulterer)/) ? kits << [g, c] : fk.(c) } }
   fk.(g)
 end
 out = []

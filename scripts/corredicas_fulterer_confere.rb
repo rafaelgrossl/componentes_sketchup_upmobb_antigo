@@ -1,7 +1,8 @@
 # Confere as gavetas das corredicas Fulterer / UniHide: furos (distancia da frente do movel, x, z) e textos.
 # NOMES: definicoes das gavetas de teste. Opcional: LEN = comprimento a testar (cm) ou nil.
 NOMES = %w[conteiner_gaveta_fulterer_fr5045 conteiner_gaveta_fulterer_fr5047 conteiner_gaveta_fulterer_fr5046_ecd
-           conteiner_gaveta_fulterer_fr5210_oe_ecd conteiner_gaveta_fgvtn_unihide_slowmotion]
+           conteiner_gaveta_fulterer_fr5210_oe_ecd conteiner_gaveta_fgvtn_unihide_slowmotion
+           conteiner_gaveta_fulterer_oculta_40kg conteiner_gaveta_fulterer_oculta_60kg]
 DA = 'dynamic_attributes'
 m = ->(v) { (v.to_f * 25.4).round(1) }
 NOMES.each do |nm|

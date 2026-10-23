@@ -4,3 +4,5 @@ gavetas_corredicas;corredica_telescopica_fr_5047.jpg;Corrediça telescópica FR 
 gavetas_corredicas;corredica_telescopica_fr_5046_ecd.jpg;Corrediça telescópica FR 5046 ECD;render 3D (scripts/foto_corredica_aberta.rb)
 gavetas_corredicas;corredica_telescopica_fr_5210_oe_ecd.jpg;Corrediça telescópica FR 5210 OE ECD;render 3D (scripts/foto_corredica_aberta.rb)
 gavetas_corredicas;corredica_oculta_unihide_slowmotion.jpg;Corrediça oculta UniHide Slowmotion;ferragens/manuais/Corredica_Unihide_slow.pdf
+gavetas_corredicas;corredica_oculta_40kg_amortecedor.jpg;Corrediça oculta 40kg amortecedor (Fulterer);render 3D (scripts/foto_corredica_aberta.rb, $foto_vista [-1.0, -0.9, 0.35])
+gavetas_corredicas;corredica_oculta_60kg_amortecedor.jpg;Corrediça oculta 60kg amortecedor (Fulterer);mesma foto da 40kg

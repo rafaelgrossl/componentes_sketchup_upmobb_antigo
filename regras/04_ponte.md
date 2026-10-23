@@ -138,3 +138,10 @@ Rotação de peça: descubra testando candidatos e medindo (`scripts/sonda_rotac
 - **Cota de manual: veja onde começa e termina a seta** (recorte a vista e amplie). Na UniHide "N − 49" e "24,5" vão
   até a face **interna** da lateral da gaveta, não a externa: folga por fora = 24,5 − espessura. Folga que depende
   da espessura vai por fórmula (`2*(2.45-parent!thickness)`), nunca fixa.
+- **Desenho de ferragem com o 0 deslocado** (Fulterer 5047 / 5046: "3,2" / "1,8" ao lado do 0, nota "starting point
+  dim. shifted"): o 0 fica **atrás** da ponta do perfil; da ponta = cota + deslocamento. Confira se os furos caem no
+  sistema 32 (32, 64, 192…) antes de usar. E não use a tabela de uma ferragem em outra (a da oculta foi parar na
+  telescópica): pergunte de qual modelo é a tabela.
+- **SketchUp 2026 e 2027 instalados**: cada um tem a sua ponte (`Plugins\componentes_upmobb\ponte` da versão). O
+  `ponte.sh` usa a mais recente com `"ativa": true`. Sem resposta: veja qual versão está com a cena
+  (`Get-Process SketchUp | Select Id,MainWindowTitle`) e se a ponte dela está ligada (`saida\estado.json`).

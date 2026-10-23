@@ -1,9 +1,11 @@
 # Foto (fundo branco, sem arestas) da corredica esquerda de cada gaveta de teste, aberta, vista do lado do movel
 # (o logo fica no perfil que sai). Tudo desfeito no fim (raise); a camera volta. Saida: PASTA/<kit>.png 800x800.
-ALVOS = /\Aconteiner_gaveta_fulterer/
-KIT = /\Acorredica_fulterer/
+# Outros alvos: defina antes $foto_alvos / $foto_kit / $foto_vista. Ex. ocultas Fulterer: /\Aconteiner_gaveta_fulterer_oculta/,
+# /\Akit_corredica_fulterer_oculta/, vista [1.0, -1.1, 0.55] (texto no lado de dentro do carro).
+ALVOS = $foto_alvos || /\Aconteiner_gaveta_fulterer_fr/
+KIT = $foto_kit || /\Acorredica_fulterer/
 PASTA = File.join(ENV['TEMP'], 'fotos_componentes')
-VISTA = [-1.0, -1.1, 0.55]
+VISTA = $foto_vista || [-1.0, -1.1, 0.55]
 DA = 'dynamic_attributes'
 dcc = $dc_observers.get_latest_class
 Dir.mkdir(PASTA) unless Dir.exist?(PASTA)
@@ -25,7 +27,7 @@ model.entities.grep(Sketchup::ComponentInstance).select { |g| g.definition.name 
   path, t = caminho.(g.definition.entities, g.transformation, KIT, [g])
   model.entities.each { |e| e.hidden = (e != g) if e.respond_to?(:hidden=) }
   path.each_cons(2) { |pai, filho| pai.definition.entities.each { |e| e.hidden = (e != filho) if e.respond_to?(:hidden=) && (e.respond_to?(:definition) || e.is_a?(Sketchup::Face)) } }
-  esq = k.definition.entities.grep(Sketchup::ComponentInstance).find { |c| c.definition.name =~ /Esq/ }
+  esq = k.definition.entities.grep(Sketchup::ComponentInstance).find { |c| c.definition.name =~ /Esq|esquerda/ }
   k.definition.entities.each { |e| e.hidden = (e != esq) if e.respond_to?(:hidden=) && e.respond_to?(:definition) }
   b = Geom::BoundingBox.new
   esq.definition.entities.grep(Sketchup::ComponentInstance).each { |c| 8.times { |i| b.add(c.definition.bounds.corner(i).transform(t * esq.transformation * c.transformation)) } }
